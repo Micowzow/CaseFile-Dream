@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class InteractionSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    //Detection Point
+    public Transform detectionPoint;
+
+    //Detection Radius
+    private const float detectionRadius=0.2f;
+
+    //Detection Layer
+    public LayerMask detectionLayer;
+
     void Update()
     {
-        
+        if(DetectObject())
+        {
+            if(InteractInput())
+            {
+                Debug.Log("INTERACT");
+
+            }
+
+        }
+    }
+
+    bool InteractInput()
+    {
+        return Input.GetKeyDown(KeyCode.E);
+
+    }
+
+    bool DetectObject()
+    {
+        return Physics2D.OverlapCircle(detectionPoint.position, detectionRadius, detectionLayer);
+
     }
 }
