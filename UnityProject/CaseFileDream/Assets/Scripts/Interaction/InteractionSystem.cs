@@ -14,12 +14,16 @@ public class InteractionSystem : MonoBehaviour
     //Detection Layer
     public LayerMask detectionLayer;
 
+    //Cached Trigger Object
+    public GameObject detectedObject;
+
     void Update()
     {
         if(DetectObject())
         {
             if(InteractInput())
             {
+                detectedObject.GetComponent<Item>().Interact();
                 Debug.Log("INTERACT");
 
             }
@@ -35,7 +39,25 @@ public class InteractionSystem : MonoBehaviour
 
     bool DetectObject()
     {
-        return Physics2D.OverlapCircle(detectionPoint.position, detectionRadius, detectionLayer);
+        Collider2D obj = Physics2D.OverlapCircle(detectionPoint.position, detectionRadius, detectionLayer);
 
+        if (obj == null)
+        {
+            detectedObject = null;
+            return false;
+        }
+        else
+        {
+            detectedObject = obj.gameObject;
+            return true;
+        }
+
+
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(detectionPoint.position, detectionRadius);
     }
 }
