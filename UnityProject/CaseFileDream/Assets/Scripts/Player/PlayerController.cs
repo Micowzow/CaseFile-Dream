@@ -11,8 +11,8 @@ namespace PlayerController
         [SerializeField] private ScriptableStats _stats;
         private Rigidbody2D _rb; //Rigidbody Componenet
         private CapsuleCollider2D _col; //Capsuale Colliders
-        private FrameInput _frameInput;
-        private Vector2 _frameVelocity;
+        private FrameInput _frameInput; //Frame
+        private Vector2 _frameVelocity; //Movement per frame
         private bool _cachedQueryStartInColliders;
 
         #region Interface
@@ -28,7 +28,7 @@ namespace PlayerController
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>(); //Call Rigidbody
-            _col = GetComponent<CapsuleCollider2D>(); //Call Capsual Collider
+            _col = GetComponent<CapsuleCollider2D>(); //Call Capsule Collider
 
             _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
         }
@@ -56,7 +56,7 @@ namespace PlayerController
                 _frameInput.Move.y = Mathf.Abs(_frameInput.Move.y) < _stats.VerticalDeadZoneThreshold ? 0 : Mathf.Sign(_frameInput.Move.y);
             }
 
-            if (_frameInput.JumpDown)
+            if (_frameInput.JumpDown) //Checking if jump is pressed per frame
             {
                 _jumpToConsume = true;
                 _timeJumpWasPressed = _time;
@@ -77,7 +77,7 @@ namespace PlayerController
         #region Collisions
         
         private float _frameLeftGrounded = float.MinValue;
-        private bool _grounded;
+        private bool _grounded; //Player grounded bool
 
         private void CheckCollisions() //Checking surface Collision
         {
