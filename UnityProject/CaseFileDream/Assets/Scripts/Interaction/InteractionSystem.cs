@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractionSystem : MonoBehaviour
 {
-
+    [Header("Detection Parameters")]
     //Detection Point
     public Transform detectionPoint;
 
@@ -16,6 +16,10 @@ public class InteractionSystem : MonoBehaviour
 
     //Cached Trigger Object
     public GameObject detectedObject;
+
+    [Header("Others")]
+    //List of Picked Up items
+    public List<GameObject> pickedItems = new List<GameObject>();
 
     void Update()
     {
@@ -53,6 +57,11 @@ public class InteractionSystem : MonoBehaviour
         }
 
 
+    }
+
+    public void PickUpItem(GameObject item)
+    {
+        pickedItems.Add(item);
     }
 
     private void OnDrawGizmosSelected()
