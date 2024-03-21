@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace PlayerController
@@ -63,9 +64,13 @@ namespace PlayerController
             }
         }
 
-        private void FixedUpdate() //Checking Methods
+        public void FixedUpdate() //Checking Methods
         {
+
             CheckCollisions();
+
+            if(CanMove()==false)
+                return;
 
             HandleJump();
             HandleDirection();
@@ -189,8 +194,22 @@ namespace PlayerController
         {
             if (_stats == null) Debug.LogWarning("Please assign a ScriptableStats asset to the Player Controller's Stats slot", this);
         }
+
+        bool CanMove()
+        {
+            bool can = true;
+
+            if (FindObjectOfType<InteractionSystem>().isExamining)
+                can = false;
+
+            return can;
+
+
+    }
 #endif
     }
+
+    
 
     public struct FrameInput
     {

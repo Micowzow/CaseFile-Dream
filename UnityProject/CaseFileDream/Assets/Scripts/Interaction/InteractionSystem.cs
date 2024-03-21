@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+
 
 public class InteractionSystem : MonoBehaviour
 {
-    [Header("Detection Parameters")]
+    [Header("Detection Fields")]
     //Detection Point
     public Transform detectionPoint;
 
@@ -16,6 +20,12 @@ public class InteractionSystem : MonoBehaviour
 
     //Cached Trigger Object
     public GameObject detectedObject;
+    [Header("Examine Fields")]
+    //Examine Window Object
+    public GameObject examineWindow;
+    public Image examineImage;
+    public TMP_Text examineText;
+    public bool isExamining;
 
     [Header("Others")]
     //List of Picked Up items
@@ -33,6 +43,11 @@ public class InteractionSystem : MonoBehaviour
             }
 
         }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(detectionPoint.position, detectionRadius);
     }
 
     bool InteractInput()
@@ -64,9 +79,30 @@ public class InteractionSystem : MonoBehaviour
         pickedItems.Add(item);
     }
 
-    private void OnDrawGizmosSelected()
+    public void ExamineItem(Item item)
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawSphere(detectionPoint.position, detectionRadius);
+        if (isExamining)
+        {
+            //Hide examine window
+            examineWindow.SetActive(false);
+            //disable the boolean
+            isExamining = false;
+        }
+        else
+        {
+
+        //Show the item image
+        examineImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
+        //Write description text
+        examineText.text = item.descriptionText;
+        //Display an examine window
+        examineWindow.SetActive(true);
+        //enable the boolean
+        isExamining = true;
+
+        }
     }
+
+  
+    
 }

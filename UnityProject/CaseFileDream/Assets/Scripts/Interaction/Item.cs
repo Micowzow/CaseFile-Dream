@@ -10,6 +10,8 @@ public class Item : MonoBehaviour
     //Interaction Type
     public enum InteractionType { NONE,PickUp,Examine}
     public InteractionType type;
+    [Header("Examine")]
+    public string descriptionText;
 
     //Collider Trigger
     private void Reset()
@@ -31,6 +33,8 @@ public class Item : MonoBehaviour
                 Debug.Log("PICK UP");
                 break;
             case InteractionType.Examine:
+                //Call the Examine item in the interaction system
+                FindObjectOfType<InteractionSystem>().ExamineItem(this);
                 Debug.Log("Examine");
                 break;
             default:
