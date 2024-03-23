@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider2D))]
 
@@ -8,10 +9,12 @@ public class Item : MonoBehaviour
 {
 
     //Interaction Type
-    public enum InteractionType { NONE,PickUp,Examine}
+    public enum InteractionType { NONE,PickUp,Examine,GrabDrop }
     public InteractionType type;
     [Header("Examine")]
     public string descriptionText;
+    [Header("Custom Event")]
+    public UnityEvent customEvent;
 
     //Collider Trigger
     private void Reset()
@@ -37,10 +40,16 @@ public class Item : MonoBehaviour
                 FindObjectOfType<InteractionSystem>().ExamineItem(this);
                 Debug.Log("Examine");
                 break;
+            case InteractionType.GrabDrop:
+                //Grab interaction
+                FindObjectOfType<InteractionSystem>().GrabDrop();
+                break;
             default:
                 Debug.Log("NULL ITEM");
                 break;
         }
+        //call custom event(S)
+        customEvent.Invoke();
     }
 
 }

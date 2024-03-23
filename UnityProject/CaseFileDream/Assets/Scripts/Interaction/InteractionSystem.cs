@@ -23,9 +23,13 @@ public class InteractionSystem : MonoBehaviour
     [Header("Examine Fields")]
     //Examine Window Object
     public GameObject examineWindow;
+    public GameObject grabbedObject;
+    public float grabbedObjectYValue;
+    public Transform grabPoint;
     public Image examineImage;
     public TMP_Text examineText;
     public bool isExamining;
+    public bool isGrabbing;
 
     [Header("Others")]
     //List of Picked Up items
@@ -37,6 +41,12 @@ public class InteractionSystem : MonoBehaviour
         {
             if(InteractInput())
             {
+                //Check if we are grabbing something, do not interact with other items, drop grabbed item first
+                if (isGrabbing)
+                {
+                    GrabDrop();
+                    return;
+                }
                 detectedObject.GetComponent<Item>().Interact();
                 Debug.Log("INTERACT");
 
@@ -58,6 +68,7 @@ public class InteractionSystem : MonoBehaviour
 
     bool DetectObject()
     {
+        
         Collider2D obj = Physics2D.OverlapCircle(detectionPoint.position, detectionRadius, detectionLayer);
 
         if (obj == null)
@@ -101,6 +112,43 @@ public class InteractionSystem : MonoBehaviour
         isExamining = true;
 
         }
+    }
+
+    public void GrabDrop()
+    {
+        //Check if we have grabbed object => drop item
+        if (isGrabbing)
+        {
+            //make isGrabbing false
+            isGrabbing = false;
+            //Unparent the grabbed object
+            grabbedObject.transform.parent = null;
+            // set Y value to original position
+            grabbedObject.transform.position = 
+                new Vector3(grabbedObject.transform.position.x, grabbedObjectYValue, grabbedObject.transform.position.z);
+            //Null the grabbed object reference
+            grabbedObject = null;
+        }
+        //Check if we have nothing grabbed, grab detected item
+        else
+        {
+            //Enable isGrabbing Bool
+            isGrabbing = true;
+
+            //Assign grabbed object to object itself
+            grabbedObject = detectedObject;
+
+            //Parent grabbed object to player
+            grabbedObject.transform.parent = transform;
+
+            //Cache the y value of the object
+            grabbedObjectYValue = grabbedObject.transform.position.y;
+
+            //Adjust the position of the grabbed object to be closer to hands
+            grabbedObject.transform.localPosition = grabPoint.localPosition;
+
+        }
+
     }
 
   
