@@ -15,6 +15,7 @@ namespace PlayerController
         private FrameInput _frameInput; //Frame
         private Vector2 _frameVelocity; //Movement per frame
         private bool _cachedQueryStartInColliders;
+        Animator animator;
 
         #region Interface
 
@@ -32,6 +33,7 @@ namespace PlayerController
             _col = GetComponent<CapsuleCollider2D>(); //Call Capsule Collider
 
             _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
+            animator = GetComponent<Animator>();
         }
 
         private void Update()
@@ -165,6 +167,8 @@ namespace PlayerController
             {
                 _frameVelocity.x = Mathf.MoveTowards(_frameVelocity.x, _frameInput.Move.x * _stats.MaxSpeed, _stats.Acceleration * Time.fixedDeltaTime);
             }
+
+            animator.SetFloat("xVelocity", Mathf.Abs(_rb.velocity.x));
         }
 
         #endregion
