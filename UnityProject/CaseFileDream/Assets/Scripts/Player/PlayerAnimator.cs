@@ -46,18 +46,18 @@ namespace PlayerController
             if (_player == null) return;
 
 
-            HandleSpriteFlip();
+           // HandleSpriteFlip();
 
             
         }
 
-        private void HandleSpriteFlip()
-        {
-            if (_player.FrameInput.x != 0) _sprite.flipX = _player.FrameInput.x < 0;
-        }
+       // private void HandleSpriteFlip()
+       // {
+       //     if (_player.FrameInput.x != 0) _sprite.flipX = _player.FrameInput.x < 0;
+       // }
 
 
-
+        
 
 
 

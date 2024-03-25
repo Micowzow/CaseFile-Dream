@@ -8,14 +8,30 @@ namespace PlayerController
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
     public class PlayerController : MonoBehaviour, IPlayerController
     {
+        [Header("Camera")]
+        [SerializeField] private GameObject cameraFollowGo;
+
         //Components for scriptable assets
         [SerializeField] private ScriptableStats _stats;
         private Rigidbody2D _rb; //Rigidbody Componenet
+
         private CapsuleCollider2D _col; //Capsuale Colliders
+
         private FrameInput _frameInput; //Frame
+
         private Vector2 _frameVelocity; //Movement per frame
+
         private bool _cachedQueryStartInColliders;
+
         Animator animator;
+
+        public bool facingRight = true;
+
+        public float speed;
+
+        private CameraFollowObject cameraFollowObject;
+
+       
 
         #region Interface
 
@@ -36,10 +52,32 @@ namespace PlayerController
             animator = GetComponent<Animator>();
         }
 
+        private void Start()
+        {
+            cameraFollowObject = cameraFollowGo.GetComponent<CameraFollowObject>();
+        }
+
         private void Update()
         {
             _time += Time.deltaTime;
             GatherInput();
+
+            float move = Input.GetAxisRaw("Horizontal");
+
+            _rb.velocity = new Vector2(move * speed, _rb.velocity.y);
+
+            HandleDirection();
+
+            if (move < 0 && facingRight)
+            {
+                Flip();
+                cameraFollowObject.CallTurn();
+            }
+            else if(move>0 && !facingRight)
+            {
+                Flip();
+                cameraFollowObject.CallTurn();
+            }
         }
 
         private void GatherInput() //Checking Player locaiton and movement Input
@@ -75,7 +113,6 @@ namespace PlayerController
                 return;
 
             HandleJump();
-            HandleDirection();
             HandleGravity();
             
             ApplyMovement();
@@ -172,6 +209,12 @@ namespace PlayerController
         }
 
         #endregion
+
+        public void Flip()
+        {
+            facingRight = !facingRight; //if player is not facing right flip transform
+            transform.Rotate(0f, 180f, 0f);
+        }
 
         #region Gravity
 
