@@ -13,29 +13,30 @@ namespace PlayerController
 
         //Components for scriptable assets
         [SerializeField] private ScriptableStats _stats;
-        private Rigidbody2D _rb; //Rigidbody Componenet
+        private Rigidbody2D rb; //Rigidbody Componenet
 
-        private CapsuleCollider2D _col; //Capsuale Colliders
+        private CapsuleCollider2D col; //Capsuale Colliders
 
-        private FrameInput _frameInput; //Frame
+        private FrameInput frameInput; //Frame
 
-        private Vector2 _frameVelocity; //Movement per frame
+        private Vector2 frameVelocity; //Movement per frame
 
-        private bool _cachedQueryStartInColliders;
+        private bool cachedQueryStartInColliders;
 
         Animator animator;
 
         public bool facingRight = true;
 
-        public float speed;
+        public float speed; //Keep In case
 
         private CameraFollowObject cameraFollowObject;
+        private float fallSpeedYDampingChangeThreshold;
 
        
 
         #region Interface
 
-        public Vector2 FrameInput => _frameInput.Move;
+        public Vector2 FrameInput => frameInput.Move;
         public event Action<bool, float> GroundedChanged;
         public event Action Jumped;
 
@@ -45,16 +46,17 @@ namespace PlayerController
 
         private void Awake()
         {
-            _rb = GetComponent<Rigidbody2D>(); //Call Rigidbody
-            _col = GetComponent<CapsuleCollider2D>(); //Call Capsule Collider
+            rb = GetComponent<Rigidbody2D>(); //Call Rigidbody
+            col = GetComponent<CapsuleCollider2D>(); //Call Capsule Collider
 
-            _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
+            cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
             animator = GetComponent<Animator>();
         }
 
         private void Start()
         {
             cameraFollowObject = cameraFollowGo.GetComponent<CameraFollowObject>();
+            fallSpeedYDampingChangeThreshold = CameraManager.instance.fallSpeedYDampingChangeThreshold;
         }
 
         private void Update()
@@ -64,7 +66,7 @@ namespace PlayerController
 
             float move = Input.GetAxisRaw("Horizontal");
 
-            _rb.velocity = new Vector2(move * speed, _rb.velocity.y);
+            //rb.velocity = new Vector2(move * speed, rb.velocity.y); //Can't remember what this was for?
 
             HandleDirection();
 
@@ -78,11 +80,26 @@ namespace PlayerController
                 Flip();
                 cameraFollowObject.CallTurn();
             }
+
+            //If player is falling past a certain speed threshold
+            if(rb.velocity.y < fallSpeedYDampingChangeThreshold && !CameraManager.instance.LerpedFromPlayerFalling)
+            {
+                CameraManager.instance.LerpingYDamping(true);
+            }
+
+            //if player is standing still or moving up
+            if (rb.velocity.y >= 0f && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
+            {
+                //reset so it can be called again
+                CameraManager.instance.LerpedFromPlayerFalling = false;
+
+                CameraManager.instance.LerpingYDamping(false);
+            }
         }
 
         private void GatherInput() //Checking Player locaiton and movement Input
         {
-            _frameInput = new FrameInput //Frame movement
+            frameInput = new FrameInput //Frame movement
             {
                 JumpDown = Input.GetButtonDown("Jump"), //If jump is pressed
                 JumpHeld = Input.GetButton("Jump"), //If jump is held
@@ -92,12 +109,12 @@ namespace PlayerController
             if (_stats.SnapInput)
             {
                 //Frame movement on Horizontal
-                _frameInput.Move.x = Mathf.Abs(_frameInput.Move.x) < _stats.HorizontalDeadZoneThreshold ? 0 : Mathf.Sign(_frameInput.Move.x); 
+                frameInput.Move.x = Mathf.Abs(frameInput.Move.x) < _stats.HorizontalDeadZoneThreshold ? 0 : Mathf.Sign(frameInput.Move.x); 
                 //Frame movement on Vertical
-                _frameInput.Move.y = Mathf.Abs(_frameInput.Move.y) < _stats.VerticalDeadZoneThreshold ? 0 : Mathf.Sign(_frameInput.Move.y);
+                frameInput.Move.y = Mathf.Abs(frameInput.Move.y) < _stats.VerticalDeadZoneThreshold ? 0 : Mathf.Sign(frameInput.Move.y);
             }
 
-            if (_frameInput.JumpDown) //Checking if jump is pressed per frame
+            if (frameInput.JumpDown) //Checking if jump is pressed per frame
             {
                 _jumpToConsume = true;
                 _timeJumpWasPressed = _time;
@@ -128,11 +145,11 @@ namespace PlayerController
             Physics2D.queriesStartInColliders = false;
 
             // Ground and Ceiling Checks
-            bool groundHit = Physics2D.CapsuleCast(_col.bounds.center, _col.size, _col.direction, 0, Vector2.down, _stats.GrounderDistance, ~_stats.PlayerLayer);
-            bool ceilingHit = Physics2D.CapsuleCast(_col.bounds.center, _col.size, _col.direction, 0, Vector2.up, _stats.GrounderDistance, ~_stats.PlayerLayer);
+            bool groundHit = Physics2D.CapsuleCast(col.bounds.center, col.size, col.direction, 0, Vector2.down, _stats.GrounderDistance, ~_stats.PlayerLayer);
+            bool ceilingHit = Physics2D.CapsuleCast(col.bounds.center, col.size, col.direction, 0, Vector2.up, _stats.GrounderDistance, ~_stats.PlayerLayer);
 
             // Hit a Ceiling
-            if (ceilingHit) _frameVelocity.y = Mathf.Min(0, _frameVelocity.y);
+            if (ceilingHit) frameVelocity.y = Mathf.Min(0, frameVelocity.y);
 
             // Landed on the Ground
             if (!_grounded && groundHit)
@@ -141,7 +158,7 @@ namespace PlayerController
                 _coyoteUsable = true;
                 _bufferedJumpUsable = true;
                 _endedJumpEarly = false;
-                GroundedChanged?.Invoke(true, Mathf.Abs(_frameVelocity.y));
+                GroundedChanged?.Invoke(true, Mathf.Abs(frameVelocity.y));
             }
             // Left the Ground
             else if (_grounded && !groundHit)
@@ -151,7 +168,7 @@ namespace PlayerController
                 GroundedChanged?.Invoke(false, 0);
             }
 
-            Physics2D.queriesStartInColliders = _cachedQueryStartInColliders;
+            Physics2D.queriesStartInColliders = cachedQueryStartInColliders;
         }
 
         #endregion
@@ -170,7 +187,7 @@ namespace PlayerController
 
         private void HandleJump() //Checking for Jump
         {
-            if (!_endedJumpEarly && !_grounded && !_frameInput.JumpHeld && _rb.velocity.y > 0) _endedJumpEarly = true; //Ending jump when key released
+            if (!_endedJumpEarly && !_grounded && !frameInput.JumpHeld && rb.velocity.y > 0) _endedJumpEarly = true; //Ending jump when key released
 
             if (!_jumpToConsume && !HasBufferedJump) return; //If there is no jump to use and no Queud Jump DO NOT JUMP
 
@@ -185,7 +202,7 @@ namespace PlayerController
             _timeJumpWasPressed = 0; //How many times was the jump pressed
             _bufferedJumpUsable = false; //The Buffered Jump Is not available for use
             _coyoteUsable = false; //Coyote Jump is not useable
-            _frameVelocity.y = _stats.JumpPower; //Frame movement 
+            frameVelocity.y = _stats.JumpPower; //Frame movement 
             Jumped?.Invoke(); // Is jump command executed?
         }
 
@@ -195,17 +212,17 @@ namespace PlayerController
 
         private void HandleDirection() //Horizontal Movement
         {
-            if (_frameInput.Move.x == 0)
+            if (frameInput.Move.x == 0)
             {
                 var deceleration = _grounded ? _stats.GroundDeceleration : _stats.AirDeceleration;
-                _frameVelocity.x = Mathf.MoveTowards(_frameVelocity.x, 0, deceleration * Time.fixedDeltaTime);
+                frameVelocity.x = Mathf.MoveTowards(frameVelocity.x, 0, deceleration * Time.fixedDeltaTime);
             }
             else
             {
-                _frameVelocity.x = Mathf.MoveTowards(_frameVelocity.x, _frameInput.Move.x * _stats.MaxSpeed, _stats.Acceleration * Time.fixedDeltaTime);
+                frameVelocity.x = Mathf.MoveTowards(frameVelocity.x, frameInput.Move.x * _stats.MaxSpeed, _stats.Acceleration * Time.fixedDeltaTime);
             }
 
-            animator.SetFloat("xVelocity", Mathf.Abs(_rb.velocity.x));
+            animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
         }
 
         #endregion
@@ -220,21 +237,21 @@ namespace PlayerController
 
         private void HandleGravity() //Gravity 
         {
-            if (_grounded && _frameVelocity.y <= 0f)
+            if (_grounded && frameVelocity.y <= 0f)
             {
-                _frameVelocity.y = _stats.GroundingForce;
+                frameVelocity.y = _stats.GroundingForce;
             }
             else
             {
                 var inAirGravity = _stats.FallAcceleration;
-                if (_endedJumpEarly && _frameVelocity.y > 0) inAirGravity *= _stats.JumpEndEarlyGravityModifier;
-                _frameVelocity.y = Mathf.MoveTowards(_frameVelocity.y, -_stats.MaxFallSpeed, inAirGravity * Time.fixedDeltaTime);
+                if (_endedJumpEarly && frameVelocity.y > 0) inAirGravity *= _stats.JumpEndEarlyGravityModifier;
+                frameVelocity.y = Mathf.MoveTowards(frameVelocity.y, -_stats.MaxFallSpeed, inAirGravity * Time.fixedDeltaTime);
             }
         }
 
         #endregion
 
-        private void ApplyMovement() => _rb.velocity = _frameVelocity;
+        private void ApplyMovement() => rb.velocity = frameVelocity;
 
 #if UNITY_EDITOR
         private void OnValidate()
