@@ -26,7 +26,7 @@ public class Elevator : MonoBehaviour
 
     void StartElevator()
     {
-        if(Vector2.Distance(player.position,elevatorSwitch.position)<0.5f && Input.GetKeyDown("e")) //Change keydown to && torch proximity
+        if(Vector2.Distance(player.position,elevatorSwitch.position)<0.5f && gameObject.CompareTag("Lantern")) //&& Input.GetKeyDown("e")) //Change keydown to && torch proximity
         {
             if(transform.position.y <= downPos.position.y)
             {
