@@ -46,5 +46,27 @@ public class Elevator : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, downPos.position, speed * Time.deltaTime);
         }
+
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Lantern"))
+        {
+            //collision.transform.parent = this.transform;
+            if (transform.position.y <= downPos.position.y)
+            {
+                isElevaterDown = true;
+            }
+            else if (transform.position.y >= upperPos.position.y)
+            {
+                isElevaterDown = false;
+            }
+
+        }
+    }
+
+    
+
+
 }

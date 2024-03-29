@@ -32,6 +32,7 @@ namespace PlayerController
         private CameraFollowObject cameraFollowObject;
         private float fallSpeedYDampingChangeThreshold;
 
+
        
 
         #region Interface
@@ -133,6 +134,8 @@ namespace PlayerController
             HandleGravity();
             
             ApplyMovement();
+
+          
         }
 
         #region Collisions
