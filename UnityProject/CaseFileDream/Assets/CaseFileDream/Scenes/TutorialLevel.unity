@@ -28056,6 +28056,7 @@ GameObject:
   - component: {fileID: 133355414}
   - component: {fileID: 133355413}
   - component: {fileID: 133355412}
+  - component: {fileID: 133355416}
   m_Layer: 9
   m_Name: GrabItem
   m_TagString: Lantern
@@ -28173,6 +28174,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &133355416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133355411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c520f8580d97348b34b072a8ce9597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullCharge: 4
+  currentCharge: 0
 --- !u!1 &179563902
 GameObject:
   m_ObjectHideFlags: 3
@@ -62077,7 +62092,7 @@ GameObject:
   - component: {fileID: 928350423}
   m_Layer: 0
   m_Name: Elevator
-  m_TagString: Untagged
+  m_TagString: LanternInteract
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62509,7 +62524,7 @@ GameObject:
   - component: {fileID: 1105934236}
   m_Layer: 0
   m_Name: Elevator
-  m_TagString: Untagged
+  m_TagString: LanternInteract
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
