@@ -16,17 +16,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   SnapInput: 1
-  VerticalDeadZoneThreshold: 0.3
+  VerticalDeadZoneThreshold: 0.99
   HorizontalDeadZoneThreshold: 0.1
   MaxSpeed: 10
   Acceleration: 120
   GroundDeceleration: 60
-  AirDeceleration: 30
+  AirDeceleration: 20
   GroundingForce: -1.5
   GrounderDistance: 0.05
-  JumpPower: 40
-  MaxFallSpeed: 40
-  FallAcceleration: 110
-  JumpEndEarlyGravityModifier: 3
+  JumpPower: 13
+  MaxFallSpeed: 20
+  FallAcceleration: 20
+  JumpEndEarlyGravityModifier: 23
   CoyoteTime: 0.15
-  JumpBuffer: 0.2
+  JumpBuffer: 0.1
