@@ -127,6 +127,8 @@ public class InteractionSystem : MonoBehaviour
             // set Y value to original position
             grabbedObject.transform.position = 
                 new Vector3(grabbedObject.transform.position.x, grabbedObject.transform.position.y, grabbedObject.transform.position.z);
+            grabbedObject.GetComponent<BoxCollider2D>().isTrigger = false;
+            grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
             //Null the grabbed object reference
             grabbedObject = null;
         }
@@ -147,6 +149,9 @@ public class InteractionSystem : MonoBehaviour
 
             //Adjust the position of the grabbed object to be closer to hands
             grabbedObject.transform.localPosition = grabPoint.localPosition;
+
+            grabbedObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
 
         }
 

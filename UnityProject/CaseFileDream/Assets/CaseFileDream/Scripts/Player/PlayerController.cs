@@ -32,6 +32,9 @@ namespace PlayerController
         private CameraFollowObject cameraFollowObject;
         private float fallSpeedYDampingChangeThreshold;
 
+        public Vector3 respawnPoint;
+        
+
 
        
 
@@ -58,6 +61,7 @@ namespace PlayerController
         {
             cameraFollowObject = cameraFollowGo.GetComponent<CameraFollowObject>();
             fallSpeedYDampingChangeThreshold = CameraManager.instance.fallSpeedYDampingChangeThreshold;
+            respawnPoint = transform.position;
         }
 
         private void Update()
@@ -96,8 +100,20 @@ namespace PlayerController
 
                 CameraManager.instance.LerpingYDamping(false);
             }
+
         }
 
+        public void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(collision.tag == "Enemy")
+            {
+                transform.position = respawnPoint;
+            }
+            else if(collision.tag == "CheckPoint")
+            {
+                respawnPoint = transform.position;
+            }
+        }
         private void GatherInput() //Checking Player locaiton and movement Input
         {
             frameInput = new FrameInput //Frame movement
