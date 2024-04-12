@@ -8,6 +8,8 @@ public class Elevator : MonoBehaviour
     public Transform elevatorSwitch;
     public Transform downPos;
     public Transform upperPos;
+    public Transform lantern;
+
 
     public float speed;
     bool isElevaterDown;
@@ -26,8 +28,9 @@ public class Elevator : MonoBehaviour
 
     void StartElevator()
     {
-        if(Vector2.Distance(player.position,elevatorSwitch.position)<0.5f && gameObject.CompareTag("Lantern")) //&& Input.GetKeyDown("e")) //Change keydown to && torch proximity
+        if(Vector2.Distance(lantern.position,elevatorSwitch.position)<2.5f && Input.GetKeyDown("q")) //&& Input.GetKeyDown("e")) //Change keydown to && torch proximity
         {
+            Debug.Log("StartedElevator/door");
             if(transform.position.y <= downPos.position.y)
             {
                 isElevaterDown = true;
@@ -49,7 +52,7 @@ public class Elevator : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Lantern"))
         {
@@ -63,10 +66,10 @@ public class Elevator : MonoBehaviour
                 isElevaterDown = false;
             }
 
-        }
+        } */
     }
 
     
 
 
-}
+

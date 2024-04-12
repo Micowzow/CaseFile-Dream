@@ -7,6 +7,8 @@ public class LanternInteraction : MonoBehaviour
 {
     public int fullCharge = 4; 
     public int currentCharge;
+
+    public bool isInCollission = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +31,36 @@ public class LanternInteraction : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void RefillCharge(int amount)
     {
-        if (collision.tag == "LanternInteract")
+        currentCharge += amount;
+
+        if(currentCharge >= fullCharge)
         {
-            UseCharge(1);
+            //No added charge
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isInCollission == false)
+        {
+            isInCollission = true;
+            if (collision.tag == "LanternInteract")
+            {
+                UseCharge(1);
+            }
+
+            if (collision.tag == "LanternRefill")
+            {
+                RefillCharge(1);
+            }
+        }
+        else
+        {
+            isInCollission = false;
+        }
+    }
+
+   
 }
