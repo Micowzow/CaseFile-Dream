@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" infinite="1" nextlayerid="6" nextobjectid="1">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" infinite="1" nextlayerid="7" nextobjectid="1">
  <editorsettings>
   <export format="json"/>
  </editorsettings>
  <tileset firstgid="1" source="BlockoutTileSet.tsx"/>
  <tileset firstgid="36" source="TerrainTileSet.tsx"/>
+ <tileset firstgid="71" source="BrickTerrain.tsx"/>
  <layer id="1" name="Blockout" width="50" height="50">
   <data encoding="csv">
    <chunk x="-16" y="-48" width="16" height="16">
@@ -1234,6 +1235,28 @@
 52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,
 52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,
 52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52
+</chunk>
+  </data>
+ </layer>
+ <layer id="6" name="Brick" width="50" height="50">
+  <data encoding="csv">
+   <chunk x="48" y="-16" width="16" height="16">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+88,89,89,88,89,88,89,88,89,88,89,88,89,88,89,90,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
   </data>
  </layer>
