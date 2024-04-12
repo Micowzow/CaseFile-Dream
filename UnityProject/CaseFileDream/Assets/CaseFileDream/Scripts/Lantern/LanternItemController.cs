@@ -10,11 +10,13 @@ public class LanternItemController : MonoBehaviour
 
     public Transform refillStation;
 
+    public ParticleSystem pS;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        pS.Stop();
         
     }
 
@@ -30,6 +32,7 @@ public class LanternItemController : MonoBehaviour
         {
             Debug.Log("LightLantern");
             isLitlantern = true;
+            pS.Play();
 
 
         }
@@ -44,6 +47,7 @@ public class LanternItemController : MonoBehaviour
     public void DouseLantern()
     {
         isLitlantern = false;
+        pS.Stop();
     }
 
    
