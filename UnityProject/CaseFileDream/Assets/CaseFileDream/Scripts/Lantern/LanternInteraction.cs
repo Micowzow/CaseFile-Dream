@@ -46,12 +46,12 @@ public class LanternInteraction : MonoBehaviour
         if (isInCollission == false)
         {
             isInCollission = true;
-            if (collision.tag == "LanternInteract")
+            if (collision.tag == "LanternInteract" && Input.GetKeyDown("q"))
             {
                 UseCharge(1);
             }
 
-            if (collision.tag == "LanternRefill")
+            if (collision.tag == "LanternRefill" && Input.GetKeyDown("q"))
             {
                 RefillCharge(1);
             }

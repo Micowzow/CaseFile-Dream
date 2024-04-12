@@ -27869,6 +27869,7 @@ GameObject:
   - component: {fileID: 133355413}
   - component: {fileID: 133355412}
   - component: {fileID: 133355416}
+  - component: {fileID: 133355418}
   - component: {fileID: 133355417}
   m_Layer: 9
   m_Name: GrabItem
@@ -28024,6 +28025,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 1
+--- !u!114 &133355418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133355411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9126581d702861a47beec1d815161239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lantern: {fileID: 133355415}
+  isLitlantern: 0
+  refillStation: {fileID: 1030860582}
 --- !u!1 &146573820
 GameObject:
   m_ObjectHideFlags: 0
@@ -57500,7 +57516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906591523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: -0.339, z: 1}
+  m_LocalPosition: {x: 0.05, y: -0.33, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []

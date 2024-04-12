@@ -17,19 +17,23 @@ public class Elevator : MonoBehaviour
     void Start()
     {
         
+
     }
 
     // Update is called once per frame
     void Update()
     {
         StartElevator();
-        
+
+
     }
 
-    void StartElevator()
+    public void StartElevator()
     {
-        if(Vector2.Distance(lantern.position,elevatorSwitch.position)<2.5f && Input.GetKeyDown("q")) //&& Input.GetKeyDown("e")) //Change keydown to && torch proximity
+        //If next to elevator switch and Q key is pressed and isLanternLit is true
+        if(Vector2.Distance(lantern.position,elevatorSwitch.position)<2.5f && Input.GetKeyDown("q") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLitlantern == true)
         {
+            lantern.GetComponent<LanternItemController>().DouseLantern();
             Debug.Log("StartedElevator/door");
             if(transform.position.y <= downPos.position.y)
             {
@@ -52,21 +56,7 @@ public class Elevator : MonoBehaviour
 
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Lantern"))
-        {
-            //collision.transform.parent = this.transform;
-            if (transform.position.y <= downPos.position.y)
-            {
-                isElevaterDown = true;
-            }
-            else if (transform.position.y >= upperPos.position.y)
-            {
-                isElevaterDown = false;
-            }
-
-        } */
+    
     }
 
     
