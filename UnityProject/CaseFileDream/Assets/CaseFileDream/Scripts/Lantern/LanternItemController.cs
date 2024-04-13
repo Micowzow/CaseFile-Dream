@@ -6,33 +6,38 @@ public class LanternItemController : MonoBehaviour
 {
     public Transform lantern;
 
-    public bool isLitlantern = false;
+    public bool isLanternBlue = false;
+    public bool isLanternPink = false;
 
-    public Transform refillStation;
+    public Transform refillStationBlue;
+    public Transform refillStationPink;
 
-    public ParticleSystem pS;
+    public ParticleSystem psBlue;
+    public ParticleSystem psPink;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        pS.Stop();
+        psBlue.Stop();
+        psPink.Stop();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        LightLantern();
+        LightBlueLantern();
+        LightPinkLantern();
     }
-
-    public void LightLantern()
+    #region Blue Lantern Fire
+    public void LightBlueLantern()
     {
-        if (Vector2.Distance(lantern.position, refillStation.position) < 2.5f && Input.GetKeyDown("q"))
+        if (Vector2.Distance(lantern.position, refillStationBlue.position) < 2.5f && Input.GetKeyDown("q"))
         {
-            Debug.Log("LightLantern");
-            isLitlantern = true;
-            pS.Play();
+            Debug.Log("LightLanternBlue");
+            isLanternBlue = true;
+            psBlue.Play();
 
 
         }
@@ -44,11 +49,34 @@ public class LanternItemController : MonoBehaviour
 
     }
 
-    public void DouseLantern()
+    public void DouseBlueLantern()
     {
-        isLitlantern = false;
-        pS.Stop();
+        isLanternBlue = false;
+        psBlue.Stop();
+    }
+    #endregion
+
+    public void LightPinkLantern()
+    {
+        if (Vector2.Distance(lantern.position, refillStationPink.position) < 2.5f && Input.GetKeyDown("q"))
+        {
+            Debug.Log("LightLanternPink");
+            isLanternPink = true;
+            psPink.Play();
+
+
+        }
+        else
+        {
+            return;
+        }
+
+
     }
 
-   
+    public void DousePinkLantern()
+    {
+        isLanternPink = false;
+        psPink.Stop();
+    }
 }
