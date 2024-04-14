@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    public Transform player;
     public Transform elevatorSwitch;
     public Transform downPos;
     public Transform upperPos;
@@ -14,18 +13,11 @@ public class Elevator : MonoBehaviour
 
     public float speed;
     bool isElevaterDown;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-
-    }
 
     // Update is called once per frame
     void Update()
     {
         StartElevator();
-
 
     }
 
@@ -61,7 +53,7 @@ public class Elevator : MonoBehaviour
         if (Vector2.Distance(lantern.position, recallElevator.position) < 2.5f && Input.GetKeyDown("q") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternBlue == true)
         {
             lantern.GetComponent<LanternItemController>().DouseBlueLantern();
-            Debug.Log("StartedElevator/door");
+            Debug.Log("StartedElevator");
             if (transform.position.y <= downPos.position.y)
             {
                 isElevaterDown = true;
@@ -83,7 +75,6 @@ public class Elevator : MonoBehaviour
 
     }
 
-    
     }
 
     

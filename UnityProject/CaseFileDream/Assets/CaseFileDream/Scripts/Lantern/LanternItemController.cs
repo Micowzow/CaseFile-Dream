@@ -39,13 +39,7 @@ public class LanternItemController : MonoBehaviour
             isLanternBlue = true;
             psBlue.Play();
 
-
-        }
-        else
-        {
-            return;
-        }
-            
+        }               
 
     }
 
@@ -56,6 +50,7 @@ public class LanternItemController : MonoBehaviour
     }
     #endregion
 
+    #region Pink Lantern Fire
     public void LightPinkLantern()
     {
         if (Vector2.Distance(lantern.position, refillStationPink.position) < 2.5f && Input.GetKeyDown("q"))
@@ -64,14 +59,8 @@ public class LanternItemController : MonoBehaviour
             isLanternPink = true;
             psPink.Play();
 
-
         }
-        else
-        {
-            return;
-        }
-
-
+        
     }
 
     public void DousePinkLantern()
@@ -79,4 +68,5 @@ public class LanternItemController : MonoBehaviour
         isLanternPink = false;
         psPink.Stop();
     }
+    #endregion
 }

@@ -15,11 +15,6 @@ public class LanternInteraction : MonoBehaviour
         currentCharge = fullCharge;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void UseCharge(int amount)
     {
