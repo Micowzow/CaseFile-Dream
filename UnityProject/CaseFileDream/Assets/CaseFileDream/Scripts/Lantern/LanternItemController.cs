@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class LanternItemController : MonoBehaviour
 {
@@ -15,12 +16,19 @@ public class LanternItemController : MonoBehaviour
     public ParticleSystem psBlue;
     public ParticleSystem psPink;
 
+    public Light2D blueLight;
+    public Light2D pinkLight;
+
+    public bool facingRight = true;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        psBlue.Stop();
-        psPink.Stop();
+        //psBlue.Stop();
+        //psPink.Stop();
+        blueLight.enabled = false;
+        pinkLight.enabled = false;
         
     }
 
@@ -29,6 +37,19 @@ public class LanternItemController : MonoBehaviour
     {
         LightBlueLantern();
         LightPinkLantern();
+
+        float move = Input.GetAxisRaw("Horizontal");
+
+        if (move < 0 && facingRight)
+            {
+                Flip();
+                
+            }
+            else if(move>0 && !facingRight)
+            {
+                Flip();
+                
+            }
     }
     #region Blue Lantern Fire
     public void LightBlueLantern()
@@ -38,6 +59,7 @@ public class LanternItemController : MonoBehaviour
             Debug.Log("LightLanternBlue");
             isLanternBlue = true;
             psBlue.Play();
+            blueLight.enabled = true;
 
         }               
 
@@ -46,6 +68,7 @@ public class LanternItemController : MonoBehaviour
     public void DouseBlueLantern()
     {
         isLanternBlue = false;
+        blueLight.enabled = false;
         psBlue.Stop();
     }
     #endregion
@@ -58,6 +81,7 @@ public class LanternItemController : MonoBehaviour
             Debug.Log("LightLanternPink");
             isLanternPink = true;
             psPink.Play();
+            pinkLight.enabled = true;
 
         }
         
@@ -67,6 +91,15 @@ public class LanternItemController : MonoBehaviour
     {
         isLanternPink = false;
         psPink.Stop();
+        pinkLight.enabled = false;
     }
     #endregion
+
+    
+
+            public void Flip()
+        {
+            facingRight = !facingRight; //if player is not facing right flip transform
+            transform.Rotate(0f, 180f, 0f);
+        }
 }
