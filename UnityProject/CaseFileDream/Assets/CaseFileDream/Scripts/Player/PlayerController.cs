@@ -27,6 +27,8 @@ namespace PlayerController
 
         public bool facingRight = true;
 
+        public bool isGrounded = false;
+
         public float speed; //Keep In case
 
         private CameraFollowObject cameraFollowObject;
@@ -113,6 +115,7 @@ namespace PlayerController
             {
                 respawnPoint = transform.position;
             }
+
         }
         private void GatherInput() //Checking Player locaiton and movement Input
         {
@@ -140,7 +143,7 @@ namespace PlayerController
 
         public void FixedUpdate() //Checking Methods
         {
-
+            animator.SetFloat("yVelocity", rb.velocity.y);
             CheckCollisions();
 
             if(CanMove()==false)
@@ -150,6 +153,7 @@ namespace PlayerController
             HandleGravity();
             
             ApplyMovement();
+            
 
           
         }
@@ -174,6 +178,7 @@ namespace PlayerController
             if (!_grounded && groundHit)
             {
                 _grounded = true;
+                animator.SetBool("isJumping", false);
                 _coyoteUsable = true;
                 _bufferedJumpUsable = true;
                 _endedJumpEarly = false;
@@ -183,6 +188,7 @@ namespace PlayerController
             else if (_grounded && !groundHit)
             {
                 _grounded = false;
+                animator.SetBool("isJumping", !_grounded);
                 _frameLeftGrounded = _time;
                 GroundedChanged?.Invoke(false, 0);
             }
@@ -201,6 +207,7 @@ namespace PlayerController
         private bool _coyoteUsable; //Jump usable for small amount of time after leaving surface
         private float _timeJumpWasPressed; //Jump key was Pressed
 
+
         private bool HasBufferedJump => _bufferedJumpUsable && _time < _timeJumpWasPressed + _stats.JumpBuffer; //Buffered Jump Is Queued
         private bool CanUseCoyote => _coyoteUsable && !_grounded && _time < _frameLeftGrounded + _stats.CoyoteTime; //Is Coyote Jump Available
 
@@ -215,14 +222,16 @@ namespace PlayerController
             _jumpToConsume = false;
         }
 
-        private void ExecuteJump() //Perform Jump Action
+        public void ExecuteJump() //Perform Jump Action
         {
+
             _endedJumpEarly = false; //Button was not released early
             _timeJumpWasPressed = 0; //How many times was the jump pressed
             _bufferedJumpUsable = false; //The Buffered Jump Is not available for use
             _coyoteUsable = false; //Coyote Jump is not useable
             frameVelocity.y = _stats.JumpPower; //Frame movement 
             Jumped?.Invoke(); // Is jump command executed?
+            
         }
 
         #endregion
