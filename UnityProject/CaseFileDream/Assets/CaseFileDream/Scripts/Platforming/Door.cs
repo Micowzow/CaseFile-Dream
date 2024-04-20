@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Door : MonoBehaviour
 {
@@ -8,12 +9,17 @@ public class Door : MonoBehaviour
     public Transform downPos;
     public Transform upperPos;
     public Transform lantern;
-    
 
     public float speed;
     bool isDoorDown;
-   
+
+    public Light2D blueLight;
+
     // Update is called once per frame
+    private void Start()
+    {
+        blueLight.enabled = false;
+    }
     void Update()
     {
         StartBlueDoor();
@@ -28,6 +34,7 @@ public class Door : MonoBehaviour
         {
             lantern.GetComponent<LanternItemController>().DouseBlueLantern();
             Debug.Log("LiftBlueDoor");
+            blueLight.enabled = true;
             if (transform.position.y <= downPos.position.y)
             {
                 isDoorDown = true;
