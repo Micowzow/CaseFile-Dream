@@ -12,6 +12,7 @@ public class LanternItemController : MonoBehaviour
 
     public Transform refillStationBlue;
     public Transform refillStationPink;
+    public Transform refillStationPinkTwo;
 
     public ParticleSystem psBlue;
     public ParticleSystem psPink;
@@ -37,6 +38,7 @@ public class LanternItemController : MonoBehaviour
     {
         LightBlueLantern();
         LightPinkLantern();
+        LightPinkLanternTwo();
 
         float move = Input.GetAxisRaw("Horizontal");
 
@@ -95,9 +97,31 @@ public class LanternItemController : MonoBehaviour
     }
     #endregion
 
-    
+    #region Pink Lantern Fire Two
+    public void LightPinkLanternTwo()
+    {
+        if (Vector2.Distance(lantern.position, refillStationPinkTwo.position) < 2.5f && Input.GetKeyDown("q"))
+        {
+            Debug.Log("LightLanternPink");
+            isLanternPink = true;
+            psPink.Play();
+            pinkLight.enabled = true;
 
-            public void Flip()
+        }
+
+    }
+
+    public void DousePinkLanternTwo()
+    {
+        isLanternPink = false;
+        psPink.Stop();
+        pinkLight.enabled = false;
+    }
+    #endregion
+
+
+
+    public void Flip()
         {
             facingRight = !facingRight; //if player is not facing right flip transform
             transform.Rotate(0f, 180f, 0f);

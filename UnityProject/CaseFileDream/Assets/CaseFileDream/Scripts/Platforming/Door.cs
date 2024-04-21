@@ -13,12 +13,14 @@ public class Door : MonoBehaviour
     public float speed;
     bool isDoorDown;
 
-    public Light2D blueLight;
+    public Light2D light;
+    public ParticleSystem pS;
 
     // Update is called once per frame
     private void Start()
     {
-        blueLight.enabled = false;
+        light.enabled = false;
+        pS.Stop();
     }
     void Update()
     {
@@ -34,7 +36,8 @@ public class Door : MonoBehaviour
         {
             lantern.GetComponent<LanternItemController>().DouseBlueLantern();
             Debug.Log("LiftBlueDoor");
-            blueLight.enabled = true;
+            light.enabled = true;
+            pS.Play();
             if (transform.position.y <= downPos.position.y)
             {
                 isDoorDown = true;
@@ -64,6 +67,8 @@ public class Door : MonoBehaviour
         {
             lantern.GetComponent<LanternItemController>().DousePinkLantern();
             Debug.Log("LiftPinkDoor");
+            light.enabled = true;
+            pS.Play();
             if (transform.position.y <= downPos.position.y)
             {
                 isDoorDown = true;
