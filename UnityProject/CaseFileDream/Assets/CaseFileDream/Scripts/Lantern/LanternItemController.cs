@@ -9,16 +9,21 @@ public class LanternItemController : MonoBehaviour
 
     public bool isLanternBlue = false;
     public bool isLanternPink = false;
+    public bool isLanternRed = false;
 
     public Transform refillStationBlue;
+    public Transform refillStationBlueTwo;
     public Transform refillStationPink;
-    public Transform refillStationPinkTwo;
+    public Transform refillStationBlueThree;
+    public Transform refillStationRed;
 
     public ParticleSystem psBlue;
     public ParticleSystem psPink;
+    public ParticleSystem psRed;
 
     public Light2D blueLight;
     public Light2D pinkLight;
+    public Light2D redLight;
 
     public bool facingRight = true;
 
@@ -30,6 +35,7 @@ public class LanternItemController : MonoBehaviour
         //psPink.Stop();
         blueLight.enabled = false;
         pinkLight.enabled = false;
+        redLight.enabled = false;
         
     }
 
@@ -37,8 +43,10 @@ public class LanternItemController : MonoBehaviour
     void Update()
     {
         LightBlueLantern();
+        LightBlueLanternTwo();
         LightPinkLantern();
-        LightPinkLanternTwo();
+        LightBlueLanternThree();
+        LightRedLantern();
 
         float move = Input.GetAxisRaw("Horizontal");
 
@@ -75,6 +83,50 @@ public class LanternItemController : MonoBehaviour
     }
     #endregion
 
+    #region Blue Lantern Fire Two
+    public void LightBlueLanternTwo()
+    {
+        if (Vector2.Distance(lantern.position, refillStationBlueTwo.position) < 2.5f && Input.GetKeyDown("q"))
+        {
+            Debug.Log("LightLanternBlue");
+            isLanternBlue = true;
+            psBlue.Play();
+            blueLight.enabled = true;
+
+        }
+
+    }
+
+    public void DouseBlueLanternTwo()
+    {
+        isLanternBlue = false;
+        blueLight.enabled = false;
+        psBlue.Stop();
+    }
+    #endregion
+
+    #region Blue Lantern Fire Three
+    public void LightBlueLanternThree()
+    {
+        if (Vector2.Distance(lantern.position, refillStationBlueThree.position) < 2.5f && Input.GetKeyDown("q"))
+        {
+            Debug.Log("LightLanternPink");
+            isLanternBlue = true;
+            psBlue.Play();
+            blueLight.enabled = true;
+
+        }
+
+    }
+
+    public void DouseBlueLanternThree()
+    {
+        isLanternBlue = false;
+        psBlue.Stop();
+        blueLight.enabled = false;
+    }
+    #endregion
+
     #region Pink Lantern Fire
     public void LightPinkLantern()
     {
@@ -97,25 +149,26 @@ public class LanternItemController : MonoBehaviour
     }
     #endregion
 
-    #region Pink Lantern Fire Two
-    public void LightPinkLanternTwo()
+
+    #region Red Lantern Fire
+    public void LightRedLantern()
     {
-        if (Vector2.Distance(lantern.position, refillStationPinkTwo.position) < 2.5f && Input.GetKeyDown("q"))
+        if (Vector2.Distance(lantern.position, refillStationRed.position) < 2.5f && Input.GetKeyDown("q"))
         {
-            Debug.Log("LightLanternPink");
-            isLanternPink = true;
-            psPink.Play();
-            pinkLight.enabled = true;
+            Debug.Log("LightLanternRed");
+            isLanternRed = true;
+            psRed.Play();
+            redLight.enabled = true;
 
         }
 
     }
 
-    public void DousePinkLanternTwo()
+    public void DouseRedLantern()
     {
-        isLanternPink = false;
-        psPink.Stop();
-        pinkLight.enabled = false;
+        isLanternRed = false;
+        redLight.enabled = false;
+        psRed.Stop();
     }
     #endregion
 

@@ -26,6 +26,7 @@ public class Door : MonoBehaviour
     {
         StartBlueDoor();
         StartPinkDoor();
+        StartRedDoor();
 
     }
 
@@ -67,6 +68,37 @@ public class Door : MonoBehaviour
         {
             lantern.GetComponent<LanternItemController>().DousePinkLantern();
             Debug.Log("LiftPinkDoor");
+            light.enabled = true;
+            pS.Play();
+            if (transform.position.y <= downPos.position.y)
+            {
+                isDoorDown = true;
+            }
+            else if (transform.position.y >= upperPos.position.y)
+            {
+                isDoorDown = false;
+            }
+        }
+
+        if (isDoorDown)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, upperPos.position, speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, downPos.position, speed * Time.deltaTime);
+        }
+
+
+    }
+
+    public void StartRedDoor()
+    {
+        //If next to door switch and Q key is pressed and isLanternLit is true
+        if (Vector2.Distance(lantern.position, doorswitch.position) < 2.5f && Input.GetKeyDown("q") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternRed == true && gameObject.tag == "RedInteract")
+        {
+            lantern.GetComponent<LanternItemController>().DouseRedLantern();
+            Debug.Log("LiftRedDoor");
             light.enabled = true;
             pS.Play();
             if (transform.position.y <= downPos.position.y)
