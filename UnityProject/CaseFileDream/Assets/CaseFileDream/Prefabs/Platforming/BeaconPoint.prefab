@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1393664634816184719}
   - component: {fileID: 1393664634816184717}
   - component: {fileID: 1393664634816184714}
-  - component: {fileID: 3372593917277177662}
   m_Layer: 0
   m_Name: BeaconPoint
   m_TagString: CheckPoint
@@ -34,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 6931531515568386549}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1393664634816184719
 BoxCollider2D:
@@ -129,18 +128,6 @@ MonoBehaviour:
   player: {fileID: 0}
   beacon: {fileID: 1393664634816184716}
   pS: {fileID: 627445673660300683}
---- !u!114 &3372593917277177662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393664634816184718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 278943ca2685e3040a1dbc81a9b1fdce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6891033447871336541
 GameObject:
   m_ObjectHideFlags: 0

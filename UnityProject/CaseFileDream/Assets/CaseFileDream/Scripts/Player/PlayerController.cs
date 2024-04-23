@@ -105,7 +105,18 @@ namespace PlayerController
 
         }
 
-        
+        public void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(collision.tag == "Enemy")
+            {
+                transform.position = respawnPoint;
+            }
+            else if(collision.tag == "CheckPoint")
+            {
+                respawnPoint = transform.position;
+            }
+
+        }
         private void GatherInput() //Checking Player locaiton and movement Input
         {
             frameInput = new FrameInput //Frame movement

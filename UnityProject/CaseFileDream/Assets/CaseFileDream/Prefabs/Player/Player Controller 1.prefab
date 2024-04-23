@@ -419,7 +419,6 @@ GameObject:
   - component: {fileID: 6904477159415637943}
   - component: {fileID: 6904477159415637942}
   - component: {fileID: 6904477159415637897}
-  - component: {fileID: 541600540369026360}
   - component: {fileID: 6904477159415637896}
   m_Layer: 7
   m_Name: Player Controller 1
@@ -446,7 +445,7 @@ Transform:
   - {fileID: 3792703738895127071}
   - {fileID: 3792703739532390827}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6904477159415637939
 SpriteRenderer:
@@ -515,7 +514,6 @@ MonoBehaviour:
   cameraFollowGo: {fileID: 0}
   _stats: {fileID: 11400000, guid: 05e6a06c5af93134ab98ff12e2c27265, type: 2}
   facingRight: 1
-  isGrounded: 0
   speed: 0
   respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!50 &6904477159415637941
@@ -619,20 +617,6 @@ MonoBehaviour:
   _moveParticles: {fileID: 0}
   _landParticles: {fileID: 0}
   _footsteps: []
---- !u!114 &541600540369026360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3792703739849195146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb00a391fe61874cbabd7e8929f17fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnPoint: {x: 0, y: 0, z: 0}
-  player: {fileID: 0}
 --- !u!95 &6904477159415637896
 Animator:
   serializedVersion: 4
