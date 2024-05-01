@@ -11,6 +11,9 @@ TagManager:
   - CheckPoint
   - BlueInteract
   - PinkInteract
+  - NPC
+  - PinkRefill
+  - RedInteract
   layers:
   - Default
   - TransparentFX
@@ -45,6 +48,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackDrop
+    uniqueID: 3730657745
+    locked: 0
   - name: Background 3
     uniqueID: 1678775907
     locked: 0
