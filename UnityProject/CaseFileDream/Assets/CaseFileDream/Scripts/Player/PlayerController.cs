@@ -12,7 +12,7 @@ namespace PlayerController
         [SerializeField] private GameObject cameraFollowGo;
 
         //Components for scriptable assets
-        [SerializeField] private ScriptableStats _stats;
+        [SerializeField] private ScriptableStats stats;
         private Rigidbody2D rb; //Rigidbody Componenet
 
         private CapsuleCollider2D col; //Capsuale Colliders
@@ -35,6 +35,9 @@ namespace PlayerController
         private float fallSpeedYDampingChangeThreshold;
 
         public Vector3 respawnPoint;
+
+        public Rigidbody2D platform;
+
         
 
 
@@ -48,7 +51,7 @@ namespace PlayerController
 
         #endregion
 
-        private float _time;
+        private float time;
 
         private void Awake()
         {
@@ -68,7 +71,7 @@ namespace PlayerController
 
         private void Update()
         {
-            _time += Time.deltaTime;
+            time += Time.deltaTime;
             GatherInput();
 
             float move = Input.GetAxisRaw("Horizontal");
@@ -104,8 +107,28 @@ namespace PlayerController
             }
 
         }
-
         
+
+        public void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("MovingPlatform"))
+            {
+                transform.parent = collision.transform;
+                platform = collision.gameObject.GetComponent<Rigidbody2D>();
+                rb.gravityScale = 10;
+            }
+        }
+
+        public void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("MovingPlatform"))
+            {
+                transform.parent = null;
+                platform = null;
+                rb.gravityScale = 0f;
+            }
+        }
+
         private void GatherInput() //Checking Player locaiton and movement Input
         {
             frameInput = new FrameInput //Frame movement
@@ -115,18 +138,18 @@ namespace PlayerController
                 Move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) //Movement on Veritcal axis
             };
 
-            if (_stats.SnapInput)
+            if (stats.SnapInput)
             {
                 //Frame movement on Horizontal
-                frameInput.Move.x = Mathf.Abs(frameInput.Move.x) < _stats.HorizontalDeadZoneThreshold ? 0 : Mathf.Sign(frameInput.Move.x); 
+                frameInput.Move.x = Mathf.Abs(frameInput.Move.x) < stats.HorizontalDeadZoneThreshold ? 0 : Mathf.Sign(frameInput.Move.x); 
                 //Frame movement on Vertical
-                frameInput.Move.y = Mathf.Abs(frameInput.Move.y) < _stats.VerticalDeadZoneThreshold ? 0 : Mathf.Sign(frameInput.Move.y);
+                frameInput.Move.y = Mathf.Abs(frameInput.Move.y) < stats.VerticalDeadZoneThreshold ? 0 : Mathf.Sign(frameInput.Move.y);
             }
 
             if (frameInput.JumpDown) //Checking if jump is pressed per frame
             {
-                _jumpToConsume = true;
-                _timeJumpWasPressed = _time;
+                jumpToConsume = true;
+                timeJumpWasPressed = time;
             }
         }
 
@@ -142,43 +165,43 @@ namespace PlayerController
             HandleGravity();
             
             ApplyMovement();
-            
 
-          
+           
+
         }
 
         #region Collisions
         
-        private float _frameLeftGrounded = float.MinValue;
-        private bool _grounded; //Player grounded bool
+        private float frameLeftGrounded = float.MinValue;
+        private bool grounded; //Player grounded bool
 
         private void CheckCollisions() //Checking surface Collision
         {
             Physics2D.queriesStartInColliders = false;
 
             // Ground and Ceiling Checks
-            bool groundHit = Physics2D.CapsuleCast(col.bounds.center, col.size, col.direction, 0, Vector2.down, _stats.GrounderDistance, ~_stats.PlayerLayer);
-            bool ceilingHit = Physics2D.CapsuleCast(col.bounds.center, col.size, col.direction, 0, Vector2.up, _stats.GrounderDistance, ~_stats.PlayerLayer);
+            bool groundHit = Physics2D.CapsuleCast(col.bounds.center, col.size, col.direction, 0, Vector2.down, stats.GrounderDistance, ~stats.PlayerLayer);
+            bool ceilingHit = Physics2D.CapsuleCast(col.bounds.center, col.size, col.direction, 0, Vector2.up, stats.GrounderDistance, ~stats.PlayerLayer);
 
             // Hit a Ceiling
             if (ceilingHit) frameVelocity.y = Mathf.Min(0, frameVelocity.y);
 
             // Landed on the Ground
-            if (!_grounded && groundHit)
+            if (!grounded && groundHit)
             {
-                _grounded = true;
+                grounded = true;
                 animator.SetBool("isJumping", false);
-                _coyoteUsable = true;
-                _bufferedJumpUsable = true;
-                _endedJumpEarly = false;
+                coyoteUsable = true;
+                bufferedJumpUsable = true;
+                endedJumpEarly = false;
                 GroundedChanged?.Invoke(true, Mathf.Abs(frameVelocity.y));
             }
             // Left the Ground
-            else if (_grounded && !groundHit)
+            else if (grounded && !groundHit)
             {
-                _grounded = false;
-                animator.SetBool("isJumping", !_grounded);
-                _frameLeftGrounded = _time;
+                grounded = false;
+                animator.SetBool("isJumping", !grounded);
+                frameLeftGrounded = time;
                 GroundedChanged?.Invoke(false, 0);
             }
 
@@ -190,35 +213,35 @@ namespace PlayerController
 
         #region Jumping 
 
-        private bool _jumpToConsume; //Is there a Jump to use
-        private bool _bufferedJumpUsable; //Next Jump Queued for use
-        private bool _endedJumpEarly; //was kump key release early
-        private bool _coyoteUsable; //Jump usable for small amount of time after leaving surface
-        private float _timeJumpWasPressed; //Jump key was Pressed
+        private bool jumpToConsume; //Is there a Jump to use
+        private bool bufferedJumpUsable; //Next Jump Queued for use
+        private bool endedJumpEarly; //was kump key release early
+        private bool coyoteUsable; //Jump usable for small amount of time after leaving surface
+        private float timeJumpWasPressed; //Jump key was Pressed
 
 
-        private bool HasBufferedJump => _bufferedJumpUsable && _time < _timeJumpWasPressed + _stats.JumpBuffer; //Buffered Jump Is Queued
-        private bool CanUseCoyote => _coyoteUsable && !_grounded && _time < _frameLeftGrounded + _stats.CoyoteTime; //Is Coyote Jump Available
+        private bool HasBufferedJump => bufferedJumpUsable && time < timeJumpWasPressed + stats.JumpBuffer; //Buffered Jump Is Queued
+        private bool CanUseCoyote => coyoteUsable && !grounded && time < frameLeftGrounded + stats.CoyoteTime; //Is Coyote Jump Available
 
         private void HandleJump() //Checking for Jump
         {
-            if (!_endedJumpEarly && !_grounded && !frameInput.JumpHeld && rb.velocity.y > 0) _endedJumpEarly = true; //Ending jump when key released
+            if (!endedJumpEarly && !grounded && !frameInput.JumpHeld && rb.velocity.y > 0) endedJumpEarly = true; //Ending jump when key released
 
-            if (!_jumpToConsume && !HasBufferedJump) return; //If there is no jump to use and no Queud Jump DO NOT JUMP
+            if (!jumpToConsume && !HasBufferedJump) return; //If there is no jump to use and no Queud Jump DO NOT JUMP
 
-            if (_grounded || CanUseCoyote) ExecuteJump(); //if grounded and is able to use jump Execute Jump Method
+            if (grounded || CanUseCoyote) ExecuteJump(); //if grounded and is able to use jump Execute Jump Method
 
-            _jumpToConsume = false;
+            jumpToConsume = false;
         }
 
         public void ExecuteJump() //Perform Jump Action
         {
 
-            _endedJumpEarly = false; //Button was not released early
-            _timeJumpWasPressed = 0; //How many times was the jump pressed
-            _bufferedJumpUsable = false; //The Buffered Jump Is not available for use
-            _coyoteUsable = false; //Coyote Jump is not useable
-            frameVelocity.y = _stats.JumpPower; //Frame movement 
+            endedJumpEarly = false; //Button was not released early
+            timeJumpWasPressed = 0; //How many times was the jump pressed
+            bufferedJumpUsable = false; //The Buffered Jump Is not available for use
+            coyoteUsable = false; //Coyote Jump is not useable
+            frameVelocity.y = stats.JumpPower; //Frame movement 
             Jumped?.Invoke(); // Is jump command executed?
             
         }
@@ -231,12 +254,12 @@ namespace PlayerController
         {
             if (frameInput.Move.x == 0)
             {
-                var deceleration = _grounded ? _stats.GroundDeceleration : _stats.AirDeceleration;
+                var deceleration = grounded ? stats.GroundDeceleration : stats.AirDeceleration;
                 frameVelocity.x = Mathf.MoveTowards(frameVelocity.x, 0, deceleration * Time.fixedDeltaTime);
             }
             else
             {
-                frameVelocity.x = Mathf.MoveTowards(frameVelocity.x, frameInput.Move.x * _stats.MaxSpeed, _stats.Acceleration * Time.fixedDeltaTime);
+                frameVelocity.x = Mathf.MoveTowards(frameVelocity.x, frameInput.Move.x * stats.MaxSpeed, stats.Acceleration * Time.fixedDeltaTime);
             }
 
             animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
@@ -254,15 +277,15 @@ namespace PlayerController
 
         private void HandleGravity() //Gravity 
         {
-            if (_grounded && frameVelocity.y <= 0f)
+            if (grounded && frameVelocity.y <= 0f)
             {
-                frameVelocity.y = _stats.GroundingForce;
+                frameVelocity.y = stats.GroundingForce;
             }
             else
             {
-                var inAirGravity = _stats.FallAcceleration;
-                if (_endedJumpEarly && frameVelocity.y > 0) inAirGravity *= _stats.JumpEndEarlyGravityModifier;
-                frameVelocity.y = Mathf.MoveTowards(frameVelocity.y, -_stats.MaxFallSpeed, inAirGravity * Time.fixedDeltaTime);
+                var inAirGravity = stats.FallAcceleration;
+                if (endedJumpEarly && frameVelocity.y > 0) inAirGravity *= stats.JumpEndEarlyGravityModifier;
+                frameVelocity.y = Mathf.MoveTowards(frameVelocity.y, -stats.MaxFallSpeed, inAirGravity * Time.fixedDeltaTime);
             }
         }
 
@@ -273,7 +296,7 @@ namespace PlayerController
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            if (_stats == null) Debug.LogWarning("Please assign a ScriptableStats asset to the Player Controller's Stats slot", this);
+            if (stats == null) Debug.LogWarning("Please assign a ScriptableStats asset to the Player Controller's Stats slot", this);
         }
 
         bool CanMove()
@@ -289,6 +312,8 @@ namespace PlayerController
     }
 #endif
     }
+
+    
 
     
 
