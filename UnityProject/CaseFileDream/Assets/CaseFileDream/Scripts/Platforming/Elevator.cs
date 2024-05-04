@@ -54,6 +54,7 @@ public class Elevator : MonoBehaviour
         {
             lantern.GetComponent<LanternItemController>().DouseBlueLantern();
             Debug.Log("StartedElevator");
+            recallElevator.transform.Rotate(0f, 180f, 0f);
             if (transform.position.y <= downPos.position.y)
             {
                 isElevaterDown = true;

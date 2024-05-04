@@ -16,6 +16,19 @@ public class DialogueManager : MonoBehaviour
 
     public bool isDialogueActive = false;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         if (Instance == null)
