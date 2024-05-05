@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame ()
     {
+        LevelManager.Instance.LoadScene("TutorialLevel", "CrossFade");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
 
 

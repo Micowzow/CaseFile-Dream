@@ -49,7 +49,7 @@ public class LevelManager : MonoBehaviour
         {
             progressBar.value = scene.progress;
             yield return null;
-        } while (scene.progress < 0.9f);
+        } while (scene.progress < 0.1f);
 
         scene.allowSceneActivation = true;
         progressBar.gameObject.SetActive(false);
