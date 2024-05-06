@@ -65,7 +65,7 @@ namespace PlayerController
         private void Start()
         {
             cameraFollowObject = cameraFollowGo.GetComponent<CameraFollowObject>();
-            fallSpeedYDampingChangeThreshold = CameraManager.instance.fallSpeedYDampingChangeThreshold;
+           
             respawnPoint = transform.position;
         }
 
@@ -91,20 +91,8 @@ namespace PlayerController
                 cameraFollowObject.CallTurn();
             }
 
-            //If player is falling past a certain speed threshold
-            if(rb.velocity.y < fallSpeedYDampingChangeThreshold && !CameraManager.instance.LerpedFromPlayerFalling)
-            {
-                CameraManager.instance.LerpingYDamping(true);
-            }
-
-            //if player is standing still or moving up
-            if (rb.velocity.y >= 0f && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
-            {
-                //reset so it can be called again
-                CameraManager.instance.LerpedFromPlayerFalling = false;
-
-                CameraManager.instance.LerpingYDamping(false);
-            }
+            
+           
 
         }
         
@@ -112,6 +100,12 @@ namespace PlayerController
         public void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.CompareTag("MovingPlatform"))
+            {
+                transform.parent = collision.transform;
+                platform = collision.gameObject.GetComponent<Rigidbody2D>();
+                rb.gravityScale = 10;
+            }
+            if (collision.gameObject.CompareTag("LanternInteract"))
             {
                 transform.parent = collision.transform;
                 platform = collision.gameObject.GetComponent<Rigidbody2D>();
@@ -126,6 +120,12 @@ namespace PlayerController
                 transform.parent = null;
                 platform = null;
                 rb.gravityScale = 0f;
+            }
+            if (collision.gameObject.CompareTag("LanternInteract"))
+            {
+                transform.parent = null;
+                platform = null;
+                rb.gravityScale = 0;
             }
         }
 
@@ -158,8 +158,8 @@ namespace PlayerController
             animator.SetFloat("yVelocity", rb.velocity.y);
             CheckCollisions();
 
-            if(CanMove()==false)
-                return;
+            //if(CanMove()==false)
+             //   return;
 
             HandleJump();
             HandleGravity();

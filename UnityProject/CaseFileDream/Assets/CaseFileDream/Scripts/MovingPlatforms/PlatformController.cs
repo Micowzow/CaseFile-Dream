@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 namespace MovingPlatforms
 {
     public enum WaypointPathType
@@ -106,8 +108,8 @@ namespace MovingPlatforms
         }
         private void OnDrawGizmos()
         {
-            if (IsSelected() && editing)
-                return;
+           // if (IsSelected() && editing)
+           //     return;
 
             if (pathType == WaypointPathType.Closed)
             {
@@ -136,10 +138,10 @@ namespace MovingPlatforms
             }
         }
 
-        private bool IsSelected()
-        {
-            return UnityEditor.Selection.activeGameObject == transform.gameObject;
-        }
+        //private bool IsSelected()
+       // {
+       //     return UnityEditor.Selection.activeGameObject == transform.gameObject;
+       // }
 
         int mod(int x, int m)
         {
