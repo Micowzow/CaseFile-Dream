@@ -38722,7 +38722,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.9981117}
+  m_Offset: {x: 0.04586792, y: -0.9981117}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -38733,7 +38733,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.371582}
+  m_Size: {x: 4.3208313, y: 3.371582}
   m_EdgeRadius: 0
 --- !u!212 &659219372
 SpriteRenderer:
@@ -45065,11 +45065,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b25878861d2a144a24adab18ca0134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allVirtualCameras:
-  - {fileID: 464725922}
-  fallPanAmount: 0.25
-  fallPanTime: 0.35
-  fallSpeedYDampingChangeThreshold: -15
 --- !u!4 &764012616
 Transform:
   m_ObjectHideFlags: 0
@@ -111052,6 +111047,14 @@ PrefabInstance:
     - target: {fileID: 9005738667318565385, guid: bf6810e622981fd4aaeb709e44f6ad2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005738667318565387, guid: bf6810e622981fd4aaeb709e44f6ad2a, type: 3}
+      propertyPath: m_Size.x
+      value: 4.6453705
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005738667318565387, guid: bf6810e622981fd4aaeb709e44f6ad2a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.044456482
       objectReference: {fileID: 0}
     - target: {fileID: 9005738667318565397, guid: bf6810e622981fd4aaeb709e44f6ad2a, type: 3}
       propertyPath: m_Name

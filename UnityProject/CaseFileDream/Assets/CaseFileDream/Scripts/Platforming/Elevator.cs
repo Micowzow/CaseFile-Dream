@@ -13,6 +13,7 @@ public class Elevator : MonoBehaviour
 
     public float speed;
     bool isElevaterDown;
+    public bool hasBeenActivated;
 
     // Update is called once per frame
     void Update()
@@ -31,10 +32,12 @@ public class Elevator : MonoBehaviour
             if(transform.position.y <= downPos.position.y)
             {
                 isElevaterDown = true;
+                hasBeenActivated = true;
             }
             else if(transform.position.y >= upperPos.position.y)
             {
                 isElevaterDown = false;
+                hasBeenActivated = true;
             }
         }
 
@@ -50,7 +53,7 @@ public class Elevator : MonoBehaviour
 
 
         //If Elevator is gone recall at recall station
-        if (Vector2.Distance(lantern.position, recallElevator.position) < 2.5f && Input.GetKeyDown("q") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternBlue == true)
+        if (Vector2.Distance(lantern.position, recallElevator.position) < 2.5f && Input.GetKeyDown("q") && hasBeenActivated == true)
         {
             lantern.GetComponent<LanternItemController>().DouseBlueLantern();
             Debug.Log("StartedElevator");
