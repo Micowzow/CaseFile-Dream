@@ -16,13 +16,15 @@ namespace PlayerController
 
         private PlayerController player;
 
+        private PlayerExtra playerExtra;
+
         private bool isfacingRight;
 
         private void Awake()
         {
-            player = playerTransform.gameObject.GetComponent<PlayerController>();
+            playerExtra = playerTransform.gameObject.GetComponent<PlayerExtra>();
 
-            isfacingRight = player.facingRight;
+            isfacingRight = playerExtra.facingRight;
         }
 
         private void Update()

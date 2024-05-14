@@ -22,26 +22,8 @@ namespace PlayerController
         private Vector2 frameVelocity; //Movement per frame
 
         private bool cachedQueryStartInColliders;
-
-        Animator animator;
-
-        public bool facingRight = true;
-
-        public bool isGrounded = false;
-
-        public float speed; //Keep In case
-
-        private CameraFollowObject cameraFollowObject;
-        private float fallSpeedYDampingChangeThreshold;
-
-        public Vector3 respawnPoint;
-
-        public Rigidbody2D platform;
-
+           
         
-
-
-       
 
         #region Interface
 
@@ -58,15 +40,12 @@ namespace PlayerController
             rb = GetComponent<Rigidbody2D>(); //Call Rigidbody
             col = GetComponent<CapsuleCollider2D>(); //Call Capsule Collider
 
-            cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
-            animator = GetComponent<Animator>();
+            cachedQueryStartInColliders = Physics2D.queriesStartInColliders;          
         }
 
         private void Start()
         {
-            cameraFollowObject = cameraFollowGo.GetComponent<CameraFollowObject>();
-           
-            respawnPoint = transform.position;
+
         }
 
         private void Update()
@@ -76,58 +55,11 @@ namespace PlayerController
 
             float move = Input.GetAxisRaw("Horizontal");
 
-            //rb.velocity = new Vector2(move * speed, rb.velocity.y); //Can't remember what this was for?
 
             HandleDirection();
-
-            if (move < 0 && facingRight)
-            {
-                Flip();
-                cameraFollowObject.CallTurn();
-            }
-            else if(move>0 && !facingRight)
-            {
-                Flip();
-                cameraFollowObject.CallTurn();
-            }
-
-            
-           
-
+                                
         }
-        
-
-        public void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.gameObject.CompareTag("MovingPlatform"))
-            {
-                transform.parent = collision.transform;
-                platform = collision.gameObject.GetComponent<Rigidbody2D>();
-                rb.gravityScale = 10;
-            }
-            if (collision.gameObject.CompareTag("LanternInteract"))
-            {
-                transform.parent = collision.transform;
-                platform = collision.gameObject.GetComponent<Rigidbody2D>();
-                rb.gravityScale = 10;
-            }
-        }
-
-        public void OnTriggerExit2D(Collider2D collision)
-        {
-            if (collision.gameObject.CompareTag("MovingPlatform"))
-            {
-                transform.parent = null;
-                platform = null;
-                rb.gravityScale = 0f;
-            }
-            if (collision.gameObject.CompareTag("LanternInteract"))
-            {
-                transform.parent = null;
-                platform = null;
-                rb.gravityScale = 0;
-            }
-        }
+               
 
         private void GatherInput() //Checking Player locaiton and movement Input
         {
@@ -155,11 +87,7 @@ namespace PlayerController
 
         public void FixedUpdate() //Checking Methods
         {
-            animator.SetFloat("yVelocity", rb.velocity.y);
             CheckCollisions();
-
-            //if(CanMove()==false)
-             //   return;
 
             HandleJump();
             HandleGravity();
@@ -190,7 +118,6 @@ namespace PlayerController
             if (!grounded && groundHit)
             {
                 grounded = true;
-                animator.SetBool("isJumping", false);
                 coyoteUsable = true;
                 bufferedJumpUsable = true;
                 endedJumpEarly = false;
@@ -200,7 +127,6 @@ namespace PlayerController
             else if (grounded && !groundHit)
             {
                 grounded = false;
-                animator.SetBool("isJumping", !grounded);
                 frameLeftGrounded = time;
                 GroundedChanged?.Invoke(false, 0);
             }
@@ -262,16 +188,11 @@ namespace PlayerController
                 frameVelocity.x = Mathf.MoveTowards(frameVelocity.x, frameInput.Move.x * stats.MaxSpeed, stats.Acceleration * Time.fixedDeltaTime);
             }
 
-            animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
+           
         }
 
         #endregion
 
-        public void Flip()
-        {
-            facingRight = !facingRight; //if player is not facing right flip transform
-            transform.Rotate(0f, 180f, 0f);
-        }
 
         #region Gravity
 
@@ -299,17 +220,7 @@ namespace PlayerController
             if (stats == null) Debug.LogWarning("Please assign a ScriptableStats asset to the Player Controller's Stats slot", this);
         }
 
-        bool CanMove()
-        {
-            bool can = true;
-
-            if (FindObjectOfType<InteractionSystem>().isExamining)
-                can = false;
-
-            return can;
-
-
-    }
+    
 #endif
     }
 
