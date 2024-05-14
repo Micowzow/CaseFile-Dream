@@ -25,7 +25,7 @@ public class Elevator : MonoBehaviour
     public void StartElevator()
     {
         //If next to elevator switch and Q key is pressed and isLanternLit is true
-        if(Vector2.Distance(lantern.position,elevatorSwitch.position)<2.5f && Input.GetKeyDown("q") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternBlue == true)
+        if(Vector2.Distance(lantern.position,elevatorSwitch.position)<2.5f && Input.GetKeyDown("f") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternBlue == true)
         {
             lantern.GetComponent<LanternItemController>().DouseBlueLantern();
             Debug.Log("StartedElevator/door");
@@ -53,7 +53,7 @@ public class Elevator : MonoBehaviour
 
 
         //If Elevator is gone recall at recall station
-        if (Vector2.Distance(lantern.position, recallElevator.position) < 2.5f && Input.GetKeyDown("q") && hasBeenActivated == true)
+        if (Vector2.Distance(lantern.position, recallElevator.position) < 2.5f && Input.GetKeyDown("f") && hasBeenActivated == true)
         {
             lantern.GetComponent<LanternItemController>().DouseBlueLantern();
             Debug.Log("StartedElevator");

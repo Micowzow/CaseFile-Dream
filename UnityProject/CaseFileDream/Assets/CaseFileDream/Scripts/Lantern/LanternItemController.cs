@@ -64,7 +64,7 @@ public class LanternItemController : MonoBehaviour
     #region Blue Lantern Fire
     public void LightBlueLantern()
     {
-        if (Vector2.Distance(lantern.position, refillStationBlue.position) < 2.5f && Input.GetKeyDown("q"))
+        if (Vector2.Distance(lantern.position, refillStationBlue.position) < 2.5f && Input.GetKeyDown("f"))
         {
             Debug.Log("LightLanternBlue");
             isLanternBlue = true;
@@ -86,7 +86,7 @@ public class LanternItemController : MonoBehaviour
     #region Blue Lantern Fire Two
     public void LightBlueLanternTwo()
     {
-        if (Vector2.Distance(lantern.position, refillStationBlueTwo.position) < 2.5f && Input.GetKeyDown("q"))
+        if (Vector2.Distance(lantern.position, refillStationBlueTwo.position) < 2.5f && Input.GetKeyDown("f"))
         {
             Debug.Log("LightLanternBlue");
             isLanternBlue = true;
@@ -108,7 +108,7 @@ public class LanternItemController : MonoBehaviour
     #region Blue Lantern Fire Three
     public void LightBlueLanternThree()
     {
-        if (Vector2.Distance(lantern.position, refillStationBlueThree.position) < 2.5f && Input.GetKeyDown("q"))
+        if (Vector2.Distance(lantern.position, refillStationBlueThree.position) < 2.5f && Input.GetKeyDown("f"))
         {
             Debug.Log("LightLanternPink");
             isLanternBlue = true;
@@ -130,7 +130,7 @@ public class LanternItemController : MonoBehaviour
     #region Pink Lantern Fire
     public void LightPinkLantern()
     {
-        if (Vector2.Distance(lantern.position, refillStationPink.position) < 2.5f && Input.GetKeyDown("q"))
+        if (Vector2.Distance(lantern.position, refillStationPink.position) < 2.5f && Input.GetKeyDown("f"))
         {
             Debug.Log("LightLanternPink");
             isLanternPink = true;
@@ -153,7 +153,7 @@ public class LanternItemController : MonoBehaviour
     #region Red Lantern Fire
     public void LightRedLantern()
     {
-        if (Vector2.Distance(lantern.position, refillStationRed.position) < 2.5f && Input.GetKeyDown("q"))
+        if (Vector2.Distance(lantern.position, refillStationRed.position) < 2.5f && Input.GetKeyDown("f"))
         {
             Debug.Log("LightLanternRed");
             isLanternRed = true;

@@ -33,7 +33,7 @@ public class Door : MonoBehaviour
     public void StartBlueDoor()
     {
         //If next to door switch and Q key is pressed and isLanternLit is true
-        if (Vector2.Distance(lantern.position, doorswitch.position) < 2.5f && Input.GetKeyDown("q") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternBlue == true && gameObject.tag == "BlueInteract")
+        if (Vector2.Distance(lantern.position, doorswitch.position) < 2.5f && Input.GetKeyDown("f") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternBlue == true && gameObject.tag == "BlueInteract")
         {
             lantern.GetComponent<LanternItemController>().DouseBlueLantern();
             Debug.Log("LiftBlueDoor");
@@ -64,7 +64,7 @@ public class Door : MonoBehaviour
     public void StartPinkDoor()
     {
         //If next to door switch and Q key is pressed and isLanternLit is true
-        if (Vector2.Distance(lantern.position, doorswitch.position) < 2.5f && Input.GetKeyDown("q") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternPink == true && gameObject.tag == "PinkInteract")
+        if (Vector2.Distance(lantern.position, doorswitch.position) < 2.5f && Input.GetKeyDown("f") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternPink == true && gameObject.tag == "PinkInteract")
         {
             lantern.GetComponent<LanternItemController>().DousePinkLantern();
             Debug.Log("LiftPinkDoor");
@@ -95,7 +95,7 @@ public class Door : MonoBehaviour
     public void StartRedDoor()
     {
         //If next to door switch and Q key is pressed and isLanternLit is true
-        if (Vector2.Distance(lantern.position, doorswitch.position) < 2.5f && Input.GetKeyDown("q") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternRed == true && gameObject.tag == "RedInteract")
+        if (Vector2.Distance(lantern.position, doorswitch.position) < 2.5f && Input.GetKeyDown("f") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternRed == true && gameObject.tag == "RedInteract")
         {
             lantern.GetComponent<LanternItemController>().DouseRedLantern();
             Debug.Log("LiftRedDoor");
