@@ -39,6 +39,7 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator LoadSceneAsync(string sceneName, string transitionName)
     {
+
         SceneTransition transition = transitions.First(t => t.name == transitionName);
         AsyncOperation scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
