@@ -5,16 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
+    public bool hasEntered = false;
     public void change()
     {
        
     }
-
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void Update()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        
+    }
+
+
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        hasEntered = true;
+
+        if (collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
         {
             LevelManager.Instance.LoadScene("New Scene", "CrossFade");
         }
+
     }
 }

@@ -6,6 +6,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
+    public bool hasEntered = false;
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
@@ -14,7 +15,19 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        hasEntered = true;
+
+        if(collision.tag == "Player" && Input.GetKeyDown(KeyCode.F))
+        {
+            TriggerDialogue();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        hasEntered = true;
+
+        if (collision.tag == "Player" && Input.GetKeyDown(KeyCode.F))
         {
             TriggerDialogue();
         }
