@@ -27994,7 +27994,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 8.181818
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -28806,6 +28806,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1a33b45a05d989947b1f0ed3f262c9d0, type: 3}
+    - target: {fileID: 5226888003657372057, guid: 478c1d18d0c379247807403fba188767, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9014209383540401985, guid: 478c1d18d0c379247807403fba188767, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -31204,10 +31208,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5226888003657372057, guid: 478c1d18d0c379247807403fba188767, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9014209383540401985, guid: 478c1d18d0c379247807403fba188767, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 86d27e4ade04bbf46861a3930ffce994, type: 3}
+    - target: {fileID: 9014209383540401985, guid: 478c1d18d0c379247807403fba188767, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014209383540401985, guid: 478c1d18d0c379247807403fba188767, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 478c1d18d0c379247807403fba188767, type: 3}
@@ -34008,6 +34024,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 415401488}
     m_Modifications:
+    - target: {fileID: 5616968941546889066, guid: 9c50b24327d630d4f9ca92bcfcd082bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8790443974799645199, guid: 9c50b24327d630d4f9ca92bcfcd082bd, type: 3}
       propertyPath: lantern
       value: 
@@ -71291,6 +71311,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 5652944419399811872, guid: a3f77044a057b3f478d0fcbe48eeff9a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6316732258562893461, guid: a3f77044a057b3f478d0fcbe48eeff9a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -75003,6 +75027,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 415401488}
     m_Modifications:
+    - target: {fileID: 5616968941546889066, guid: 9c50b24327d630d4f9ca92bcfcd082bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8790443974799645199, guid: 9c50b24327d630d4f9ca92bcfcd082bd, type: 3}
       propertyPath: lantern
       value: 
