@@ -36533,9 +36533,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1393664634816184717, guid: e06a00e167f85da4fa317e144088f750, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393664634816184717, guid: e06a00e167f85da4fa317e144088f750, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9761a00aee753234189abe8c4499337e, type: 3}
+      objectReference: {fileID: 21300000, guid: 9a31f79dd45a929448c0ab36cf380a20, type: 3}
     - target: {fileID: 1393664634816184717, guid: e06a00e167f85da4fa317e144088f750, type: 3}
       propertyPath: m_SortingLayer
       value: -1
@@ -69489,7 +69493,7 @@ SpriteRenderer:
   m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1a6440f922d1c434d8d34b989b0621d3, type: 3}
-  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -74628,9 +74632,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1393664634816184717, guid: e06a00e167f85da4fa317e144088f750, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393664634816184717, guid: e06a00e167f85da4fa317e144088f750, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393664634816184717, guid: e06a00e167f85da4fa317e144088f750, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9761a00aee753234189abe8c4499337e, type: 3}
+      objectReference: {fileID: 21300000, guid: ead335c4c6b7fa544bde14eef7d14ffd, type: 3}
     - target: {fileID: 1393664634816184717, guid: e06a00e167f85da4fa317e144088f750, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -77498,6 +77510,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1393664634816184717, guid: e06a00e167f85da4fa317e144088f750, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 90b45aa7b2d726747b4b9f93a5b9bb5a, type: 3}
     - target: {fileID: 1393664634816184717, guid: e06a00e167f85da4fa317e144088f750, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
