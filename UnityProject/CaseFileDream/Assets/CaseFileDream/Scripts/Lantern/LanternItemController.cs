@@ -20,7 +20,9 @@ public class LanternItemController : MonoBehaviour
     public Light2D pinkLight;
     public Light2D redLight;
 
-
+    public bool inRangeBlue = false;
+    public bool inRangePink = false;
+    public bool inRangeRed = false;
     public bool facingRight = true;
 
 
@@ -51,28 +53,47 @@ public class LanternItemController : MonoBehaviour
                 Flip();
                 
             }
-    }
 
-    public void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("BlueRefill") && Input.GetKeyDown(KeyCode.F))
+        if (inRangeBlue == true && Input.GetKeyDown(KeyCode.F))
         {
             LightBlueLantern();
         }
-
-        if (collision.gameObject.CompareTag("PinkRefill") && Input.GetKeyDown(KeyCode.F))
+        if (inRangePink == true && Input.GetKeyDown(KeyCode.F))
         {
             LightPinkLantern();
         }
-        if (collision.gameObject.CompareTag("RedRefill") && Input.GetKeyDown(KeyCode.F))
+        if (inRangeRed == true && Input.GetKeyDown(KeyCode.F))
         {
             LightRedLantern();
+        }
+    }
+    
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        if (collision.gameObject.CompareTag("BlueRefill"))
+        {
+            inRangeBlue = true;
+            
+        }
+
+        if (collision.gameObject.CompareTag("PinkRefill"))
+        {
+            inRangePink = true;
+            
+        }
+        if (collision.gameObject.CompareTag("RedRefill"))
+        {
+            inRangeRed = true;
+            
         }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-       
+        inRangeBlue = false;
+        inRangePink = false;
+        inRangeRed = false;
     }
     #region Blue Lantern Fire
     public void LightBlueLantern()
