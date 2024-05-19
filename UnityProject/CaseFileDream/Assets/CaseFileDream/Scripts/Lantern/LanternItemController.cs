@@ -60,11 +60,11 @@ public class LanternItemController : MonoBehaviour
             LightBlueLantern();
         }
 
-        if (collision.gameObject.CompareTag("PinkRefill"))
+        if (collision.gameObject.CompareTag("PinkRefill") && Input.GetKeyDown(KeyCode.F))
         {
             LightPinkLantern();
         }
-        if (collision.gameObject.CompareTag("RedRefill"))
+        if (collision.gameObject.CompareTag("RedRefill") && Input.GetKeyDown(KeyCode.F))
         {
             LightRedLantern();
         }
