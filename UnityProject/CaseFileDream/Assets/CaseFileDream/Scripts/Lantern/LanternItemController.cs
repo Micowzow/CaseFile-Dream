@@ -53,9 +53,9 @@ public class LanternItemController : MonoBehaviour
             }
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("BlueRefill"))
+        if (collision.gameObject.CompareTag("BlueRefill") && Input.GetKeyDown(KeyCode.F))
         {
             LightBlueLantern();
         }
