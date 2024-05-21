@@ -6,7 +6,17 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
-    public bool hasEntered = false;
+    public bool canTalk = false;
+
+    public void Update()
+    {
+        if(canTalk == true && Input.GetKeyDown(KeyCode.F))
+        {
+            TriggerDialogue();
+
+        }
+
+    }
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
@@ -15,27 +25,18 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hasEntered = true;
-
-        if(collision.tag == "Player" && Input.GetKeyDown(KeyCode.F))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            TriggerDialogue();
-        }
-    }
+            canTalk = true;
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        hasEntered = true;
-
-        if (collision.tag == "Player" && Input.GetKeyDown(KeyCode.F))
-        {
-            TriggerDialogue();
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         FindObjectOfType<DialogueManager>().EndDialogue();
+        canTalk = false;
 
     }
 }

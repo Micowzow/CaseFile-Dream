@@ -12,18 +12,27 @@ public class SceneChange : MonoBehaviour
     }
     public void Update()
     {
+        if (hasEntered == true && Input.GetKeyDown(KeyCode.F))
+        {
+            LevelManager.Instance.LoadScene("New Scene", "CrossFade");
+        }
         
     }
 
 
-    public void OnTriggerStay2D(Collider2D collision)
-    {
-        hasEntered = true;
-
-        if (collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
+    public void OnTriggerEnter2D(Collider2D collision)
+    { 
+        if (collision.gameObject.CompareTag("Player"))
         {
-            LevelManager.Instance.LoadScene("New Scene", "CrossFade");
+            hasEntered = true;
+
         }
+
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        hasEntered = false;
 
     }
 }

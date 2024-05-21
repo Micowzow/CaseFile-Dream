@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Elevator : MonoBehaviour
+public class ElevatorBlue : MonoBehaviour
 {
     public Transform elevatorSwitch;
     public Transform downPos;
@@ -18,13 +18,13 @@ public class Elevator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartElevator();
+        StartElevatorBlue();
 
     }
 
-    public void StartElevator()
+    public void StartElevatorBlue()
     {
-        //If next to elevator switch and Q key is pressed and isLanternLit is true
+        //If next to elevator switch and F key is pressed and isLanternLit is true
         if(Vector2.Distance(lantern.position,elevatorSwitch.position)<2f && Input.GetKeyDown("f") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternBlue == true)
         {
             lantern.GetComponent<LanternItemController>().DouseBlueLantern();
@@ -50,7 +50,7 @@ public class Elevator : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, downPos.position, speed * Time.deltaTime);
         }
 
-
+        
 
         //If Elevator is gone recall at recall station
         if (Vector2.Distance(lantern.position, recallElevator.position) < 2.5f && Input.GetKeyDown("f") && hasBeenActivated == true)
@@ -77,8 +77,13 @@ public class Elevator : MonoBehaviour
         }
 
     }
+    
 
     }
+
+    
+
+    
 
     
 
