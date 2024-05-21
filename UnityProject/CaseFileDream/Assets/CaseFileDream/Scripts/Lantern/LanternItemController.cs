@@ -34,6 +34,9 @@ public class LanternItemController : MonoBehaviour
         blueLight.enabled = false;
         pinkLight.enabled = false;
         redLight.enabled = false;
+
+        Physics2D.IgnoreLayerCollision(9,7);
+        Physics2D.IgnoreLayerCollision(10,7);
         
     }
 
