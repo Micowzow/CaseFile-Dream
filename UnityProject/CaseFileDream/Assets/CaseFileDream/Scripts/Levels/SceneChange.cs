@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     public bool hasEntered = false;
+    
     public void change()
     {
        
