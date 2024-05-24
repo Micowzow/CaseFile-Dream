@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7332864663576440677}
   - component: {fileID: 469431151622783454}
   m_Layer: 0
-  m_Name: Chandelier fire 1
+  m_Name: Chandelier fire Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &7332864663576440677
 ParticleSystem:
@@ -1306,24 +1306,24 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.19103792, g: 0.1462264, b: 1, a: 1}
-        key1: {r: 0, g: 0.27114317, b: 0.99215686, a: 1}
-        key2: {r: 0.2117647, g: 1, b: 0.6847129, a: 0.5686275}
-        key3: {r: 0.2117647, g: 1, b: 0.712286, a: 1}
+        key0: {r: 0.37040326, g: 0.13216448, b: 0.8490566, a: 1}
+        key1: {r: 0.8962264, g: 0.2325116, b: 0.6000285, a: 1}
+        key2: {r: 1, g: 0.8170266, b: 0.19245279, a: 0.5686275}
+        key3: {r: 0.9529412, g: 0.19215687, b: 0.38967946, a: 1}
         key4: {r: 0.2117647, g: 1, b: 0.38140905, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 12914
-        ctime2: 51272
-        ctime3: 53970
+        ctime1: 26985
+        ctime2: 57825
+        ctime3: 65535
         ctime4: 65535
         ctime5: 0
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
+        atime1: 23130
         atime2: 65535
         atime3: 65535
         atime4: 0
@@ -1331,7 +1331,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 5
+        m_NumColorKeys: 3
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
