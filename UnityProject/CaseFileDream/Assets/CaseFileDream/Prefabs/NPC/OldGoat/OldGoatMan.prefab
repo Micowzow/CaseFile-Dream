@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 9005738667318565384}
   - component: {fileID: 9005738667318565387}
   - component: {fileID: 9005738667318565386}
-  - component: {fileID: 9005738667318565390}
   - component: {fileID: 9005738667318565391}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: OldGoatMan
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -34,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9005738667318565384
 SpriteRenderer:
@@ -101,7 +100,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.9981117}
+  m_Offset: {x: 0.044456482, y: -0.9981117}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -112,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.371582}
+  m_Size: {x: 4.6453705, y: 3.371582}
   m_EdgeRadius: 0
 --- !u!114 &9005738667318565386
 MonoBehaviour:
@@ -133,35 +132,7 @@ MonoBehaviour:
     - I wasn't sure if you would make it this far
     - Not long to go now, the Church sits above us
     - Watch your step
---- !u!114 &9005738667318565390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9005738667318565397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688520fd780c1e0419567d3d8a410082, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  descriptionText: 
-  customEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 9005738667318565386}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  canTalk: 0
 --- !u!95 &9005738667318565391
 Animator:
   serializedVersion: 4

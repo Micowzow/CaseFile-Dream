@@ -12,6 +12,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(canTalk == true && Input.GetKeyDown(KeyCode.F))
         {
+            Debug.Log("Talking");
             TriggerDialogue();
 
         }
@@ -23,14 +24,14 @@ public class DialogueTrigger : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.CompareTag("Player"))
         {
             canTalk = true;
 
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
