@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     public bool hasEntered = false;
-    
+    DoorUp doorUp;
     public void change()
     {
        
     }
     public void Update()
     {
-        if (hasEntered == true && Input.GetKeyDown(KeyCode.F))
+        if (hasEntered == true && Input.GetKeyDown(KeyCode.F) && doorUp.canEnter == true)
         {
             LevelManager.Instance.LoadScene("New Scene", "CrossFade");
         }

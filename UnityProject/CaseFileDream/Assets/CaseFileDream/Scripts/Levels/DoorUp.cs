@@ -7,6 +7,7 @@ public class DoorUp : MonoBehaviour
     public Animator anim;
     bool canOpen;
     public bool isOpen = false;
+    public bool canEnter = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +46,6 @@ public class DoorUp : MonoBehaviour
     {
         anim.SetBool("isOpen", true);
         isOpen = true;
+        canEnter = true;
     }
 }
