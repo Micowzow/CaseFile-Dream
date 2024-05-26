@@ -11,9 +11,14 @@ public class SceneChange : MonoBehaviour
     {
        
     }
+
+    public void Awake()
+    {
+        doorUp = GameObject.Find("OldGoatMan (1)").GetComponent<DoorUp>();
+    }
     public void Update()
     {
-        if (hasEntered == true && Input.GetKeyDown(KeyCode.F))
+        if (hasEntered == true && Input.GetKeyDown(KeyCode.F) && doorUp.canEnter == true)
         {
             LevelManager.Instance.LoadScene("New Scene", "CrossFade");
         }
