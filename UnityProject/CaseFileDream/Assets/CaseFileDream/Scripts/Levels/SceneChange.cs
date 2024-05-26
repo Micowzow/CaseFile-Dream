@@ -13,7 +13,7 @@ public class SceneChange : MonoBehaviour
     }
     public void Update()
     {
-        if (hasEntered == true && Input.GetKeyDown(KeyCode.F) && doorUp.canEnter == true)
+        if (hasEntered == true && Input.GetKeyDown(KeyCode.F))
         {
             LevelManager.Instance.LoadScene("New Scene", "CrossFade");
         }
