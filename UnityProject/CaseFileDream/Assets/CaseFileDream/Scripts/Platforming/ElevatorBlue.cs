@@ -10,6 +10,8 @@ public class ElevatorBlue : MonoBehaviour
     public Transform lantern;
     public Transform recallElevator;
 
+    public ParticleSystem pS;
+
 
     public float speed;
     bool isElevaterDown;
@@ -33,11 +35,13 @@ public class ElevatorBlue : MonoBehaviour
             {
                 isElevaterDown = true;
                 hasBeenActivated = true;
+                
             }
             else if(transform.position.y >= upperPos.position.y)
             {
                 isElevaterDown = false;
                 hasBeenActivated = true;
+                
             }
         }
 

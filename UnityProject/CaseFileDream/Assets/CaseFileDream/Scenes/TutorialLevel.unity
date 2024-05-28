@@ -37440,6 +37440,7 @@ MonoBehaviour:
   upperPos: {fileID: 768306435}
   lantern: {fileID: 133355415}
   recallElevator: {fileID: 152098492}
+  pS: {fileID: 0}
   speed: 3
   hasBeenActivated: 0
 --- !u!61 &554476870
@@ -83928,6 +83929,11 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!198 &1987560616 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2805566344689466596, guid: 94764d7bac0745e46a739f85b0cfba74, type: 3}
+  m_PrefabInstance: {fileID: 1393959311889855069}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1990424957 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5065871325652524070, guid: 478c1d18d0c379247807403fba188767, type: 3}
@@ -86227,6 +86233,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1393959311821022799, guid: 94764d7bac0745e46a739f85b0cfba74, type: 3}
+      propertyPath: pS
+      value: 
+      objectReference: {fileID: 1987560616}
     - target: {fileID: 1393959311821022799, guid: 94764d7bac0745e46a739f85b0cfba74, type: 3}
       propertyPath: lantern
       value: 
