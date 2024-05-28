@@ -36949,6 +36949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484148156}
   - component: {fileID: 484148157}
+  - component: {fileID: 484148158}
   m_Layer: 0
   m_Name: Layer-1
   m_TagString: Untagged
@@ -36986,6 +36987,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxFactor: 0.2
+--- !u!114 &484148158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484148155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a023d395d16847aa07ad7bdf506a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 27748518}
+  parallaxEffect: 0.2
 --- !u!4 &511449129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5880467066101902304, guid: 39f11851f8094974caa816f9b6f8c55b, type: 3}
@@ -37822,8 +37837,9 @@ GameObject:
   m_Component:
   - component: {fileID: 586135720}
   - component: {fileID: 586135721}
+  - component: {fileID: 586135722}
   m_Layer: 0
-  m_Name: Layer-3
+  m_Name: Layer-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37861,6 +37877,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxFactor: 0.1
+--- !u!114 &586135722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586135719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a023d395d16847aa07ad7bdf506a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 27748518}
+  parallaxEffect: 0.1
 --- !u!1 &588360253
 GameObject:
   m_ObjectHideFlags: 0
@@ -38082,7 +38112,7 @@ GameObject:
   - component: {fileID: 623221519}
   - component: {fileID: 623221521}
   m_Layer: 0
-  m_Name: Layer-2
+  m_Name: Layer-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38113,7 +38143,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1887990163}
-  m_Father: {fileID: 1264401341}
+  m_Father: {fileID: 636734373}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &623221521
@@ -38471,12 +38501,13 @@ Transform:
   - {fileID: 1409006579}
   - {fileID: 484148156}
   - {fileID: 1822706380}
+  - {fileID: 623221520}
   - {fileID: 586135720}
   - {fileID: 765174857}
   - {fileID: 1901646486}
   - {fileID: 701988992}
-  - {fileID: 892743739}
   - {fileID: 927368506}
+  - {fileID: 892743739}
   m_Father: {fileID: 1264401341}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39440,8 +39471,9 @@ GameObject:
   m_Component:
   - component: {fileID: 701988992}
   - component: {fileID: 701988993}
+  - component: {fileID: 701988994}
   m_Layer: 0
-  m_Name: Layer-6
+  m_Name: Layer-7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39489,6 +39521,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxFactor: -0.1
+--- !u!114 &701988994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701988991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a023d395d16847aa07ad7bdf506a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 27748518}
+  parallaxEffect: -0.1
 --- !u!1001 &705323977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40376,8 +40422,9 @@ GameObject:
   m_Component:
   - component: {fileID: 765174857}
   - component: {fileID: 765174858}
+  - component: {fileID: 765174859}
   m_Layer: 0
-  m_Name: Layer-4
+  m_Name: Layer-5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40413,6 +40460,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxFactor: 0.05
+--- !u!114 &765174859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765174856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a023d395d16847aa07ad7bdf506a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  parallaxEffect: 0.05
 --- !u!1 &768306434
 GameObject:
   m_ObjectHideFlags: 0
@@ -70618,6 +70679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 927368506}
   - component: {fileID: 927368507}
+  - component: {fileID: 927368508}
   m_Layer: 0
   m_Name: Layer-8
   m_TagString: Untagged
@@ -70659,6 +70721,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxFactor: -0.2
+--- !u!114 &927368508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927368505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a023d395d16847aa07ad7bdf506a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 27748518}
+  parallaxEffect: -0.2
 --- !u!1 &930122752
 GameObject:
   m_ObjectHideFlags: 0
@@ -75051,7 +75127,6 @@ Transform:
   m_Children:
   - {fileID: 636734373}
   - {fileID: 415401488}
-  - {fileID: 623221520}
   - {fileID: 2057555267}
   - {fileID: 1816616416}
   - {fileID: 69939641}
@@ -78868,6 +78943,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 4131897894299617228, guid: a3f77044a057b3f478d0fcbe48eeff9a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6316732258562893461, guid: a3f77044a057b3f478d0fcbe48eeff9a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -82267,6 +82346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1822706380}
   - component: {fileID: 1822706381}
+  - component: {fileID: 1822706382}
   m_Layer: 0
   m_Name: Layer-2
   m_TagString: Untagged
@@ -82334,6 +82414,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxFactor: 0.15
+--- !u!114 &1822706382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822706379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a023d395d16847aa07ad7bdf506a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 27748518}
+  parallaxEffect: 0.15
 --- !u!213 &1823606475
 Sprite:
   m_ObjectHideFlags: 0
@@ -82819,7 +82913,7 @@ GameObject:
   - component: {fileID: 1901646486}
   - component: {fileID: 1901646487}
   m_Layer: 0
-  m_Name: Layer-5
+  m_Name: Layer-6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
