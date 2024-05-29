@@ -13,7 +13,7 @@ public class ParallaxSimple : MonoBehaviour
     {
         startposx = transform.position.x;
         startposy = transform.position.y;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        //length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
     // Update is called once per frame
