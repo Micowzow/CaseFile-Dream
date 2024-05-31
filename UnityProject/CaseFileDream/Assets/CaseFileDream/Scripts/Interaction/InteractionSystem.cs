@@ -42,13 +42,14 @@ public class InteractionSystem : MonoBehaviour
         {
             if(InteractInput())
             {
+                detectedObject.GetComponent<Item>().Interact();
                 //Check if we are grabbing something, do not interact with other items, drop grabbed item first
                 if (isGrabbing)
                 {
-                    GrabDrop();
-                    return;
+                    //GrabDrop();
+                    //return;
                 }
-                detectedObject.GetComponent<Item>().Interact();
+                
                 Debug.Log("INTERACT");
 
             }
@@ -112,6 +113,16 @@ public class InteractionSystem : MonoBehaviour
         //enable the boolean
         isExamining = true;
 
+        }
+    }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (isExamining)
+        {
+            //Hide examine window
+            examineWindow.SetActive(false);
+            //disable the boolean
+            isExamining = false;
         }
     }
 
