@@ -91,7 +91,7 @@ Transform:
   - {fileID: 1393959312530193815}
   - {fileID: 1393959310977543764}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1393959310977543765
 GameObject:
@@ -421,6 +421,7 @@ MonoBehaviour:
   upperPos: {fileID: 1393959312530193815}
   lantern: {fileID: 0}
   recallElevator: {fileID: 1393959310977543764}
+  pS: {fileID: 0}
   speed: 3
   hasBeenActivated: 0
 --- !u!61 &1393959311821022803
