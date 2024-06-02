@@ -37890,6 +37890,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.62
       objectReference: {fileID: 0}
+    - target: {fileID: 5065871325471902772, guid: 478c1d18d0c379247807403fba188767, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.07
+      objectReference: {fileID: 0}
     - target: {fileID: 5065871325652524069, guid: 478c1d18d0c379247807403fba188767, type: 3}
       propertyPath: m_Name
       value: BlueDoor
@@ -48198,7 +48202,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press F on the Chandelier with a lit candle to open the way
+  m_text: Press F while standing on the Chandelier with a lit candle to open the
+    way
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
