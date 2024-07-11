@@ -95445,6 +95445,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2221228777443474027, guid: 70b53b0d45dcd114a8258379b75f74f1, type: 3}
   m_PrefabInstance: {fileID: 2221228776105567378}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1081007005 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2221228777443474024, guid: 70b53b0d45dcd114a8258379b75f74f1, type: 3}
+  m_PrefabInstance: {fileID: 2221228776105567378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1081007011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129269,6 +129274,14 @@ PrefabInstance:
       propertyPath: examineWindow
       value: 
       objectReference: {fileID: 6609773972778791839}
+    - target: {fileID: 4793421516988953917, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 1081007005}
+    - target: {fileID: 4793421516988953917, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
+      propertyPath: enemyMask.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
     - target: {fileID: 5260656935322252339, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
       propertyPath: anim
       value: 

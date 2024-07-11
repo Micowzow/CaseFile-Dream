@@ -8,28 +8,28 @@ public class PlayerMelee : MonoBehaviour
     public float attackRadius = 1f;
     public LayerMask enemyMask;
 
+    public float cooldownTime = .5f;
+    private float cooldownTimer = 0f;
+
     public int attackDamage = 25;
 
-    public float cooldownTime = .5f;
-    public float cooldownTimer = 0f;
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(attackOrigin.position, attackRadius);
-    }
-  
+    public Animator animator;
 
-    // Update is called once per frame
-    public void Update()
+    private void Update()
     {
-        if (cooldownTime <= 0)
+        if (cooldownTimer <= 0)
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
+                // Example of playing attack animation
+                animator.SetTrigger("Melee");
+
                 Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
                 foreach (var enemy in enemiesInRange)
                 {
                     enemy.GetComponent<EnemyHealthManager>().TakeDamage(attackDamage);
                 }
+
                 cooldownTimer = cooldownTime;
             }
         }
@@ -37,5 +37,10 @@ public class PlayerMelee : MonoBehaviour
         {
             cooldownTimer -= Time.deltaTime;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(attackOrigin.position, attackRadius);
     }
 }

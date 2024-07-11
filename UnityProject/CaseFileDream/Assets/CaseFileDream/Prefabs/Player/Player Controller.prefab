@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 919636612}
   m_Layer: 7
   m_Name: DamageZone
-  m_TagString: Untagged
+  m_TagString: DamageZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 5260656935322252339}
   - component: {fileID: 1248653968755486339}
   - component: {fileID: 1248653968755486392}
-  - component: {fileID: 7742746115402537894}
+  - component: {fileID: 4793421516988953917}
   m_Layer: 7
   m_Name: Player Controller
   m_TagString: Player
@@ -647,7 +647,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7742746115402537894
+--- !u!114 &4793421516988953917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -663,10 +663,10 @@ MonoBehaviour:
   attackRadius: 1
   enemyMask:
     serializedVersion: 2
-    m_Bits: 0
-  attackDamage: 25
+    m_Bits: 4096
   cooldownTime: 0.5
-  cooldownTimer: 0
+  attackDamage: 25
+  animator: {fileID: 0}
 --- !u!1 &8802248891406137505
 GameObject:
   m_ObjectHideFlags: 0
