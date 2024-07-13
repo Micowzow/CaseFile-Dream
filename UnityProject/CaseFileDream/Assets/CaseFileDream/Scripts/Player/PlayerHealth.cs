@@ -29,10 +29,14 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            TakeDamage(1);
+            TakeDamage(0);
         }
 
+    }
 
+    public void AddHealth(float value)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + value, 0, startingHealth);
     }
 
 }
