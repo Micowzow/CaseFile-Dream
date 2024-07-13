@@ -9,25 +9,57 @@ public class EnemyHealthManager : MonoBehaviour
     public int currentHealth;
 
     public EnemyHealthBar healthbar;
+
+    private float dazedTime;
+    public float startDazedTime;
     
+    public Transform enemy;
+    public Transform playerAttackArea;
+
+    public float cooldownTime = .5f;
+    private float cooldownTimer = 0f;
+
+   
+
+
     void Start()
     {
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
+        
     }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if(dazedTime <= 0)
         {
-            TakeDamage(25);
+            GetComponent<EnemyController>().speed = 5;
         }
+        else
+        {
+            GetComponent<EnemyController>().speed = 0;
+            dazedTime -= Time.deltaTime;
+        }
+        if (cooldownTimer <= 0)
+        {
+            if (Input.GetKeyDown(KeyCode.F) && Vector2.Distance(enemy.position, playerAttackArea.position) < 2.5f)
+            {
+                TakeDamage(25);
+            }
+
+            cooldownTimer = cooldownTime;
+        }
+        else
+        {
+            cooldownTimer -= Time.deltaTime;
+        }
+
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
+        dazedTime = startDazedTime;
         if(currentHealth <= 0)
         {
             Destroy(gameObject);
