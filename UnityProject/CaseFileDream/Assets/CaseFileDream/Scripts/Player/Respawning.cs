@@ -9,6 +9,8 @@ public class Respawning : MonoBehaviour
     Rigidbody2D playerRb;
     public Animator anim;
 
+    public PlayerHealth playerHealth;
+
     public void Awake()
     {
         playerRb = GetComponent<Rigidbody2D>();
@@ -30,8 +32,16 @@ public class Respawning : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            anim.Play("FadeOut");
-            Die();
+            if (playerHealth.currentHealth > 0)
+            {
+                playerHealth.TakeDamage(1);
+            }
+            if (playerHealth.currentHealth <= 0)
+            {
+                anim.Play("FadeOut");
+                Die();
+            }
+           
         }
         
 
@@ -57,6 +67,7 @@ public class Respawning : MonoBehaviour
         transform.position = checkpointPos;
         transform.localScale = new Vector3(1, 1, 1);
         playerRb.simulated = true;
+        playerHealth.currentHealth = playerHealth.startingHealth;
 
     }
 }
