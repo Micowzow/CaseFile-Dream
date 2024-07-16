@@ -57,15 +57,15 @@ public class LanternItemController : MonoBehaviour
                 
             }
 
-        if (inRangeBlue == true && Input.GetKeyDown(KeyCode.F))
+        if (inRangeBlue == true && Input.GetButtonDown("Fire2"))
         {
             LightBlueLantern();
         }
-        if (inRangePink == true && Input.GetKeyDown(KeyCode.F))
+        if (inRangePink == true && Input.GetButtonDown("Fire2"))
         {
             LightPinkLantern();
         }
-        if (inRangeRed == true && Input.GetKeyDown(KeyCode.F))
+        if (inRangeRed == true && Input.GetButtonDown("Fire2"))
         {
             LightRedLantern();
         }

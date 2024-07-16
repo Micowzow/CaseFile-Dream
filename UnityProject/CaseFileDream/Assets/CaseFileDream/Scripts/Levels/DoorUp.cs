@@ -18,7 +18,7 @@ public class DoorUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canOpen == true && Input.GetKeyDown(KeyCode.F))
+        if (canOpen == true && Input.GetButtonDown("Fire2"))
         {
 
             AnimStart();

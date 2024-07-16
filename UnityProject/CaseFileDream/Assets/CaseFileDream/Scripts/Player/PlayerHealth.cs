@@ -32,6 +32,11 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(0);
         }
 
+        if (collision.tag == "Water")
+        {
+            TakeDamage(10);
+        }
+
     }
 
     public void AddHealth(float value)

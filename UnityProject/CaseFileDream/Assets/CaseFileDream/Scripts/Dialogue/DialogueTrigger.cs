@@ -10,7 +10,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void Update()
     {
-        if(canTalk == true && Input.GetKeyDown(KeyCode.F))
+        if(canTalk == true && Input.GetButtonDown("Fire2"))
         {
             Debug.Log("Talking");
             TriggerDialogue();

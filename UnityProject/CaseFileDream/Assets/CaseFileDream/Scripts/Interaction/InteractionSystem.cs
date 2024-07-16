@@ -64,7 +64,7 @@ public class InteractionSystem : MonoBehaviour
 
     bool InteractInput()
     {
-        return Input.GetKeyDown(KeyCode.E);
+        return Input.GetButtonDown("Fire1");
 
     }
 

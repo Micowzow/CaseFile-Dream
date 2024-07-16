@@ -42,7 +42,7 @@ public class EnemyHealthManager : MonoBehaviour
         }
         if (cooldownTimer <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.F) && Vector2.Distance(enemy.position, playerAttackArea.position) < 2.5f)
+            if (Input.GetAxis("Fire3") ==1 && Vector2.Distance(enemy.position, playerAttackArea.position) < 2.5f)
             {
                 TakeDamage(25);
             }
