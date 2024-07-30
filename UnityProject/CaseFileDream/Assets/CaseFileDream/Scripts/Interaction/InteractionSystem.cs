@@ -23,13 +23,12 @@ public class InteractionSystem : MonoBehaviour
     public GameObject detectedObject;
     [Header("Examine Fields")]
     //Examine Window Object
-    public GameObject examineWindow;
+    
     public GameObject grabbedObject;
     public float grabbedObjectYValue;
     public Transform grabPoint;
-    public Image examineImage;
-    public TMP_Text examineText;
-    public bool isExamining;
+   
+    
     public bool isGrabbing;
 
     [Header("Others")]
@@ -92,39 +91,7 @@ public class InteractionSystem : MonoBehaviour
         pickedItems.Add(item);
     }
 
-    public void ExamineItem(Item item)
-    {
-        if (isExamining)
-        {
-            //Hide examine window
-            examineWindow.SetActive(false);
-            //disable the boolean
-            isExamining = false;
-        }
-        else
-        {
-            rb.velocity = Vector3.zero;
-            //Show the item image
-            examineImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
-        //Write description text
-        examineText.text = item.descriptionText;
-        //Display an examine window
-        examineWindow.SetActive(true);
-        //enable the boolean
-        isExamining = true;
-
-        }
-    }
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        if (isExamining)
-        {
-            //Hide examine window
-            examineWindow.SetActive(false);
-            //disable the boolean
-            isExamining = false;
-        }
-    }
+    
 
     public void GrabDrop()
     {

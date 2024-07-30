@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider2D))]
 
-public class Item : MonoBehaviour
+public class Examine : MonoBehaviour
 {
 
     //Interaction Type
@@ -34,6 +34,11 @@ public class Item : MonoBehaviour
                 //Disable Object
                 gameObject.SetActive(false);
                 Debug.Log("PICK UP");
+                break;
+            case InteractionType.Examine:
+                //Call the Examine item in the interaction system
+                FindObjectOfType<ExamineSystem>().ExamineItem(this);
+                Debug.Log("Examine");
                 break;
             case InteractionType.GrabDrop:
                 //Grab interaction

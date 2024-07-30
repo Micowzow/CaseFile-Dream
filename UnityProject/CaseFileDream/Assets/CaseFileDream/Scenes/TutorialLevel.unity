@@ -61462,6 +61462,7 @@ GameObject:
   - component: {fileID: 860838283}
   - component: {fileID: 860838285}
   - component: {fileID: 860838284}
+  - component: {fileID: 860838286}
   m_Layer: 9
   m_Name: backSpecialFlowerEnvironment
   m_TagString: Untagged
@@ -61593,6 +61594,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &860838286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860838281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68fee9f35104be4e93457de240cfa7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  descriptionText: This is a Bloom. These flower buds were once found all over the
+    DreamWorlds
+  customEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &863718379
 GameObject:
   m_ObjectHideFlags: 0
@@ -94138,6 +94157,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   playerAttackArea: {fileID: 0}
   cooldownTime: 0.5
+  enemyDead: 0
 --- !u!1 &1039546307
 GameObject:
   m_ObjectHideFlags: 0
@@ -126240,6 +126260,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &2101319562 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8802248890113273026, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
+  m_PrefabInstance: {fileID: 8802248889539753245}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2101746982
 GameObject:
   m_ObjectHideFlags: 0
@@ -127781,7 +127806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1081007011, guid: 70b53b0d45dcd114a8258379b75f74f1, type: 3}
       propertyPath: cooldownTime
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1081007011, guid: 70b53b0d45dcd114a8258379b75f74f1, type: 3}
       propertyPath: playerAttackArea
@@ -128661,6 +128686,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 3
   currentHealth: 0
+--- !u!50 &7742746115402537893 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1248653968755486398, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
+  m_PrefabInstance: {fileID: 8802248889539753245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7742746115402537896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539435503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: a5457f0b031a9114eb180e1e3b59815c, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerOnGround
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &7980014656695956608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128979,6 +129039,30 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 7742746115402537886}
+    - target: {fileID: 5404994156282692661, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 7742746115402537893}
+    - target: {fileID: 5404994156282692661, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
+      propertyPath: examineText
+      value: 
+      objectReference: {fileID: 6609773972696714360}
+    - target: {fileID: 5404994156282692661, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
+      propertyPath: examineImage
+      value: 
+      objectReference: {fileID: 6609773972031992084}
+    - target: {fileID: 5404994156282692661, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
+      propertyPath: examineWindow
+      value: 
+      objectReference: {fileID: 6609773972778791839}
+    - target: {fileID: 5404994156282692661, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
+      propertyPath: detectionPoint
+      value: 
+      objectReference: {fileID: 2101319562}
+    - target: {fileID: 5404994156282692661, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
+      propertyPath: detectionLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 8802248890683799425, guid: 268ed334fec70c745a5c90b243459c8f, type: 3}
       propertyPath: m_Name
       value: Player Controller

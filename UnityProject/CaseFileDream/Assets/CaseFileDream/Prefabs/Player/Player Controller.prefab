@@ -418,6 +418,7 @@ GameObject:
   - component: {fileID: 1248653968755486399}
   - component: {fileID: 1248653968755486396}
   - component: {fileID: 1248653968755486397}
+  - component: {fileID: 5404994156282692661}
   - component: {fileID: 5260656935322252339}
   - component: {fileID: 1248653968755486339}
   - component: {fileID: 1248653968755486392}
@@ -448,7 +449,7 @@ Transform:
   - {fileID: 8802248891406137504}
   - {fileID: 919636612}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1248653968755486393
 MonoBehaviour:
@@ -561,6 +562,32 @@ MonoBehaviour:
   isExamining: 0
   isGrabbing: 0
   pickedItems: []
+--- !u!114 &5404994156282692661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802248890683799425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc25133382cddb44bd4ea5500769e33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  detectionPoint: {fileID: 0}
+  detectionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  detectedObject: {fileID: 0}
+  examineWindow: {fileID: 0}
+  grabbedObject: {fileID: 0}
+  grabbedObjectYValue: 0
+  grabPoint: {fileID: 0}
+  examineImage: {fileID: 0}
+  examineText: {fileID: 0}
+  isExamining: 0
+  isGrabbing: 0
 --- !u!114 &5260656935322252339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,6 +602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpointPos: {x: 0, y: 0}
   anim: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!95 &1248653968755486339
 Animator:
   serializedVersion: 4

@@ -180,7 +180,7 @@ namespace PlayerController
         {
             bool can = true;
 
-            if (FindObjectOfType<InteractionSystem>().isExamining)
+            if (FindObjectOfType<ExamineSystem>().isExamining)
                 can = false;
 
             return can;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using XInputDotNetPure;
+using UnityEngine.InputSystem;
 
 
 public class EnemyHealthManager : MonoBehaviour
@@ -70,9 +71,7 @@ public class EnemyHealthManager : MonoBehaviour
         GamePad.SetVibration(playerIndex, .1f, .1f);
         yield return new WaitForSeconds(.2f);
         GamePad.SetVibration(playerIndex, 0f, 0f);
-
-        
-
+        InputSystem.ResetHaptics();
 
     }
     public void TakeDamage(int damage)
@@ -83,7 +82,7 @@ public class EnemyHealthManager : MonoBehaviour
         {
             Destroy(gameObject);
             enemyDead = true;
-            
+            InputSystem.ResetHaptics();
         }
         healthbar.SetCurrentHealth(currentHealth);
     }
