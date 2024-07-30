@@ -8,9 +8,11 @@ public class DialogueTrigger : MonoBehaviour
 
     public bool canTalk = false;
 
+    public bool isTalking = false;
+
     public void Update()
     {
-        if(canTalk == true && Input.GetButtonDown("Fire2"))
+        if(canTalk == true && Input.GetButtonDown("Fire2") && isTalking == false)
         {
             Debug.Log("Talking");
             TriggerDialogue();
@@ -21,6 +23,7 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        isTalking = true;
 
     }
 
@@ -38,6 +41,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         FindObjectOfType<DialogueManager>().EndDialogue();
         canTalk = false;
+        isTalking = false;
 
     }
 }

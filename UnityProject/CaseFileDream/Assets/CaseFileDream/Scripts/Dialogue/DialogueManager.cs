@@ -7,7 +7,7 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
-
+    public DialogueTrigger dialogueTrigger;
     public Animator animator;
 
     public TMP_Text nameText;
@@ -36,8 +36,13 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
+    public void Update()
+    {
+        
+    }
     public void StartDialogue (Dialogue dialogue)
     {
+        
         animator.SetBool("isOpen", true);
         isDialogueActive = true;
         nameText.text = dialogue.name;
@@ -49,8 +54,8 @@ public class DialogueManager : MonoBehaviour
 
         }
 
+            DisplayNextSentence();
         
-        DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
