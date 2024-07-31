@@ -71,7 +71,9 @@ public class EnemyHealthManager : MonoBehaviour
         GamePad.SetVibration(playerIndex, .1f, .1f);
         yield return new WaitForSeconds(.2f);
         GamePad.SetVibration(playerIndex, 0f, 0f);
-        InputSystem.ResetHaptics();
+        yield return new WaitForSeconds(.2f);
+        GamePad.SetVibration(playerIndex, 0f, 0f);
+
 
     }
     public void TakeDamage(int damage)
@@ -82,9 +84,10 @@ public class EnemyHealthManager : MonoBehaviour
         {
             Destroy(gameObject);
             enemyDead = true;
-            InputSystem.ResetHaptics();
+            GamePad.SetVibration(playerIndex, 0f, 0f);
         }
         healthbar.SetCurrentHealth(currentHealth);
+        GamePad.SetVibration(playerIndex, 0f, 0f);
     }
 
    
