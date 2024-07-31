@@ -28994,6 +28994,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1081007011, guid: 70b53b0d45dcd114a8258379b75f74f1, type: 3}
+      propertyPath: cooldownTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081007011, guid: 70b53b0d45dcd114a8258379b75f74f1, type: 3}
       propertyPath: playerAttackArea
       value: 
       objectReference: {fileID: 128570167}
@@ -94146,31 +94150,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7050671630862794454, guid: f2bb7183358bae54e9fce05c35a93dfb, type: 3}
   m_PrefabInstance: {fileID: 675642105}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1039278488 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2221228777443474027, guid: 70b53b0d45dcd114a8258379b75f74f1, type: 3}
-  m_PrefabInstance: {fileID: 33862886}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1039278495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1039278488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b090f59596d66846b6db9e3886e1d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  healthbar: {fileID: 0}
-  startDazedTime: 0
-  enemy: {fileID: 0}
-  playerAttackArea: {fileID: 0}
-  cooldownTime: 0.5
-  enemyDead: 0
 --- !u!1 &1039546307
 GameObject:
   m_ObjectHideFlags: 0

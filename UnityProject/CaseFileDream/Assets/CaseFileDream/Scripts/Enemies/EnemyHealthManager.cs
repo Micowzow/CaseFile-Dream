@@ -50,13 +50,21 @@ public class EnemyHealthManager : MonoBehaviour
         }
         if (cooldownTimer <= 0)
         {
+
             if (Input.GetAxis("Fire3") ==1 && Vector2.Distance(enemy.position, playerAttackArea.position) < 2.5f && enemyDead == false)
             {
                 TakeDamage(25);
-                StartCoroutine(Vibrate());
+                
             }
 
             cooldownTimer = cooldownTime;
+
+            if (Input.GetAxis("Fire3") == 1)
+            {
+                StartCoroutine(Vibrate());
+            }
+
+
         }
         else
         {
@@ -68,12 +76,9 @@ public class EnemyHealthManager : MonoBehaviour
     IEnumerator Vibrate()
     {
         GamePad.SetVibration(playerIndex, .1f, .1f);
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.1f);
         GamePad.SetVibration(playerIndex, 0f, 0f);
-        yield return new WaitForSeconds(.2f);
-        GamePad.SetVibration(playerIndex, 0f, 0f);
-
-
+       
     }
     public void TakeDamage(int damage)
     {
@@ -83,10 +88,10 @@ public class EnemyHealthManager : MonoBehaviour
         {
             Destroy(gameObject);
             enemyDead = true;
-            GamePad.SetVibration(playerIndex, 0f, 0f);
+            
         }
         healthbar.SetCurrentHealth(currentHealth);
-        GamePad.SetVibration(playerIndex, 0f, 0f);
+        
     }
 
    
