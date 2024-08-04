@@ -14,7 +14,7 @@ public class SceneChange : MonoBehaviour
 
     public void Awake()
     {
-        doorUp = GameObject.Find("OldGoatMan (1)").GetComponent<DoorUp>();
+        doorUp = GameObject.Find("ZyhiemDoorTrigger").GetComponent<DoorUp>();
     }
     public void Update()
     {
