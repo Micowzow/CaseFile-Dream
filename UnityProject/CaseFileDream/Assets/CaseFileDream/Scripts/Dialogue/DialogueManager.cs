@@ -3,88 +3,145 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Ink.Runtime;
+using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager Instance;
-    public DialogueTrigger dialogueTrigger;
-    public Animator animator;
+    [Header("Dialogue UI")]
 
-    public TMP_Text nameText;
-    public TMP_Text dialogueText;
-    private Queue<string> sentences;
+    [SerializeField] private GameObject dialoguePanel;
 
-    public bool isDialogueActive = false;
-    // Start is called before the first frame update
+    [SerializeField] private TextMeshProUGUI dialogueText;
+
+    private Story currentStory;
+
+    public bool dialogueIsPlaying {get; private set; }
+
+    private static DialogueManager instance;
+
+    private DialogueTrigger dialogueTrigger;
+
+    [Header("Choices UI")]
+    [SerializeField] private GameObject[] choices;
+    private TextMeshProUGUI[] choicesText;
+
 
     private void Awake()
     {
-        if (Instance == null)
+        if (instance != null)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
-        else
+        instance = this;
+
+        dialogueTrigger = GetComponent<DialogueTrigger>();
+    }
+
+    public static DialogueManager GetInstance()
+    {
+        return instance;
+    }
+
+    private void Start()
+    {
+        dialogueIsPlaying = false;
+        dialoguePanel.SetActive(false);
+
+        choicesText = new TextMeshProUGUI[choices.Length];
+        int index = 0;
+        foreach (GameObject choice in choices)
         {
-            Destroy(gameObject);
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            index++;
         }
     }
-    void Start()
-    {
-        if (Instance == null)
-            Instance = this;
-        sentences = new Queue<string>();
-    }
 
-    public void Update()
+    private void Update()
     {
-        
-    }
-    public void StartDialogue (Dialogue dialogue)
-    {
-        
-        animator.SetBool("isOpen", true);
-        isDialogueActive = true;
-        nameText.text = dialogue.name;
-        sentences.Clear();
-
-        foreach(string sentence in dialogue.sentences)
+        if (!dialogueIsPlaying)
         {
-            sentences.Enqueue(sentence);
-
-        }
-
-            DisplayNextSentence();
-        
-    }
-
-    public void DisplayNextSentence()
-    {
-        if(sentences.Count == 0)
-        {
-            EndDialogue();
             return;
         }
 
-       string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
-    }
-
-    IEnumerator TypeSentence(string sentence)
-    {
-        dialogueText.text = "";
-        foreach(char letter in sentence.ToCharArray())
+        if (Input.GetButtonDown("Fire2"))
         {
-            dialogueText.text += letter;
-                yield return null;
+            ContinueStory();
+            
         }
     }
 
-    public void EndDialogue()
+    public void EnterDialogueMode(TextAsset inkJSON)
     {
-        animator.SetBool("isOpen", false);
-        isDialogueActive = false;
+        currentStory = new Story(inkJSON.text);
+        dialogueIsPlaying = true;
+        dialoguePanel.SetActive(true);
+
+        ContinueStory();
+
     }
 
+    private IEnumerator ExitDialogueMode()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        dialogueIsPlaying = false;
+        dialoguePanel.SetActive(false);
+        dialogueText.text = "";
+        
+        
+    }
+
+    private void ContinueStory()
+    {
+        if (currentStory.canContinue)
+        {
+            dialogueText.text = currentStory.Continue();
+
+            DisplayChoices();
+        }
+        else
+        {
+           StartCoroutine(ExitDialogueMode());
+            
+        }
+    }
+
+    private void DisplayChoices()
+    {
+        List<Choice> currentChoices = currentStory.currentChoices;
+
+        if(currentChoices.Count > choices.Length)
+        {
+            Debug.LogError("More choices were given than the UI can support");
+        }
+
+        int index = 0;
+
+        foreach(Choice choice in currentChoices)
+        {
+            choices[index].gameObject.SetActive(true);
+            choicesText[index].text = choice.text;
+            index++;
+        }
+
+        for(int i = index; i < choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
+        }
+
+        StartCoroutine(SelectFirstChoice());
+    }
+
+    private IEnumerator SelectFirstChoice()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        yield return new WaitForEndOfFrame();
+        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+    }
+
+    public void MakeChoice(int choiceIndex)
+    {
+        currentStory.ChooseChoiceIndex(choiceIndex);
+    }
 }

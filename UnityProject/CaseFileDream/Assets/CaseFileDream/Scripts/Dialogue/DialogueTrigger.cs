@@ -4,44 +4,56 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Dialogue dialogue;
+    [Header("Visual Cue")]
+    [SerializeField] private GameObject visualCue;
 
-    public bool canTalk = false;
+    [Header("Ink JSON")]
+    [SerializeField] private TextAsset inkJSON;
 
-    public bool isTalking = false;
+    private bool playerInRange;
 
-    public void Update()
+    
+
+    
+    private void Awake()
     {
-        if(canTalk == true && Input.GetButtonDown("Fire2") && isTalking == false)
+        playerInRange = false;
+        
+        visualCue.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            Debug.Log("Talking");
-            TriggerDialogue();
-
+            visualCue.SetActive(true);
+            if (Input.GetButtonDown("Fire2"))
+            {
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                
+            }
         }
-
-    }
-    public void TriggerDialogue()
-    {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        isTalking = true;
-
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-
-        if (collision.gameObject.CompareTag("Player"))
+        else
         {
-            canTalk = true;
-
+            visualCue.SetActive(false);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        FindObjectOfType<DialogueManager>().EndDialogue();
-        canTalk = false;
-        isTalking = false;
+        if (collider.gameObject.tag == "Player")
+        {
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            playerInRange = false;
+            
+        }
 
     }
 }
