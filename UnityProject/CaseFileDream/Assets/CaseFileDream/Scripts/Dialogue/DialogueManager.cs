@@ -64,7 +64,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetButtonDown("Fire2"))
+        if (currentStory.currentChoices.Count == 0 && Input.GetButtonDown("Fire2"))
         {
             ContinueStory();
             
@@ -143,5 +143,6 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+
     }
 }
