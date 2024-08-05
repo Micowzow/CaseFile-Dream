@@ -81,7 +81,7 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    private IEnumerator ExitDialogueMode()
+    public IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);
 

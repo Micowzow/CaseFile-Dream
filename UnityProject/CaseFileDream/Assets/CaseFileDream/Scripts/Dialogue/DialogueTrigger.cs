@@ -54,6 +54,6 @@ public class DialogueTrigger : MonoBehaviour
             playerInRange = false;
             
         }
-
+        StartCoroutine(DialogueManager.GetInstance().GetComponent<DialogueManager>().ExitDialogueMode());
     }
 }
