@@ -10,6 +10,8 @@ public class TimerController : MonoBehaviour
     public PauseMenu pauseMenu;
 
     public float timeRemaining;
+
+    public float addTime;
     public float maxTime = 5.0f;
 
     public void Awake() 
@@ -35,4 +37,13 @@ public class TimerController : MonoBehaviour
             pauseMenu.LoadMenu();
         }
     }
+
+    public void AddTime()
+    {
+        timeRemaining += addTime;
+        timeRadial.fillAmount = timeRemaining + addTime;
+
+    }
+
+    
 }
