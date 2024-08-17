@@ -23,6 +23,7 @@ public class NPCPatrol : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        
         currentPoint = pointB.transform;
     }
 
@@ -32,21 +33,25 @@ public class NPCPatrol : MonoBehaviour
         Vector2 point = currentPoint.position - transform.position;
         if(currentPoint == pointB.transform)
         {
+         
             rb.velocity = new Vector2(speed, 0);
         }
         else
         {
+           
             rb.velocity = new Vector2(-speed, 0);
         }
 
         if(Vector2.Distance(transform.position, currentPoint.position) <0.5f && currentPoint == pointB.transform)
         {
+            
             StartCoroutine(IdleNPC());
             flip();
             currentPoint = pointA.transform;
         }
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
         {
+            
             StartCoroutine(IdleNPC());
             flip();
             currentPoint = pointB.transform;
@@ -63,13 +68,16 @@ public class NPCPatrol : MonoBehaviour
     public IEnumerator IdleNPC()
     {
         speed = 0;
+        anim.SetBool("isWalking", false);
         yield return new WaitForSeconds(idleSeconds);
         speed = 2;
+        anim.SetBool("isWalking", true);
     }
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
         Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+        
     }
 }
