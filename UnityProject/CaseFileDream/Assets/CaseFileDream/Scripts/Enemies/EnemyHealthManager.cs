@@ -12,6 +12,8 @@ public class EnemyHealthManager : MonoBehaviour
 
     public EnemyHealthBar healthbar;
 
+    public EssenceDrop essenceDrop;
+
     private float dazedTime;
     public float startDazedTime;
     
@@ -34,6 +36,7 @@ public class EnemyHealthManager : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
+        essenceDrop = GetComponent<EssenceDrop>();
         
     }
 
@@ -88,6 +91,7 @@ public class EnemyHealthManager : MonoBehaviour
         {
             Destroy(gameObject);
             enemyDead = true;
+            essenceDrop.DropEssence();
             
         }
         healthbar.SetCurrentHealth(currentHealth);

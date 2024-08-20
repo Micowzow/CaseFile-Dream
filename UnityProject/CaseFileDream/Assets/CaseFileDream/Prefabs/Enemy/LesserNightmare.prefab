@@ -497,7 +497,7 @@ Transform:
   - {fileID: 2221228775794449742}
   - {fileID: 2221228775632508737}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2221228775632508736
 GameObject:
@@ -576,6 +576,7 @@ GameObject:
   - component: {fileID: 2221228777443474025}
   - component: {fileID: 2221228777443474029}
   - component: {fileID: 1081007011}
+  - component: {fileID: 206016345}
   m_Layer: 12
   m_Name: Enemy
   m_TagString: Enemy
@@ -748,7 +749,23 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthbar: {fileID: 1784820923}
+  essenceDrop: {fileID: 206016345}
   startDazedTime: 1
   enemy: {fileID: 2221228777443474024}
   playerAttackArea: {fileID: 0}
   cooldownTime: 0.1
+  enemyDead: 0
+--- !u!114 &206016345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2221228777443474027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534ae6147ff703d4da324ff163ae7e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  essenceDrop: {fileID: 6625883882055688400, guid: 8e2714c78b014fc4eab727ebd5361c32, type: 3}
+  transform: {fileID: 2221228777443474024}
