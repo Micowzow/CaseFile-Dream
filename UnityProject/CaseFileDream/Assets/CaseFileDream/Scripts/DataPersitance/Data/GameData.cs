@@ -15,8 +15,11 @@ public class GameData
     //the game starts with when theres no data to load
     public GameData()
     {
+        //AMOUNT OF ESSENCE
         this.essenceCount = 0;
-        playerPosition = Vector3.zero;
+
+        //PLAYER POSITION
+        //playerPosition = Vector3.zero;
     }
     
 }

@@ -6,7 +6,7 @@ namespace PlayerController
 {
    
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-    public class PlayerExtra : MonoBehaviour, IDataPersistance
+    public class PlayerExtra : MonoBehaviour//, IDataPersistance
     {
         [Header("Camera")]
         [SerializeField] private GameObject cameraFollowGo;
@@ -55,7 +55,7 @@ namespace PlayerController
             respawnPoint = transform.position;
         }
 
-        public void LoadData(GameData data)
+       /* public void LoadData(GameData data)
         {
             this.transform.position = data.playerPosition;
         }
@@ -65,6 +65,7 @@ namespace PlayerController
             data.playerPosition = this.transform.position;
         }
 
+        */
         private void Update()
         {
 
