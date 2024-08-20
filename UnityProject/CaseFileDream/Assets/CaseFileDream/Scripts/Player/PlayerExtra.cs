@@ -6,7 +6,7 @@ namespace PlayerController
 {
    
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-    public class PlayerExtra : MonoBehaviour
+    public class PlayerExtra : MonoBehaviour, IDataPersistance
     {
         [Header("Camera")]
         [SerializeField] private GameObject cameraFollowGo;
@@ -37,13 +37,6 @@ namespace PlayerController
         public Rigidbody2D platform;
 
         
-
-
-       
-
-  
-
-
         private float time;
 
         private void Awake()
@@ -60,6 +53,16 @@ namespace PlayerController
             cameraFollowObject = cameraFollowGo.GetComponent<CameraFollowObject>();
            
             respawnPoint = transform.position;
+        }
+
+        public void LoadData(GameData data)
+        {
+            this.transform.position = data.playerPosition;
+        }
+
+        public void SaveData( ref GameData data)
+        {
+            data.playerPosition = this.transform.position;
         }
 
         private void Update()

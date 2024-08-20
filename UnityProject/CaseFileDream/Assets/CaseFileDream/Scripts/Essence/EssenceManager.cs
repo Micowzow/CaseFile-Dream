@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class EssenceManager : MonoBehaviour
+public class EssenceManager : MonoBehaviour, IDataPersistance
 {
     public static EssenceManager instance;
 
@@ -21,7 +21,15 @@ public class EssenceManager : MonoBehaviour
 
     }
 
-    
+   public void LoadData(GameData data)
+    {
+        this.essences = data.essenceCount;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.essenceCount = this.essences;
+    }
 
     private void ONGUI()
     {
