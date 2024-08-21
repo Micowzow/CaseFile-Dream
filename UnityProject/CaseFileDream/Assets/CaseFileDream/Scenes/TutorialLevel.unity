@@ -28350,7 +28350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27748518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.67, y: 0.37507975, z: -88.935165}
+  m_LocalPosition: {x: -6.376, y: 0.37507975, z: -88.935165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108327,6 +108327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialAreaTileMap
       objectReference: {fileID: 0}
+    - target: {fileID: -8776179442685287763, guid: a3f77044a057b3f478d0fcbe48eeff9a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8457311422678395583, guid: a3f77044a057b3f478d0fcbe48eeff9a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -108387,6 +108391,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: -5708287979526413360, guid: a3f77044a057b3f478d0fcbe48eeff9a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4732151177606657817, guid: a3f77044a057b3f478d0fcbe48eeff9a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -125931,7 +125939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400670501220687985, guid: b9672fec9cefb9b42881ecd7c6297750, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.783249
+      value: -11.489248
       objectReference: {fileID: 0}
     - target: {fileID: 400670501220687985, guid: b9672fec9cefb9b42881ecd7c6297750, type: 3}
       propertyPath: m_LocalPosition.y
@@ -127985,7 +127993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1429383530382843911, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.67
+      value: -7.376
       objectReference: {fileID: 0}
     - target: {fileID: 1429383530382843911, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
       propertyPath: m_LocalPosition.y
@@ -128031,6 +128039,14 @@ PrefabInstance:
       propertyPath: cameraFollowGo
       value: 
       objectReference: {fileID: 1687314855}
+    - target: {fileID: 1429383530382843967, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1039799397, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
+    - target: {fileID: 1429383530382843967, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5296313529434163890, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
       propertyPath: examineText
       value: 
