@@ -23,7 +23,7 @@ namespace PlayerController
 
         private bool cachedQueryStartInColliders;
 
-        Animator animator;
+        public Animator animator;
 
         public bool facingRight = true;
 

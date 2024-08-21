@@ -19,10 +19,10 @@ public class PlayerMelee : MonoBehaviour
     {
         if (cooldownTimer <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.K))
+            if (Input.GetAxis("Fire3") == 1)
             {
                 // Example of playing attack animation
-                animator.SetTrigger("Melee");
+                StartCoroutine(AttackAnim());
 
                 Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
                 foreach (var enemy in enemiesInRange)
@@ -39,7 +39,14 @@ public class PlayerMelee : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
+    IEnumerator AttackAnim()
+    {
+        animator.SetBool("isAttacking", true);
+        yield return new WaitForSeconds(.1f);
+        animator.SetBool("isAttacking", false);
+    }
+
+        private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attackOrigin.position, attackRadius);
     }
