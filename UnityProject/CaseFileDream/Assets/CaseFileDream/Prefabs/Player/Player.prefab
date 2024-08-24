@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180755950852801540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.03, y: -0.3, z: 0}
+  m_LocalPosition: {x: 2.07, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraFollowGo: {fileID: 8693620937348004102}
   stats: {fileID: 11400000, guid: 05e6a06c5af93134ab98ff12e2c27265, type: 2}
+  animator: {fileID: 1429383530382843908}
   facingRight: 1
   speed: 0
   respawnPoint: {x: 0, y: 0, z: 0}
@@ -319,7 +320,7 @@ MonoBehaviour:
     m_Bits: 4096
   cooldownTime: 0.5
   attackDamage: 25
-  animator: {fileID: 0}
+  animator: {fileID: 1429383530382843908}
 --- !u!114 &4090589373040067400
 MonoBehaviour:
   m_ObjectHideFlags: 0
