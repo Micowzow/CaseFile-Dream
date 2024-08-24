@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using Unity.UI;
 
 public class LanternItemController : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class LanternItemController : MonoBehaviour
     public Light2D pinkLight;
     public Light2D redLight;
 
+    public GameObject blueFlame;
+    public GameObject pinkFlame;
+    public GameObject redFlame;
+
     public bool inRangeBlue = false;
     public bool inRangePink = false;
     public bool inRangeRed = false;
@@ -27,13 +32,17 @@ public class LanternItemController : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //psBlue.Stop();
         //psPink.Stop();
         blueLight.enabled = false;
         pinkLight.enabled = false;
         redLight.enabled = false;
+
+        blueFlame.SetActive (false);
+        redFlame.SetActive(false);
+        pinkFlame.SetActive(false);
 
         Physics2D.IgnoreLayerCollision(9,7);
         Physics2D.IgnoreLayerCollision(10,7);
@@ -104,7 +113,8 @@ public class LanternItemController : MonoBehaviour
             Debug.Log("LightLanternBlue");
             isLanternBlue = true;
             psBlue.Play();
-            blueLight.enabled = true;                    
+            blueLight.enabled = true;
+            blueFlame.SetActive(true);
     }
 
     public void DouseBlueLantern()
@@ -112,6 +122,7 @@ public class LanternItemController : MonoBehaviour
         isLanternBlue = false;
         blueLight.enabled = false;
         psBlue.Stop();
+        blueFlame.SetActive(false);
     }
     #endregion
 
@@ -123,13 +134,15 @@ public class LanternItemController : MonoBehaviour
             isLanternPink = true;
             psPink.Play();
             pinkLight.enabled = true;
-             
+            pinkFlame.SetActive(true);
     }
     public void DousePinkLantern()
     {
         isLanternPink = false;
         psPink.Stop();
         pinkLight.enabled = false;
+        pinkFlame.SetActive(false);
+
     }
     #endregion
 
@@ -140,7 +153,8 @@ public class LanternItemController : MonoBehaviour
             Debug.Log("LightLanternRed");
             isLanternRed = true;
             psRed.Play();
-            redLight.enabled = true;   
+            redLight.enabled = true;
+            redFlame.SetActive(true);
 
     }
 
@@ -149,6 +163,7 @@ public class LanternItemController : MonoBehaviour
         isLanternRed = false;
         redLight.enabled = false;
         psRed.Stop();
+        redFlame.SetActive(false);
     }
     #endregion
 
