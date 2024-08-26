@@ -10,7 +10,7 @@ public class OnewayPlatform : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetAxis("Vertical") == -1)
         {
             if (currentOneWayPlatform != null)
             {
