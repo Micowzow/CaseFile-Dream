@@ -9892,6 +9892,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1127967659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1352860858728205527, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
+  m_PrefabInstance: {fileID: 824636254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1141491587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 180755950852801539, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
@@ -12626,6 +12631,7 @@ PrefabInstance:
     - target: {fileID: 4924726581254725368, guid: 95b10244c5d5c1342a07a2e1445b42e1, type: 3}
       propertyPath: redFlame
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 0}
     - target: {fileID: 4924726581254725368, guid: 95b10244c5d5c1342a07a2e1445b42e1, type: 3}
       propertyPath: blueFlame
@@ -12635,6 +12641,17 @@ PrefabInstance:
       propertyPath: pinkFlame
       value: 
       objectReference: {fileID: 0}
+=======
+      objectReference: {fileID: 1778974231}
+    - target: {fileID: 4924726581254725368, guid: 95b10244c5d5c1342a07a2e1445b42e1, type: 3}
+      propertyPath: blueFlame
+      value: 
+      objectReference: {fileID: 1127967659}
+    - target: {fileID: 4924726581254725368, guid: 95b10244c5d5c1342a07a2e1445b42e1, type: 3}
+      propertyPath: pinkFlame
+      value: 
+      objectReference: {fileID: 1793840487}
+>>>>>>> Stashed changes
     - target: {fileID: 4924726581254725369, guid: 95b10244c5d5c1342a07a2e1445b42e1, type: 3}
       propertyPath: player
       value: 
@@ -12843,6 +12860,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1778974231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2920830746781935266, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
+  m_PrefabInstance: {fileID: 824636254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1782333899
 GameObject:
   m_ObjectHideFlags: 0
@@ -12986,6 +13008,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b355359669a281740a735605303f090e, type: 3}
+--- !u!1 &1793840487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5318082839535320154, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
+  m_PrefabInstance: {fileID: 824636254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1817219719
 GameObject:
   m_ObjectHideFlags: 0
