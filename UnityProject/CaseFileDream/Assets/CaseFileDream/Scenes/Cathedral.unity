@@ -2607,7 +2607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497803394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -2.6149204, z: -88.935165}
+  m_LocalPosition: {x: 1, y: 1.3850796, z: -88.935165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3858,21 +3858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &824636256 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1963816194, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
-  m_PrefabInstance: {fileID: 824636254}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &824636257 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 500243457, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
-  m_PrefabInstance: {fileID: 824636254}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &824636258 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2038757303, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
-  m_PrefabInstance: {fileID: 824636254}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &856609887
 GameObject:
   m_ObjectHideFlags: 0
@@ -9480,6 +9465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8693620937969940007, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
@@ -11460,7 +11449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400670501220687985, guid: b9672fec9cefb9b42881ecd7c6297750, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6149204
+      value: 1.3850796
       objectReference: {fileID: 0}
     - target: {fileID: 400670501220687985, guid: b9672fec9cefb9b42881ecd7c6297750, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12553,15 +12542,15 @@ PrefabInstance:
     - target: {fileID: 4924726581254725368, guid: 95b10244c5d5c1342a07a2e1445b42e1, type: 3}
       propertyPath: redFlame
       value: 
-      objectReference: {fileID: 824636256}
+      objectReference: {fileID: 0}
     - target: {fileID: 4924726581254725368, guid: 95b10244c5d5c1342a07a2e1445b42e1, type: 3}
       propertyPath: blueFlame
       value: 
-      objectReference: {fileID: 824636258}
+      objectReference: {fileID: 0}
     - target: {fileID: 4924726581254725368, guid: 95b10244c5d5c1342a07a2e1445b42e1, type: 3}
       propertyPath: pinkFlame
       value: 
-      objectReference: {fileID: 824636257}
+      objectReference: {fileID: 0}
     - target: {fileID: 4924726581254725369, guid: 95b10244c5d5c1342a07a2e1445b42e1, type: 3}
       propertyPath: player
       value: 
