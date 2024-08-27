@@ -99,6 +99,7 @@ namespace PlayerController
                 transform.parent = collision.transform;
                 platform = collision.gameObject.GetComponent<Rigidbody2D>();
                 rb.gravityScale = 10;
+                rb.velocity = platform.velocity;
             }
             if (collision.gameObject.CompareTag("LanternInteract"))
             {
