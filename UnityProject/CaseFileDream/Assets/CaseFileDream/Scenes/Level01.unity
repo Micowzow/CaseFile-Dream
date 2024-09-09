@@ -14890,7 +14890,6 @@ GameObject:
   - component: {fileID: 1104211349}
   - component: {fileID: 1104211348}
   - component: {fileID: 1104211347}
-  - component: {fileID: 1104211346}
   m_Layer: 11
   m_Name: Bird
   m_TagString: NPC
@@ -14914,26 +14913,6 @@ Transform:
   m_Father: {fileID: 513256595}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1104211346
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104211344}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 63331fcf85c40114b952f87e222c441f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1104211347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28204,7 +28183,6 @@ GameObject:
   - component: {fileID: 402707890430848621}
   - component: {fileID: 402707890430848618}
   - component: {fileID: 402707890430848619}
-  - component: {fileID: 402707890430848617}
   m_Layer: 11
   m_Name: PolarBear
   m_TagString: NPC
@@ -28212,26 +28190,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &402707890430848617
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402707890430848614}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 63331fcf85c40114b952f87e222c441f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &402707890430848618
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28403,26 +28361,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f6d5ea0fcb321b94a8c8c0950668d7c4, type: 3}
---- !u!95 &1701737790536979504
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701737790536979519}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 63331fcf85c40114b952f87e222c441f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1701737790536979506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28543,7 +28481,6 @@ GameObject:
   - component: {fileID: 1701737790536979508}
   - component: {fileID: 1701737790536979507}
   - component: {fileID: 1701737790536979506}
-  - component: {fileID: 1701737790536979504}
   m_Layer: 11
   m_Name: Skunk
   m_TagString: NPC
