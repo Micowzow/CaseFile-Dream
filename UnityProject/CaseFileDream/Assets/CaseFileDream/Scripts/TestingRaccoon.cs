@@ -8,6 +8,8 @@ public class TestingRaccoon : MonoBehaviour
     public GameObject bubble;
     public EssenceManager essenceManager;
 
+    public bool hasBubble = false;
+
     public TextMeshProUGUI essenceDisplay;
 
     public int bubbleAmount;
@@ -25,10 +27,11 @@ public class TestingRaccoon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player" && essenceManager.essences == bubbleAmount)
+        if (collider.gameObject.tag == "Player" && essenceManager.essences == bubbleAmount && hasBubble == false)
         {
             Debug.Log("Spaw Bubble");
             Instantiate(bubble);
+            hasBubble = true;
             essenceManager.essences -= bubbleAmount;
             essenceDisplay.text = essenceManager.essences.ToString();
         }
