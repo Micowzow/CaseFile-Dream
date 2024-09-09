@@ -36,6 +36,10 @@ namespace PlayerController
 
         public Rigidbody2D platform;
 
+        public GameObject bubble;
+        public bool hasBubblePower = false;
+        
+
         
         private float time;
 
@@ -46,6 +50,7 @@ namespace PlayerController
 
             cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
             animator = GetComponent<Animator>();
+            
         }
 
         private void Start()
@@ -105,6 +110,10 @@ namespace PlayerController
                 transform.parent = collision.transform;
                 platform = collision.gameObject.GetComponent<Rigidbody2D>();
                 rb.gravityScale = 10;
+            }
+            if (collision.gameObject.tag == "BubblePower" )
+            {
+            hasBubblePower = true;
             }
         }
 
