@@ -24,10 +24,11 @@ public class TestingRaccoon : MonoBehaviour
     {
         
     }
+    
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player" && essenceManager.essences == bubbleAmount && hasBubble == false)
+        if (collider.gameObject.tag == "Player" && essenceManager.essences >= bubbleAmount && hasBubble == false)
         {
             Debug.Log("Spaw Bubble");
             Instantiate(bubble);
