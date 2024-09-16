@@ -46,7 +46,7 @@ public class EnemyHealthManager : MonoBehaviour
     {
         if(dazedTime <= 0)
         {
-            GetComponent<EnemyController>().speed = 5;
+            //GetComponent<EnemyController>().speed = 5;
         }
         else
         {
