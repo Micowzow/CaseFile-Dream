@@ -11,23 +11,28 @@ public class LanternItemController : MonoBehaviour
     public bool isLanternBlue = false;
     public bool isLanternPink = false;
     public bool isLanternRed = false;
+    public bool isLanternYellow = false;
 
 
     public ParticleSystem psBlue;
     public ParticleSystem psPink;
     public ParticleSystem psRed;
+    public ParticleSystem psYellow;
 
     public Light2D blueLight;
     public Light2D pinkLight;
     public Light2D redLight;
+    public Light2D yellowLight;
 
     public GameObject blueFlame;
     public GameObject pinkFlame;
     public GameObject redFlame;
+    public GameObject yellowFlame;
 
     public bool inRangeBlue = false;
     public bool inRangePink = false;
     public bool inRangeRed = false;
+    public bool inRangeYellow = false;
     public bool facingRight = true;
 
 
@@ -39,10 +44,12 @@ public class LanternItemController : MonoBehaviour
         blueLight.enabled = false;
         pinkLight.enabled = false;
         redLight.enabled = false;
+        yellowLight.enabled = false;
 
         blueFlame.SetActive (false);
         redFlame.SetActive(false);
         pinkFlame.SetActive(false);
+        yellowFlame.SetActive(false);
 
         Physics2D.IgnoreLayerCollision(9,7);
         Physics2D.IgnoreLayerCollision(10,7);
@@ -78,6 +85,10 @@ public class LanternItemController : MonoBehaviour
         {
             LightRedLantern();
         }
+        if (inRangeYellow == true && Input.GetButtonDown("Fire2"))
+        {
+            LightYellowLantern();
+        }
     }
     
     public void OnTriggerEnter2D(Collider2D collision)
@@ -99,6 +110,11 @@ public class LanternItemController : MonoBehaviour
             inRangeRed = true;
             
         }
+        if (collision.gameObject.CompareTag("YellowRefill"))
+        {
+            inRangeYellow= true;
+
+        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
@@ -106,6 +122,7 @@ public class LanternItemController : MonoBehaviour
         inRangeBlue = false;
         inRangePink = false;
         inRangeRed = false;
+        inRangeYellow = false;
     }
     #region Blue Lantern Fire
     public void LightBlueLantern()
@@ -164,6 +181,25 @@ public class LanternItemController : MonoBehaviour
         redLight.enabled = false;
         psRed.Stop();
         redFlame.SetActive(false);
+    }
+    #endregion
+
+    #region Yellow Lantern Fire
+    public void LightYellowLantern()
+    {
+        Debug.Log("LightLanternYellow");
+        isLanternYellow = true;
+        psYellow.Play();
+        yellowLight.enabled = true;
+        yellowFlame.SetActive(true);
+    }
+
+    public void DouseYellowLantern()
+    {
+        isLanternYellow = false;
+        yellowLight.enabled = false;
+        psYellow.Stop();
+        yellowFlame.SetActive(false);
     }
     #endregion
 
