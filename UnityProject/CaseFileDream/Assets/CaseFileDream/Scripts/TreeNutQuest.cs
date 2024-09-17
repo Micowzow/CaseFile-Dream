@@ -11,16 +11,17 @@ public class TreeNutQuest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        numberOfQuestItems = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (numberOfQuestItems == 4)
+        if (numberOfQuestItems == 8)
         {
             Debug.Log("all Nuts present");
             Instantiate(birdQuestItem);
+            Destroy(gameObject);
         }
     }
 

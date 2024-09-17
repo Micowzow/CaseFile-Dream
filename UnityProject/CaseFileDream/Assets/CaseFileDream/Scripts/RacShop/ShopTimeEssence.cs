@@ -28,7 +28,7 @@ public class ShopTimeEssence : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collider)
     {
        
-        if (collider.gameObject.tag == "Player" && essenceManager.essences >= budAmount && hasBud == false && Input.GetButtonDown("Fire2"))
+        if (collider.gameObject.tag == "Player" && essenceManager.essences >= budAmount && Input.GetButtonDown("Fire2"))
         {
             Debug.Log("Spawn scissors");
             Instantiate(bud, spawnPosition.position, spawnPosition.rotation);
