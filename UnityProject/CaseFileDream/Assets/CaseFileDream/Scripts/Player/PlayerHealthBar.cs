@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealthBar : MonoBehaviour
+namespace PlayerController
+{
+    public class PlayerHealthBar : MonoBehaviour
 {
     public PlayerHealth playerHealth;
     public Image totalhealthBar;
@@ -18,4 +20,5 @@ public class PlayerHealthBar : MonoBehaviour
     {
         currentHealthBar.fillAmount = playerHealth.currentHealth / 3;
     }
+} 
 }

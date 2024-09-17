@@ -2,48 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class TimerController : MonoBehaviour
+namespace PlayerController
 {
-    public Image timeRadial;
-    public Respawning respawning;
-    public PauseMenu pauseMenu;
 
-    public float timeRemaining;
 
-    public float addTime;
-    public float maxTime = 5.0f;
-
-    public void Awake() 
+    public class TimerController : MonoBehaviour
     {
-        
-    }
-    void Start()
-    {
-        timeRemaining = maxTime;
-    }
+        public Image timeRadial;
+        public Respawning respawning;
+        public PauseMenu pauseMenu;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(timeRemaining > 0)
+        public float timeRemaining;
+
+        public float addTime;
+        public float maxTime = 5.0f;
+
+        public void Awake()
         {
-            timeRemaining -= Time.deltaTime;
-            timeRadial.fillAmount = timeRemaining / maxTime;
+
         }
-        else
+        void Start()
         {
-            respawning.Die();
-            pauseMenu.LoadMenu();
+            timeRemaining = maxTime;
         }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                timeRadial.fillAmount = timeRemaining / maxTime;
+            }
+            else
+            {
+                respawning.Die();
+                pauseMenu.LoadMenu();
+            }
+        }
+
+        public void AddTime()
+        {
+            timeRemaining += addTime;
+            timeRadial.fillAmount = timeRemaining + addTime;
+
+        }
+
+
     }
-
-    public void AddTime()
-    {
-        timeRemaining += addTime;
-        timeRadial.fillAmount = timeRemaining + addTime;
-
-    }
-
-    
 }

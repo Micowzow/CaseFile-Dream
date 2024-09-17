@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+namespace PlayerController
+{
+    public class PlayerHealth : MonoBehaviour
 {
     public float startingHealth;
     public float currentHealth;
-
+    public PlayerExtra playerExtra;
     private void Awake()
     {
         currentHealth = startingHealth;
+            playerExtra = GetComponent<PlayerExtra>();
+
     }
 
     public void TakeDamage(float damge)
     {
         currentHealth = Mathf.Clamp(currentHealth - damge, 0, startingHealth);
-        if(currentHealth > 0)
+        if (currentHealth > 0)
         {
 
         }
@@ -34,7 +38,16 @@ public class PlayerHealth : MonoBehaviour
 
         if (collision.tag == "Water")
         {
-            TakeDamage(10);
+                if (playerExtra.hasBubblePower == false)
+                {
+                    TakeDamage(10);
+
+                }
+                else
+                {
+                    TakeDamage(0);
+                }
+                
         }
 
     }
@@ -44,4 +57,5 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + value, 0, startingHealth);
     }
 
+} 
 }

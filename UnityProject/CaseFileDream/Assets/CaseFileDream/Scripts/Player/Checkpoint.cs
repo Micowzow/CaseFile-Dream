@@ -2,31 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Checkpoint : MonoBehaviour
+namespace PlayerController
 {
-    Respawning respawning;
-    LanternRespawn lanternRespawn;
-    // Start is called before the first frame update
-    void Awake()
+    public class Checkpoint : MonoBehaviour
     {
-        respawning = GameObject.FindGameObjectWithTag("Player").GetComponent<Respawning>();
-        lanternRespawn = GameObject.FindGameObjectWithTag("Lantern").GetComponent<LanternRespawn>();
-    }
+        Respawning respawning;
+        LanternRespawn lanternRespawn;
+        // Start is called before the first frame update
+        void Awake()
+        {
+            respawning = GameObject.FindGameObjectWithTag("Player").GetComponent<Respawning>();
+            lanternRespawn = GameObject.FindGameObjectWithTag("Lantern").GetComponent<LanternRespawn>();
+        }
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        public void OnTriggerEnter2D(Collider2D collision)
         {
-            respawning.UpdateCheckpoint(transform.position);
+            if (collision.CompareTag("Player"))
+            {
+                respawning.UpdateCheckpoint(transform.position);
+            }
+            if (collision.CompareTag("Player"))
+            {
+                lanternRespawn.UpdateCheckpoint(transform.position);
+            }
         }
-        if (collision.CompareTag("Player"))
+        // Update is called once per frame
+        void Update()
         {
-            lanternRespawn.UpdateCheckpoint(transform.position);
+
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

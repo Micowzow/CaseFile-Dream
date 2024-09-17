@@ -2,29 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AddTime : MonoBehaviour
+namespace PlayerController
 {
-    public TimerController timerController;
-    // Start is called before the first frame update
-    void Start()
+    public class AddTime : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    { 
-        if (collision.gameObject.CompareTag("Player"))
+        public TimerController timerController;
+        // Start is called before the first frame update
+        void Start()
         {
-            timerController.AddTime();
-            Destroy(gameObject);
-        
 
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        public void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                timerController.AddTime();
+                Destroy(gameObject);
+
+
+            }
         }
     }
 }
+
