@@ -83,12 +83,12 @@ namespace PlayerController
             if (move < 0 && facingRight)
             {
                 Flip();
-                cameraFollowObject.CallTurn();
+                //cameraFollowObject.CallTurn();
             }
             else if(move>0 && !facingRight)
             {
                 Flip();
-                cameraFollowObject.CallTurn();
+                //cameraFollowObject.CallTurn();
             }
 
             

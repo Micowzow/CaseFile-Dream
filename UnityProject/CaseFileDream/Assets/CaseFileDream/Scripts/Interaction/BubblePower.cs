@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class BubblePower : MonoBehaviour
 {
-
-    public GameObject water;
+    
     
 
-
+    
 
     private void Start()
     {
@@ -20,8 +19,8 @@ public class BubblePower : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-
-            Destroy(water);
+            
+            
             Destroy(gameObject);
 
         }
