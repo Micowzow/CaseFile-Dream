@@ -79,7 +79,7 @@ Transform:
   - {fileID: 8693620937969940007}
   - {fileID: 180755950852801539}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1429383530382843966
 MonoBehaviour:
@@ -293,7 +293,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1039799397, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
+  m_Sprite: {fileID: -1537843054, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -338,6 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 3
   currentHealth: 0
+  playerExtra: {fileID: 0}
 --- !u!114 &973466593
 MonoBehaviour:
   m_ObjectHideFlags: 0
