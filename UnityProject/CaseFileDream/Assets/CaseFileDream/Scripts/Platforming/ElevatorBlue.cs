@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Rendering.Universal;
 public class ElevatorBlue : MonoBehaviour
 {
     public Transform elevatorSwitch;
@@ -11,13 +11,19 @@ public class ElevatorBlue : MonoBehaviour
     public Transform recallElevator;
     public Transform recallElevatorTwo;
 
+
     public ParticleSystem pS;
+    public Light2D blueLight;
 
 
     public float speed;
     bool isElevaterDown;
     public bool hasBeenActivated;
 
+    private void Start()
+    {
+        blueLight.enabled = false;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -33,6 +39,7 @@ public class ElevatorBlue : MonoBehaviour
             lantern.GetComponent<LanternItemController>().DouseBlueLantern();
             Debug.Log("StartedElevator/door");
             pS.Play();
+            blueLight.enabled = true;
             if(transform.position.y <= downPos.position.y)
             {
                 isElevaterDown = true;
