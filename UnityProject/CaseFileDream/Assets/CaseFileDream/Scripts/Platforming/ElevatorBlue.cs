@@ -9,6 +9,7 @@ public class ElevatorBlue : MonoBehaviour
     public Transform upperPos;
     public Transform lantern;
     public Transform recallElevator;
+    public Transform recallElevatorTwo;
 
     public ParticleSystem pS;
 
@@ -31,6 +32,7 @@ public class ElevatorBlue : MonoBehaviour
         {
             lantern.GetComponent<LanternItemController>().DouseBlueLantern();
             Debug.Log("StartedElevator/door");
+            pS.Play();
             if(transform.position.y <= downPos.position.y)
             {
                 isElevaterDown = true;
@@ -61,6 +63,30 @@ public class ElevatorBlue : MonoBehaviour
         {
             Debug.Log("StartedElevator");
             recallElevator.transform.Rotate(0f, 180f, 0f);
+            if (transform.position.y <= downPos.position.y)
+            {
+                isElevaterDown = true;
+            }
+            else if (transform.position.y >= upperPos.position.y)
+            {
+                isElevaterDown = false;
+            }
+        }
+
+        if (isElevaterDown)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, upperPos.position, speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, downPos.position, speed * Time.deltaTime);
+        }
+
+        //If Elevator is gone recall at recall station
+        if (Vector2.Distance(lantern.position, recallElevatorTwo.position) < 2.5f && Input.GetButtonDown("Fire2") && hasBeenActivated == true)
+        {
+            Debug.Log("StartedElevator");
+            recallElevatorTwo.transform.Rotate(0f, 180f, 0f);
             if (transform.position.y <= downPos.position.y)
             {
                 isElevaterDown = true;
