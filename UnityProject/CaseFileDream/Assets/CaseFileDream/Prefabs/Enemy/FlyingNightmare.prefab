@@ -146,11 +146,11 @@ GameObject:
   - component: {fileID: 1803001920281067330}
   - component: {fileID: 1803001920281067331}
   - component: {fileID: 1803001920281067328}
-  - component: {fileID: 1803001920281067329}
   - component: {fileID: 1803001920281067332}
   - component: {fileID: 1803001920281067333}
   - component: {fileID: 1803001920281067335}
   - component: {fileID: 1803001920281067334}
+  - component: {fileID: 5788147742381671018}
   m_Layer: 12
   m_Name: FlyingNightmare
   m_TagString: Enemy
@@ -246,20 +246,6 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &1803001920281067329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803001920281067342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  target: {fileID: 0}
 --- !u!114 &1803001920281067332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +318,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5788147742381671018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803001920281067342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b0de5ef22ccdd4fb438428d3d636d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  activateDistance: 50
+  pathUpdateSeconds: 0.5
+  speed: 200
+  nextWaypointDistance: 3
+  jumpNodeHieghtRequirment: 0.8
+  jumpModifier: 0.3
+  jumpCheckOffset: 0.1
+  followEnabled: 1
+  jumpEnabled: 1
+  directionLookEnabled: 1
 --- !u!1 &1803001920385380774
 GameObject:
   m_ObjectHideFlags: 0
