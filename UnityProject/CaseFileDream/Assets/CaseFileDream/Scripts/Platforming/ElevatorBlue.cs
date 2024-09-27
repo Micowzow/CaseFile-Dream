@@ -10,6 +10,7 @@ public class ElevatorBlue : MonoBehaviour
     public Transform lantern;
     public Transform recallElevator;
     public Transform recallElevatorTwo;
+    public Transform player;
 
 
     public ParticleSystem pS;
@@ -66,7 +67,7 @@ public class ElevatorBlue : MonoBehaviour
         
 
         //If Elevator is gone recall at recall station
-        if (Vector2.Distance(lantern.position, recallElevator.position) < 2.5f && Input.GetButtonDown("Fire2") && hasBeenActivated == true)
+        if (Vector2.Distance(player.position, recallElevator.position) < 2.5f && Input.GetButtonDown("Fire2") && hasBeenActivated == true)
         {
             Debug.Log("StartedElevator");
             recallElevator.transform.Rotate(0f, 180f, 0f);
@@ -90,7 +91,7 @@ public class ElevatorBlue : MonoBehaviour
         }
 
         //If Elevator is gone recall at recall station
-        if (Vector2.Distance(lantern.position, recallElevatorTwo.position) < 2.5f && Input.GetButtonDown("Fire2") && hasBeenActivated == true)
+        if (Vector2.Distance(player.position, recallElevatorTwo.position) < 2.5f && Input.GetButtonDown("Fire2") && hasBeenActivated == true)
         {
             Debug.Log("StartedElevator");
             recallElevatorTwo.transform.Rotate(0f, 180f, 0f);
