@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 4613810194589760442}
   - component: {fileID: 4090589373040067400}
   - component: {fileID: 973466593}
+  - component: {fileID: 1450074667}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -79,7 +80,7 @@ Transform:
   - {fileID: 8693620937969940007}
   - {fileID: 180755950852801539}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1429383530382843966
 MonoBehaviour:
@@ -230,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointPos: {x: 0, y: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 1429383530382843908}
   playerHealth: {fileID: 4090589373040067400}
 --- !u!95 &1429383530382843908
 Animator:
@@ -352,6 +353,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCollider: {fileID: 1429383530382843960}
+--- !u!81 &1450074667
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8693620937348004102}
+  m_Enabled: 1
 --- !u!1 &8693620937969940006
 GameObject:
   m_ObjectHideFlags: 0

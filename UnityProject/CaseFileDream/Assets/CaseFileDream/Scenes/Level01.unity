@@ -2556,7 +2556,6 @@ GameObject:
   m_Component:
   - component: {fileID: 93300065}
   - component: {fileID: 93300064}
-  - component: {fileID: 93300063}
   - component: {fileID: 93300066}
   - component: {fileID: 93300067}
   m_Layer: 0
@@ -2566,14 +2565,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &93300063
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93300062}
-  m_Enabled: 1
 --- !u!20 &93300064
 Camera:
   m_ObjectHideFlags: 0
@@ -9512,6 +9503,26 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 763868990}
     m_Modifications:
+    - target: {fileID: 1005584325606188622, guid: e6035b89e97ff1c4cbe61f8d653b0430, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005584325606188622, guid: e6035b89e97ff1c4cbe61f8d653b0430, type: 3}
+      propertyPath: MaxDistance
+      value: 18.17035
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005584325606188622, guid: e6035b89e97ff1c4cbe61f8d653b0430, type: 3}
+      propertyPath: MinDistance
+      value: 1.856617
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005584325606188622, guid: e6035b89e97ff1c4cbe61f8d653b0430, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005584325606188622, guid: e6035b89e97ff1c4cbe61f8d653b0430, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4928358499326509710, guid: e6035b89e97ff1c4cbe61f8d653b0430, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -31133,11 +31144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7441fc8a9cb2b54499599c4be3f59da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &1450074655 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1429383530382843908, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
-  m_PrefabInstance: {fileID: 2035878288}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1453191057
 GameObject:
   m_ObjectHideFlags: 0
@@ -41660,10 +41666,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5441394020257233588, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 1450074655}
     - target: {fileID: 8693620937348004102, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
       propertyPath: m_Name
       value: Player
