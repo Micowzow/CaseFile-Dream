@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerAttack
+  m_Name: NoSlash
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,15 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -369650490, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
-    - time: 0.083333336
-      value: {fileID: 1029937592, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
-    - time: 0.16666667
-      value: {fileID: 778879956, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
-    - time: 0.25
-      value: {fileID: -1949371405, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
-    - time: 0.33333334
-      value: {fileID: -1699734393, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
+      value: {fileID: 1602476852, guid: 2f5c7ae9cbed5c046a652b8996e5d656, type: 3}
+    - time: 0.016666668
+      value: {fileID: 918424757, guid: 2f5c7ae9cbed5c046a652b8996e5d656, type: 3}
+    - time: 0.033333335
+      value: {fileID: -1190771668, guid: 2f5c7ae9cbed5c046a652b8996e5d656, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -49,22 +45,20 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
     pptrCurveMapping:
-    - {fileID: -369650490, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
-    - {fileID: 1029937592, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
-    - {fileID: 778879956, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
-    - {fileID: -1949371405, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
-    - {fileID: -1699734393, guid: 0c8892b9102135d46a00cf1b8baaa5bd, type: 3}
+    - {fileID: 1602476852, guid: 2f5c7ae9cbed5c046a652b8996e5d656, type: 3}
+    - {fileID: 918424757, guid: 2f5c7ae9cbed5c046a652b8996e5d656, type: 3}
+    - {fileID: -1190771668, guid: 2f5c7ae9cbed5c046a652b8996e5d656, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.35000002
+    m_StopTime: 0.050000004
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
+    m_LoopTime: 1
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -78,11 +72,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.1
-    functionName: Slash
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

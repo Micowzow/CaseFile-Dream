@@ -44,6 +44,7 @@ public class PlayerMelee : MonoBehaviour
         animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(.1f);
         animator.SetBool("isAttacking", false);
+        
     }
 
         private void OnDrawGizmos()
