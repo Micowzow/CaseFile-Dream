@@ -11,18 +11,24 @@ public class TreeNutQuest : MonoBehaviour
     public GameObject birdOne;
     public GameObject birdTwo;
 
+    public bool inArea;
+
+    public NutManager nutManager;
+
     // Start is called before the first frame update
     void Start()
     {
         numberOfQuestItems = 0;
         birdOne.SetActive(true);
         birdTwo.SetActive(false);
+        nutManager = NutManager.instance;
+        inArea = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (numberOfQuestItems == 8)
+        if (nutManager.nuts == 4 && inArea == true)
         {
             Debug.Log("all Nuts present");
             birdOne.SetActive(false);
@@ -42,6 +48,12 @@ public class TreeNutQuest : MonoBehaviour
 
         }
 
+        if (collider.gameObject.tag == "Player")
+        {
+            inArea = true;
+
+        }
+
 
     }
 
@@ -50,6 +62,12 @@ public class TreeNutQuest : MonoBehaviour
         if (collider.gameObject.tag == "TreeNut")
         {
             numberOfQuestItems -= 1;
+
+        }
+
+        if (collider.gameObject.tag == "Player")
+        {
+            inArea = false;
 
         }
     }
