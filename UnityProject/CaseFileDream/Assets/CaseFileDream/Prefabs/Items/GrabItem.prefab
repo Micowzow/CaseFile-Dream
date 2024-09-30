@@ -72,7 +72,7 @@ Transform:
   m_Children:
   - {fileID: 4924726580870266597}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4924726581254725364
 SpriteRenderer:
@@ -755,6 +755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 8743410666497785141, guid: df61c0e93e7a35b4594db05e98ed91ca, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b8406fc030ae4d543b6722ff66e56cbd, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: df61c0e93e7a35b4594db05e98ed91ca, type: 3}
