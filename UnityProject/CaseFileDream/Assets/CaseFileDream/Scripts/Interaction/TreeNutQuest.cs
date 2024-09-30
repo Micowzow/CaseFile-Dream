@@ -20,6 +20,9 @@ public class TreeNutQuest : MonoBehaviour
     public TextMeshProUGUI nutDisplay;
     public Image nutImage;
 
+    public SpriteRenderer treeWith;
+    public SpriteRenderer treeWithout;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,9 @@ public class TreeNutQuest : MonoBehaviour
         inArea = false;
         nutDisplay.enabled = false;
         nutImage.enabled = false;
+
+        treeWith.enabled = false;
+        treeWithout.enabled = true;
         
     }
 
@@ -44,6 +50,8 @@ public class TreeNutQuest : MonoBehaviour
             Instantiate(birdQuestItem);
             nutManager.nuts = 0;
             nutDisplay.text = 0.ToString();
+            treeWith.enabled = true;
+            treeWithout.enabled = false;
             Destroy(gameObject);
             
         }
