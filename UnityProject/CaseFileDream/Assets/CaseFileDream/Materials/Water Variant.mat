@@ -23,7 +23,7 @@ Material:
   m_Name: Water Variant
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: 43bee363a00a02240b6edcbe6f5f6299, type: 2}
-  m_ModifiedSerializedProperties: 0
+  m_ModifiedSerializedProperties: 2
   m_ValidKeywords:
   - _ENVIRONMENTREFLECTIONS_OFF
   - _RECEIVE_SHADOWS_OFF
@@ -45,6 +45,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - _Smoothness: 0
+    m_Colors:
+    - _BaseColor: {r: 0.3280082, g: 0.3455945, b: 0.764151, a: 0.5019608}
+    - _Color: {r: 0.32800817, g: 0.34559447, b: 0.764151, a: 0.5019608}
+    - _EmissionColor: {r: 551.9058, g: 27.292048, b: 0, a: 1}
+    - _SpecColor: {r: 0.9056604, g: 0.8699809, b: 0.764685, a: 1}
   m_BuildTextureStacks: []
