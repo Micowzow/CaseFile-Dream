@@ -43,6 +43,7 @@ public class TreeNutQuest : MonoBehaviour
             birdTwo.SetActive(true);
             Instantiate(birdQuestItem);
             nutManager.nuts = 0;
+            nutDisplay.text = 0.ToString();
             Destroy(gameObject);
             
         }
