@@ -34,7 +34,8 @@ namespace PlayerController
         if (collision.tag == "Enemy")
         {
             TakeDamage(0);
-        }
+                FindObjectOfType<AudioManager>().Play("Hurt");
+            }
 
         if (collision.tag == "Water")
         {
