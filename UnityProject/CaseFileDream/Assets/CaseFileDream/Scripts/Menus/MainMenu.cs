@@ -13,6 +13,14 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    public void SkipTutorial()
+    {
+        LevelManager.Instance.LoadScene("Cathedral", "CrossFade");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+
+
+    }
+
     public void Quitgame ()
     {
         Application.Quit();

@@ -41,7 +41,8 @@ public class ElevatorBlue : MonoBehaviour
             Debug.Log("StartedElevator/door");
             pS.Play();
             blueLight.enabled = true;
-            if(transform.position.y <= downPos.position.y)
+            FindObjectOfType<AudioManager>().Play("Elevator");
+            if (transform.position.y <= downPos.position.y)
             {
                 isElevaterDown = true;
                 hasBeenActivated = true;
@@ -70,6 +71,7 @@ public class ElevatorBlue : MonoBehaviour
         if (Vector2.Distance(player.position, recallElevator.position) < 2.5f && Input.GetButtonDown("Fire2") && hasBeenActivated == true)
         {
             Debug.Log("StartedElevator");
+            FindObjectOfType<AudioManager>().Play("Elevator");
             recallElevator.transform.Rotate(0f, 180f, 0f);
             if (transform.position.y <= downPos.position.y)
             {
@@ -94,6 +96,7 @@ public class ElevatorBlue : MonoBehaviour
         if (Vector2.Distance(player.position, recallElevatorTwo.position) < 2.5f && Input.GetButtonDown("Fire2") && hasBeenActivated == true)
         {
             Debug.Log("StartedElevator");
+            FindObjectOfType<AudioManager>().Play("Elevator");
             recallElevatorTwo.transform.Rotate(0f, 180f, 0f);
             if (transform.position.y <= downPos.position.y)
             {
