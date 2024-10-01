@@ -42,7 +42,7 @@ public class NPCAudioTree : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             playerInRange = false;
-            FindObjectOfType<AudioManager>().Stop("ElkDialogue");
+            FindObjectOfType<AudioManager>().Stop("TreeDialogue");
             isTalking = false;
 
         }

@@ -183,6 +183,7 @@ namespace PlayerController
             {
                 var deceleration = grounded ? stats.GroundDeceleration : stats.AirDeceleration;
                 frameVelocity.x = Mathf.MoveTowards(frameVelocity.x, 0, deceleration * Time.fixedDeltaTime);
+
             }
             else
             {
