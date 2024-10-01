@@ -169,7 +169,8 @@ namespace PlayerController
             coyoteUsable = false; //Coyote Jump is not useable
             frameVelocity.y = stats.JumpPower; //Frame movement 
             Jumped?.Invoke(); // Is jump command executed?
-            
+            FindObjectOfType<AudioManager>().Play("Jump");
+
         }
 
         #endregion

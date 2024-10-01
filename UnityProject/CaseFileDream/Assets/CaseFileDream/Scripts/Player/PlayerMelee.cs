@@ -31,6 +31,8 @@ public class PlayerMelee : MonoBehaviour
                 }
 
                 cooldownTimer = cooldownTime;
+
+                FindObjectOfType<AudioManager>().Play("Attack");
             }
         }
         else
