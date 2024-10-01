@@ -47,13 +47,43 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 18ab54b7f66752249bdf06db7015923a, type: 3}
-    volume: 0.8
+    volume: 0.4
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Attack
-    clip: {fileID: 8300000, guid: 18ab54b7f66752249bdf06db7015923a, type: 3}
+    clip: {fileID: 8300000, guid: 6f3caf39d317a1a4e8fe32e945a199b4, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: cf76011791e95ce478ac14bdcbcf8f11, type: 3}
     volume: 0.8
     pitch: 1
-    loop: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Hurt
+    clip: {fileID: 8300000, guid: 98484bbe241efb24b82919f958dc6f2b, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 6638e73bc21760948bad105bde7f26be, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ElkDialogue
+    clip: {fileID: 8300000, guid: 62cfb50824784ff408d134a5f6067224, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MenuMusic
+    clip: {fileID: 8300000, guid: fd0a9318259162e4cb1648669549ee18, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
     source: {fileID: 0}

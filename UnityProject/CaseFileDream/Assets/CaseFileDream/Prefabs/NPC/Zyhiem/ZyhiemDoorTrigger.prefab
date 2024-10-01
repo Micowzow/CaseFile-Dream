@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1550310532078720804}
   - component: {fileID: 2948883253665179673}
   - component: {fileID: 1550310532078720820}
+  - component: {fileID: 6807356768269903075}
   m_Layer: 11
   m_Name: ZyhiemDoorTrigger
   m_TagString: NPC
@@ -164,6 +165,18 @@ MonoBehaviour:
   anim: {fileID: 0}
   isOpen: 0
   canEnter: 0
+--- !u!114 &6807356768269903075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550310532078720811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e272f3dd4bb3c3940a037bc050262762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1550310533155136797
 GameObject:
   m_ObjectHideFlags: 0

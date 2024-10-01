@@ -132,6 +132,7 @@ public class LanternItemController : MonoBehaviour
             psBlue.Play();
             blueLight.enabled = true;
             blueFlame.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("LightCandle");
     }
 
     public void DouseBlueLantern()
@@ -152,6 +153,7 @@ public class LanternItemController : MonoBehaviour
             psPink.Play();
             pinkLight.enabled = true;
             pinkFlame.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("LightCandle");
     }
     public void DousePinkLantern()
     {
@@ -172,6 +174,7 @@ public class LanternItemController : MonoBehaviour
             psRed.Play();
             redLight.enabled = true;
             redFlame.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("LightCandle");
 
     }
 
@@ -192,6 +195,7 @@ public class LanternItemController : MonoBehaviour
         psYellow.Play();
         yellowLight.enabled = true;
         yellowFlame.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("LightCandle");
     }
 
     public void DouseYellowLantern()

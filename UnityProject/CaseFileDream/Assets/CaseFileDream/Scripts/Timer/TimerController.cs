@@ -15,6 +15,7 @@ namespace PlayerController
         public float timeRemaining;
 
         public float addTime;
+        public float removeTime;
         public float maxTime = 5.0f;
 
         public void Awake()
@@ -45,6 +46,13 @@ namespace PlayerController
         {
             timeRemaining += addTime;
             timeRadial.fillAmount = timeRemaining + addTime;
+
+        }
+
+        public void RemoveTime()
+        {
+            timeRemaining -= removeTime;
+            timeRadial.fillAmount = timeRemaining - removeTime;
 
         }
 

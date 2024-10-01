@@ -13,6 +13,8 @@ namespace PlayerController
 
         public PlayerHealth playerHealth;
 
+        public TimerController timerController;
+
         public void Awake()
         {
             playerRb = GetComponent<Rigidbody2D>();
@@ -42,6 +44,7 @@ namespace PlayerController
                 {
                     anim.Play("FadeOut");
                     Die();
+                    
                 }
 
             }
@@ -53,6 +56,7 @@ namespace PlayerController
                 {
                     anim.Play("FadeOut");
                     Die();
+                    
                 }
 
             }
@@ -68,6 +72,9 @@ namespace PlayerController
         {
 
             StartCoroutine(Respawn(1.5f));
+            timerController.RemoveTime();
+            FindObjectOfType<AudioManager>().Play("Death");
+
 
         }
 
