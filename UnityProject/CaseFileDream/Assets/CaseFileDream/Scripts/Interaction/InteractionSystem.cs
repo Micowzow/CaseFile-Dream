@@ -109,6 +109,8 @@ public class InteractionSystem : MonoBehaviour
             grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
             //Null the grabbed object reference
             grabbedObject = null;
+
+            FindObjectOfType<AudioManager>().Play("Drop");
         }
         //Check if we have nothing grabbed, grab detected item
         else
@@ -130,6 +132,8 @@ public class InteractionSystem : MonoBehaviour
 
             grabbedObject.GetComponent<BoxCollider2D>().isTrigger = true;
             grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
+
+            FindObjectOfType<AudioManager>().Play("PickUp");
 
         }
 
