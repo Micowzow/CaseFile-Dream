@@ -89,8 +89,8 @@ public class EnemyHealthManager : MonoBehaviour
     {
         currentHealth -= damage;
         dazedTime = startDazedTime;
-
-        if(currentHealth <= 0)
+        FindObjectOfType<AudioManager>().Play("EnemyDamage");
+        if (currentHealth <= 0)
         {
             Destroy(gameObject);
             enemyDead = true;
