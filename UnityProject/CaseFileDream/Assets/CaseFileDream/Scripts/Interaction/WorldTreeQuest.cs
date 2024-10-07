@@ -12,11 +12,17 @@ public class WorldTreeQuest : MonoBehaviour
 
     public GameObject worldHeart;
 
+    public GameObject treeOne;
+    public GameObject treeTwo;
+
+
     //[SerializeField] private PlayableDirector playableDirector;
     
     // Start is called before the first frame update
     void Start()
     {
+        treeOne.SetActive(true);
+        treeTwo.SetActive(false);
         
     }
 
@@ -30,6 +36,8 @@ public class WorldTreeQuest : MonoBehaviour
             Destroy(blockage);
             Instantiate(worldHeart);
             Destroy(gameObject);
+            treeOne.SetActive(false);
+            treeTwo.SetActive(true);
 
         }
     }
