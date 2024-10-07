@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class WorldTreeQuest : MonoBehaviour
 {
     public Collider2D depositArea;
     public int numberOfQuestItems;
+
+    public GameObject blockage;
+
+    public GameObject worldHeart;
+
+    //[SerializeField] private PlayableDirector playableDirector;
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +26,10 @@ public class WorldTreeQuest : MonoBehaviour
         if(numberOfQuestItems == 4)
         {
             Debug.Log("all items present");
+            //playableDirector.Play();
+            Destroy(blockage);
+            Instantiate(worldHeart);
+            Destroy(gameObject);
 
         }
     }
