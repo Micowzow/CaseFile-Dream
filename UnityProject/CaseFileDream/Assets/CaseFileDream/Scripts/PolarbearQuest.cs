@@ -14,6 +14,8 @@ public class PolarbearQuest : MonoBehaviour
     bool isDoorDown;
     public bool doorActivated;
 
+    public GameObject bearQuestItem;
+
      public GameObject bearOne;
     public GameObject bearTwo;
 
@@ -31,26 +33,28 @@ public class PolarbearQuest : MonoBehaviour
     }
     void Update()
     {
-        StartBlueDoor();
+        StartPinkDoor();
 
         if(doorActivated == true)
         {
             bearOne.SetActive(false);
             bearTwo.SetActive(true);
+            Instantiate(bearQuestItem);
+            Destroy(gameObject);
 
         }
         
     }
 
-    public void StartBlueDoor()
+    public void StartPinkDoor()
     {
         //If next to door switch and Q key is pressed and isLanternLit is true
-        if (Vector2.Distance(lantern.position, doorswitch.position) < 2.5f && Input.GetButtonDown("Fire2") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternBlue == true && gameObject.tag == "BlueInteract")
+        if (Vector2.Distance(lantern.position, doorswitch.position) < 2.5f && Input.GetButtonDown("Fire2") && GameObject.Find("GrabItem").GetComponent<LanternItemController>().isLanternPink == true)
         {
-            lantern.GetComponent<LanternItemController>().DouseBlueLantern();
-            Debug.Log("LiftBlueDoor");
-            light.enabled = true;
+            lantern.GetComponent<LanternItemController>().DousePinkLantern();
+            Debug.Log("LiftPinkDoor");
             doorActivated = true;
+            light.enabled = true;
             pS.Play();
             if (transform.position.y <= downPos.position.y)
             {
