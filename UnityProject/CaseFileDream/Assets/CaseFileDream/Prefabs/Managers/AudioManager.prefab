@@ -45,21 +45,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 18ab54b7f66752249bdf06db7015923a, type: 3}
+  - name: LightCandle
+    clip: {fileID: 8300000, guid: 36326bf4fcb464b45aa9d8c01f8e2049, type: 3}
     volume: 0.4
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: Attack
     clip: {fileID: 8300000, guid: 6f3caf39d317a1a4e8fe32e945a199b4, type: 3}
-    volume: 0.2
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: cf76011791e95ce478ac14bdcbcf8f11, type: 3}
-    volume: 0.8
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -71,7 +71,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Death
     clip: {fileID: 8300000, guid: 6638e73bc21760948bad105bde7f26be, type: 3}
-    volume: 0.6
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -79,10 +79,52 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 62cfb50824784ff408d134a5f6067224, type: 3}
     volume: 0.2
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: MenuMusic
     clip: {fileID: 8300000, guid: fd0a9318259162e4cb1648669549ee18, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BirdDialogue
+    clip: {fileID: 8300000, guid: 26cc9f9e709bea2449d8367a5de9fa30, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RacDialogue
+    clip: {fileID: 8300000, guid: 5aa0ae56ed5844b498660e2d4f087375, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TreeDialogue
+    clip: {fileID: 8300000, guid: d1bc16e92295c3f46ba791a360b4c4b5, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PickUp
+    clip: {fileID: 8300000, guid: caf47d792dd1a474496a7b95cd69c9f7, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Drop
+    clip: {fileID: 8300000, guid: c8895b8e6f0abd6438c1f2c53ca23cdf, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Elevator
+    clip: {fileID: 8300000, guid: fb2afdac7a6da6c44af15eb04667eab0, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDamage
+    clip: {fileID: 8300000, guid: d6671ff65f2e74b47b52b9d2d35d4650, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0
