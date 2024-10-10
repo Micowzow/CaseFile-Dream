@@ -15,6 +15,7 @@ public class NPCPatrol : MonoBehaviour
     private Transform currentPoint;
     public float speed;
     public float idleSeconds;
+    public SpriteRenderer sprite;
 
    
 
@@ -46,23 +47,26 @@ public class NPCPatrol : MonoBehaviour
         {
             
             StartCoroutine(IdleNPC());
-            flip();
+            flipTrue();
             currentPoint = pointA.transform;
         }
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
         {
             
             StartCoroutine(IdleNPC());
-            flip();
+            flipFalse();
             currentPoint = pointB.transform;
         }
     }
 
-    private void flip()
+    private void flipTrue()
     {
-        Vector3 localscale = transform.localScale;
-        localscale.x *= -1;
-        transform.localScale = localscale;
+        sprite.flipX = true;
+    }
+
+    private void flipFalse()
+    {
+        sprite.flipX = false;
     }
 
     public IEnumerator IdleNPC()
