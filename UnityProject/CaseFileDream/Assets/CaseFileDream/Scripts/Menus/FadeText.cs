@@ -35,7 +35,7 @@ public class FadeText : MonoBehaviour
     {
         textBox.CrossFadeAlpha(1, 0.5f, false);
         fadeTime += Time.deltaTime;
-        if(textBox.color.a == 1 && fadeTime > 2.5f)
+        if(textBox.color.a == 1 && fadeTime > 3f)
         {
             fadingIn = false;
             fadeTime = 0;
