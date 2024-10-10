@@ -773,7 +773,7 @@ Transform:
   m_Children:
   - {fileID: 3931917678591168982}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3931917677130909127
 MonoBehaviour:
@@ -787,7 +787,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b13c3fbb130283499798fb69bd1ec96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typingSpeed: 0.04
   dialoguePanel: {fileID: 3931917678650039996}
+  continueIcon: {fileID: 3931917677032153919}
   dialogueText: {fileID: 3931917677770642713}
   choices:
   - {fileID: 8057592154163295405}
