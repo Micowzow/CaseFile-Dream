@@ -130,12 +130,7 @@ public class DialogueManager : MonoBehaviour
 
         foreach (char letter in line.ToCharArray())
         {
-            if (Input.GetButtonDown("Fire2"))
-            {
-                dialogueText.text = line;
-                break;
-
-            }
+            
 
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
