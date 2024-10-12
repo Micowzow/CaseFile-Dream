@@ -10,6 +10,7 @@ public class SceneChangeLVL1 : MonoBehaviour
     public GameObject defaultPreview;
     public GameObject forestPreview;
     public Animator anim;
+    public Animator animRoots;
 
     public void change()
     {
@@ -25,6 +26,7 @@ public class SceneChangeLVL1 : MonoBehaviour
     {
         anim.enabled = true;
         anim.SetBool("onPortal", false);
+        animRoots.SetBool("hasEntered", false);
     }
     public void Update()
     {
@@ -42,6 +44,7 @@ public class SceneChangeLVL1 : MonoBehaviour
         {
             hasEntered = true;
             anim.SetBool("onPortal", true);
+            animRoots.SetBool("hasEntered", true);
             //defaultPreview.GetComponent<Renderer>().enabled = false;
         }
 
@@ -52,6 +55,7 @@ public class SceneChangeLVL1 : MonoBehaviour
         hasEntered = false;
         defaultPreview.GetComponent<Renderer>().enabled = true;
         anim.SetBool("onPortal", false);
+        animRoots.SetBool("hasEntered", false);
 
     }
 }
