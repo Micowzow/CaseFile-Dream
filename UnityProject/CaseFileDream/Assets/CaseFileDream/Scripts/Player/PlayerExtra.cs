@@ -38,6 +38,8 @@ namespace PlayerController
 
         public GameObject bubble;
         public bool hasBubblePower = false;
+
+        public bool hasHeart;
         
 
         
@@ -115,6 +117,12 @@ namespace PlayerController
             {
             hasBubblePower = true;
             }
+            if (collision.gameObject.tag == "WorldHeart")
+            {
+                hasHeart = true;
+                Destroy(GameObject.FindWithTag("WorldHeart"));
+            }
+
         }
 
         public void OnTriggerExit2D(Collider2D collision)

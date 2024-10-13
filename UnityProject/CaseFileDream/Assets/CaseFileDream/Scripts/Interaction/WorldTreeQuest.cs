@@ -15,9 +15,11 @@ public class WorldTreeQuest : MonoBehaviour
     public GameObject treeOne;
     public GameObject treeTwo;
 
+    public Transform spawnPosition;
+
 
     //[SerializeField] private PlayableDirector playableDirector;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,7 @@ public class WorldTreeQuest : MonoBehaviour
             Debug.Log("all items present");
             //playableDirector.Play();
             Destroy(blockage);
-            Instantiate(worldHeart);
+            Instantiate(worldHeart, spawnPosition.position, spawnPosition.rotation);
             Destroy(gameObject);
             treeOne.SetActive(false);
             treeTwo.SetActive(true);
