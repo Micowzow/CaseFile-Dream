@@ -77,6 +77,7 @@ namespace PlayerController
         {
 
             float move = Input.GetAxisRaw("Horizontal");
+            float vertical = Input.GetAxisRaw("Vertical");
 
             //rb.velocity = new Vector2(move * speed, rb.velocity.y); //Can't remember what this was for?
 
@@ -91,6 +92,18 @@ namespace PlayerController
             {
                 Flip();
                 //cameraFollowObject.CallTurn();
+            }
+
+            if(vertical < 0)
+            {
+                animator.SetBool("isCrouching", true);
+
+            }
+
+            if(vertical > 0 || vertical == 0)
+            {
+                animator.SetBool("isCrouching", false);
+
             }
 
             
@@ -187,6 +200,8 @@ namespace PlayerController
 
             animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
         }
+
+        
 
         #endregion
 

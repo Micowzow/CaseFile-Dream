@@ -19,14 +19,12 @@ public class PolarbearQuest : MonoBehaviour
      public GameObject bearOne;
     public GameObject bearTwo;
 
-    public Light2D light;
-    public ParticleSystem pS;
+    
 
     // Update is called once per frame
     private void Start()
     {
-        light.enabled = false;
-        pS.Stop();
+        
         anim.SetBool("hasMelted", false);
         bearOne.SetActive(true);
         bearTwo.SetActive(false);
@@ -60,8 +58,7 @@ public class PolarbearQuest : MonoBehaviour
             //lantern.GetComponent<LanternItemController>().DouseYellowLantern();
             Debug.Log("LiftPinkDoor");
             doorActivated = true;
-            light.enabled = true;
-            pS.Play();
+            
             
         }
 
