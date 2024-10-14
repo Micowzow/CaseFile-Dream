@@ -99294,11 +99294,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7303708162266248049, guid: 4b0ab4e6d71f63a43b679d311f42a77e, type: 3}
   m_PrefabInstance: {fileID: 1704442080}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2023418272 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8693620938349162785, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
-  m_PrefabInstance: {fileID: 2035878288}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2026415059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5880467066101902304, guid: 39f11851f8094974caa816f9b6f8c55b, type: 3}
@@ -99855,14 +99850,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1429383530382843962, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
-      propertyPath: detectionLayer.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 5296313529434163890, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
-      propertyPath: grabPoint
-      value: 
-      objectReference: {fileID: 2023418272}
     - target: {fileID: 5296313529434163890, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
       propertyPath: examineText
       value: 
@@ -99875,10 +99862,6 @@ PrefabInstance:
       propertyPath: examineWindow
       value: 
       objectReference: {fileID: 857213197}
-    - target: {fileID: 5296313529434163890, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
-      propertyPath: detectionLayer.m_Bits
-      value: 8192
-      objectReference: {fileID: 0}
     - target: {fileID: 5441394020257233588, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
       propertyPath: timerController
       value: 
