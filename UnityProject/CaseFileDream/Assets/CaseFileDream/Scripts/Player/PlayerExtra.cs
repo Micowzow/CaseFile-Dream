@@ -94,12 +94,11 @@ namespace PlayerController
                 //cameraFollowObject.CallTurn();
             }
 
-            if(vertical < 0)
+            if(vertical < 0.1f)
             {
                 animator.SetBool("isCrouching", true);
 
             }
-
             if(vertical > 0 || vertical == 0)
             {
                 animator.SetBool("isCrouching", false);
