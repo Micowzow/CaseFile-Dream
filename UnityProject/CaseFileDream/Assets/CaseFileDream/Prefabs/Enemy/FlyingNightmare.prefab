@@ -174,7 +174,7 @@ Transform:
   - {fileID: 1803001920429768376}
   - {fileID: 1803001921380112371}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1803001920281067331
 MonoBehaviour:
@@ -316,7 +316,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &5788147742381671018
 MonoBehaviour:
@@ -334,7 +334,7 @@ MonoBehaviour:
   activateDistance: 10
   pathUpdateSeconds: 0.5
   speed: 200
-  nextWaypointDistance: 3
+  nextWaypointDistance: 2
   jumpNodeHieghtRequirment: 0.8
   jumpModifier: 0.3
   jumpCheckOffset: 0.1
