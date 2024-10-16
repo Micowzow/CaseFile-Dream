@@ -13,45 +13,37 @@ Why are you here?
         
 === Zyhiem ===
 Zyhiem..? I don't know that name...
-My Memory... is lost... I have bee withering for a long time...
+My Memory... is lost... I have been withering for a long time...
 If you are not one with the evil that infects this world then you must leave.
         
         +[I Can Help]
             ->ICanHelp
-            
-        +[Heart Of Life]
-            ->HeartOfLife
+       
         
-
 === ICanHelp ===
 ...
-Why?
+Why would you help?
 
-+[Save World]
++[Save Dream Worlds]
             ->SaveWorld
 ->END
-=== HeartOfLife ===
-...
-Why?
 
-+[Save World]
-            ->SaveWorld
 ->END
 
 === SaveWorld ===
-Oh? You are here to help then?
-Help me then if you speak true... The denizens of this world...
+If you speak the truth... The denizens of this world...
 They are suffering from the nightmares that invade this world
-Some of them are infected but just don't seem to know
-But I am too sick to interfere
+But I am too sick to help
 They are the souls of this forest, connected to the "Heart of Life"
 I just want my forest to thrive again
+Help the citizens to get an Item from each of them
+Then bring those items back to the offering bowl above me 
+and I will give you the "Heart of Life"
 
 +[Where do i go]
             ->Where 
             
-+[Don't worry]
-            ->DontWorry
+
 ->END
 
 
@@ -62,9 +54,4 @@ The nightmare are blocking access to other areas of the world
 Maybe you can reopen the paths in your travels
 ->END
 
-=== DontWorry ===
-The path down to your right will lead you to the Grotto
-The path to your left will lead up to the treetops
-The nightmare are blocking access to other areas of the world
-Maybe you can reopen the paths in your travels
-->END
+
