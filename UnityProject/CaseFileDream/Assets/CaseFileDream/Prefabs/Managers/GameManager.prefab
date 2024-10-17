@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1426814933450403889}
   - component: {fileID: 2065145274}
   - component: {fileID: 2604889253916596139}
+  - component: {fileID: 3946396591175415295}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1426814933450403889
 MonoBehaviour:
@@ -50,8 +51,9 @@ MonoBehaviour:
   respawning: {fileID: 5441394020257233588, guid: 387173f53701abe439fee0575f4f3e16, type: 3}
   pauseMenu: {fileID: 0}
   timeRemaining: 0
-  addTime: 0
-  maxTime: 1000000
+  addTime: 90
+  removeTime: 30
+  maxTime: 1200
 --- !u!114 &2065145274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,3 +82,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nuts: 0
   nutDisplay: {fileID: 0}
+--- !u!114 &3946396591175415295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426814933450403891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7baf26bdca641418623ae765ecc06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: 0
+  numDisplay: {fileID: 0}
