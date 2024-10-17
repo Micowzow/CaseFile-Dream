@@ -126398,13 +126398,21 @@ PrefabInstance:
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7081557776700117838, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117838, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: sounds.Array.data[7].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117838, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
       propertyPath: sounds.Array.data[9].clip
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7081557776700117838, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
       propertyPath: sounds.Array.data[14].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 2296dc5dbdf600d45a10feb234c38494, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7081557776700117838, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
       propertyPath: sounds.Array.data[14].name
       value: LeafBudHit
@@ -126412,7 +126420,7 @@ PrefabInstance:
     - target: {fileID: 7081557776700117838, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
       propertyPath: sounds.Array.data[15].clip
       value: 
-      objectReference: {fileID: 8300000, guid: cb75453ee62d9f64e92995020ad77ec2, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7081557776700117838, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
       propertyPath: sounds.Array.data[15].name
       value: LeafBudRespawn
@@ -126424,6 +126432,10 @@ PrefabInstance:
     - target: {fileID: 7081557776700117838, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
       propertyPath: sounds.Array.data[15].pitch
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117838, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7081557776700117838, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
       propertyPath: sounds.Array.data[14].volume
