@@ -13,26 +13,21 @@ I don't think i've ever smelt something so nightmarish before.
         
 === Hello ===
 Such a smell should be kept away from someone like me
-I'll need a whole new perfume to get rid of this Nightmare smell
-I bet something from the Grotto would have a unique smell 
-Maybe if I could find a new perfume recipe in the Grotto that smell would leave me alone
+If only I had my perfume recipe on me
+But it's stuck in its container down below
+Maybe there's a way to break the glass
         
-        +[Hello? Can you hear me?]
+        +[Hello? do you need help?]
             ->HearMe
             
-        +[Mightmare smell?]
-            ->BadSmell
+        
         
 
 === HearMe ===
-Ah yes a perfume from the Grotto is just what I need
-I'll go find some later, my flowers need some care first
+I remember the raccoon said something about a MALLET in the grotto somewhere
+maybe that could smash the container
 
 
 ->END
-=== BadSmell ===
-Such a fowl oder should leave me alone until it has a better smell for me
-I hope it leaves soon
 
-->END
 
