@@ -1,28 +1,25 @@
 -> main
 
 === main ===
-Take a look at this Bloom little one.
-These Blooms once populated the Dream Worlds
-It's amazing that this one is still alive
-        +[What are they?]
+Take a look at this Bloom little one
+These are known as Time Blooms
+you may have noticed that this world is slowly collapsing 
+We are on a time limit while we are in these worlds
+Grabbing a seed from these blooms will stabilze the world and give us a bit more time
+        +[How long do we have]
             ->What
             
-        +[It's pretty]
-            ->Pretty
+       
         
        
         
 === What ===
-Blooms collect the essences of people dreams 
-They coalesce those dreams together into the Dream Worlds
-Very few of them still exist today
+Without grabbing these seeds the world will collapse within 20 minutes
+Collecting the seeds will give you a few minutes back
+be careful though, you can only collect one seed per Bloom
         
         
 
-->END
-=== Pretty ===
-Isn't it?
-Imagine how Amazing this world would look with more Blooms around
 
 ->END
 

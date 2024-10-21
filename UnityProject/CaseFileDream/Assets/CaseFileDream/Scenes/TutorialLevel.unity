@@ -28506,7 +28506,7 @@ RectTransform:
   m_GameObject: {fileID: 27751745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.013882831, y: 0.013882831, z: 0.013882831}
+  m_LocalScale: {x: 0.01106059, y: 0.01106059, z: 0.01106059}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 723951611}
@@ -28514,7 +28514,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -462.25, y: -272}
+  m_AnchoredPosition: {x: -463.02, y: -273.51}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27751747
@@ -28537,11 +28537,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Press E or B on GamePad\n on the door symbole with a lit candle to open
+  m_text: "Press  'B'  on GamePad\n on the door symbole with a lit candle to open
     the way"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
+  m_sharedMaterial: {fileID: 7099881780253200638, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28565,8 +28565,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.03
-  m_fontSizeBase: 30.03
+  m_fontSize: 48.7
+  m_fontSizeBase: 48.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28601,7 +28601,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -221.13852, y: 0, z: -218.56831, w: -52.45641}
+  m_margin: {x: -221.13852, y: 0, z: -218.56831, w: -131.66782}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -28786,7 +28786,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -399.03, y: -240.33}
+  m_AnchoredPosition: {x: -399.03, y: -238.58}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &28238364
@@ -28809,10 +28809,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Press E or B on Gamepad\n Near characters to speak with them"
+  m_text: "Press ' B'  on Gamepad\n Near characters to speak with them"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
+  m_sharedMaterial: {fileID: 7099881780253200638, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28836,8 +28836,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.03
-  m_fontSizeBase: 30.03
+  m_fontSize: 41.7
+  m_fontSizeBase: 41.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28899,7 +28899,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -26.157837, y: -149.1698}
+  m_Offset: {x: -26.157837, y: -283.62634}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -28910,7 +28910,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 553.84705, y: 401.1427}
+  m_Size: {x: 553.84705, y: 377.68054}
   m_EdgeRadius: 0
 --- !u!114 &28238367
 MonoBehaviour:
@@ -30282,11 +30282,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "walk near a Firefly patch with your candle holder and press E or B on
-    Gamepad\n to light your candle"
+  m_text: "walk near a Firefly patch with your candle holder and \npress 'B' on Gamepad\n
+    to light your candle"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
+  m_sharedMaterial: {fileID: 7099881780253200638, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30310,8 +30310,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.86
-  m_fontSizeBase: 24.86
+  m_fontSize: 35.9
+  m_fontSizeBase: 35.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -30947,8 +30947,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96084735}
-  m_LocalRotation: {x: 0.70710325, y: 0.0022496614, z: -0.0022496614, w: 0.70710325}
-  m_LocalPosition: {x: -0.1400032, y: -0.10000014, z: 1.16}
+  m_LocalRotation: {x: 0.7071058, y: -0.0011726812, z: 0.0011726812, w: 0.7071058}
+  m_LocalPosition: {x: 0.54, y: -0.1, z: -1.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31021,8 +31021,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 4.32
-  m_PointLightOuterRadius: 5.34
+  m_PointLightInnerRadius: 1.9937937
+  m_PointLightOuterRadius: 3.6085744
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -34747,8 +34747,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222607219}
-  m_LocalRotation: {x: -0, y: -0, z: -0.0054965024, w: 0.9999849}
-  m_LocalPosition: {x: -15.64, y: 61.84, z: -0.04380628}
+  m_LocalRotation: {x: -0, y: -0, z: -0.016121984, w: 0.99987006}
+  m_LocalPosition: {x: -16.01, y: 58.21, z: -0.04380628}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34822,7 +34822,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 3.54
-  m_PointLightOuterRadius: 9.79
+  m_PointLightOuterRadius: 4.7601175
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -39976,7 +39976,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -517.19, y: -218.15}
+  m_AnchoredPosition: {x: -516.52, y: -216.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375512754
@@ -39999,10 +39999,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press E near an object with an Eye Icon on it to examine '
+  m_text: Grab the small Pods near a bloom to increase your timer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
+  m_sharedMaterial: {fileID: 7099881780253200638, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -40026,8 +40026,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.86
-  m_fontSizeBase: 24.86
+  m_fontSize: 42.27
+  m_fontSizeBase: 42.27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -40089,7 +40089,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.6976929, y: -205.69995}
+  m_Offset: {x: 108.46576, y: -245.45383}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -40100,7 +40100,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 643.0542, y: 523.0062}
+  m_Size: {x: 865.3811, y: 602.5142}
   m_EdgeRadius: 0
 --- !u!114 &375512757
 MonoBehaviour:
@@ -47684,11 +47684,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Press E or B on Gamepad\n while standing on the Chandelier with a lit
-    candle to open the way"
+  m_text: "Press  'B'  on Gamepad\n while standing on the Chandelier with a lit candle
+    to open the way"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
+  m_sharedMaterial: {fileID: 7099881780253200638, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -47712,8 +47712,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.03
-  m_fontSizeBase: 30.03
+  m_fontSize: 43.2
+  m_fontSizeBase: 43.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -50668,37 +50668,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &551298244
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 551298245}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &551298245
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551298244}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.325207, y: 13.503566, z: 5.4093213}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &553770715
 GameObject:
   m_ObjectHideFlags: 0
@@ -50965,7 +50934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462042962001532494, guid: 9aa2873393054c947853e8ad9fcf4408, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7462042962001532494, guid: 9aa2873393054c947853e8ad9fcf4408, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53254,7 +53223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162713411546533, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 44.98
+      value: 45.14
       objectReference: {fileID: 0}
     - target: {fileID: 202162713411546533, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
       propertyPath: m_LocalPosition.z
@@ -53288,10 +53257,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1767064138071794883, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558912518970423089, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999742
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558912518970423089, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.007187236
+      objectReference: {fileID: 0}
     - target: {fileID: 7586335192213354158, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
       propertyPath: timerController
       value: 
       objectReference: {fileID: 1426814932144225203}
+    - target: {fileID: 8050852168653223266, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050852168653223266, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050852168653223266, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050852168653223266, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
+      propertyPath: m_Intensity
+      value: 6.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050852168653223266, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 1.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050852168653223266, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 1.4218935
+      objectReference: {fileID: 0}
     - target: {fileID: 8184980230468707418, guid: 981ed4871550f61439a18ec99dd679ae, type: 3}
       propertyPath: m_Name
       value: TimeEssence
@@ -53995,12 +54000,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press Shift  or X on game pad
+  m_text: 'Press  ''X''  on game pad
 
     to pick up Items'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
+  m_sharedMaterial: {fileID: 7099881780253200638, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -54365,6 +54370,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &658324864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2321541429684099719, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321541429684099719, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 55.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.074188754
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377395, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_Name
+      value: RefillStationRed (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235206422620862, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235206422620862, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.56
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
 --- !u!4 &659219373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8439471954816714469, guid: 134608bedac50c84c932a820e9be99df, type: 3}
@@ -100436,6 +100516,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1288086205
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2321541429684099719, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321541429684099719, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 58.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.074188754
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377389, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235205876377395, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_Name
+      value: RefillStationRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235206422620862, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669235206422620862, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.56
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7425d7bf0786c84cb8332c4648e41fc, type: 3}
 --- !u!4 &1290170576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7050671630862794454, guid: f2bb7183358bae54e9fce05c35a93dfb, type: 3}
@@ -101702,6 +101857,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1354966741
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7081557776700117833, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117839, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117839, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 258.71762
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117839, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 123.68703
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117839, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.8575535
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117839, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117839, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117839, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117839, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117839, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117839, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081557776700117839, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: f24014e853b569942b219c64e79f6ddf, type: 3}
 --- !u!1 &1365633047
 GameObject:
   m_ObjectHideFlags: 0
@@ -105307,7 +105521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -406.18, y: -235.48}
+  m_AnchoredPosition: {x: -406.18, y: -233.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1474237231
@@ -105333,8 +105547,8 @@ MonoBehaviour:
   m_text: This is a Beacon, When you pass a beacon it will light up and hold the
     memory of your visit to this location
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
+  m_sharedMaterial: {fileID: 7099881780253200638, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -105358,8 +105572,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.03
-  m_fontSizeBase: 30.03
+  m_fontSize: 45.8
+  m_fontSizeBase: 45.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -105421,7 +105635,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -34.707336, y: -306.24155}
+  m_Offset: {x: -34.707336, y: -432.5765}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -105432,7 +105646,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 365.36414, y: 469.9947}
+  m_Size: {x: 365.36414, y: 473.6042}
   m_EdgeRadius: 0
 --- !u!114 &1474237234
 MonoBehaviour:
@@ -114000,8 +114214,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747310001}
-  m_LocalRotation: {x: -0, y: -0, z: 0.012660368, w: 0.9999199}
-  m_LocalPosition: {x: 103.67763, y: 40.96099, z: -0.04380628}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 103.5, y: 40.87, z: -0.04380628}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -114024,8 +114238,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.36
-  m_Color: {r: 0.8773585, g: 0.6496667, b: 0.25244746, a: 1}
-  m_Intensity: 0.6
+  m_Color: {r: 0.9433962, g: 0.8191861, b: 0.6007476, a: 1}
+  m_Intensity: 0.84
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 6b77f12f
@@ -114074,8 +114288,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 2.79
-  m_PointLightOuterRadius: 4.25
+  m_PointLightInnerRadius: 3.42
+  m_PointLightOuterRadius: 4.76
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -122217,10 +122431,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "WASD or Left stick to move\nSpacebar  or A on Gamepad \nto Jump"
+  m_text: '''Left stick'' to move
+
+    ''A'' on Gamepad to Jump'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
+  m_sharedMaterial: {fileID: 7099881780253200638, guid: 852e1c3ef3bcf8340b1ba9a2f9b78291, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -125676,7 +125892,7 @@ PrefabInstance:
       objectReference: {fileID: 1318148647}
     - target: {fileID: 1426814933450403888, guid: 05a29b08ae09f434eb88e8257c95237a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1426814933450403888, guid: 05a29b08ae09f434eb88e8257c95237a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -126219,7 +126435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3931917677130909124, guid: b041553abbd9254438b5ca53d5642f71, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3931917677130909124, guid: b041553abbd9254438b5ca53d5642f71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -126784,6 +127000,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2137148688}
     m_Modifications:
+    - target: {fileID: 6465832498074404139, guid: dc4e948827c267f488426477bfd6dac7, type: 3}
+      propertyPath: descriptionText
+      value: 'This is a Bloom. '
+      objectReference: {fileID: 0}
     - target: {fileID: 6465832498074404140, guid: dc4e948827c267f488426477bfd6dac7, type: 3}
       propertyPath: m_Name
       value: TimeFlower
@@ -127029,7 +127249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8360886371508330545, guid: e1ef8413922f9004a8c2c5b10aebb4a3, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8360886371508330545, guid: e1ef8413922f9004a8c2c5b10aebb4a3, type: 3}
       propertyPath: m_AnchorMax.x

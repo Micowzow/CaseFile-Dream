@@ -2,6 +2,11 @@
 
 === main ===
 Greetings little one. I'm glad to see you've finally awoken
+        
+->firstchoice       
+...
+ === firstchoice=== 
+ 
         +[Where am I?]
             ->WhereAmI
             
@@ -9,17 +14,16 @@ Greetings little one. I'm glad to see you've finally awoken
             ->WhoAreYou
         +[What should I Do?]
             ->WhatDo
-       
-        
+            
 === WhereAmI ===
 You are in the Rock Shelter Dream world.
 Well, at least whats left of it. 
-Nightmares are plaquing the Dream worlds and destroying their realities
+Nightmares are Destroying the Dream worlds
         
         +[Dream Worlds?]
             ->DreamWorlds
             
-        +[Whats Left?]
+        +[Nightmares?]
             ->WhatsLeft
 
 ->END
@@ -28,7 +32,7 @@ I am Zyhiem.
 I have been travelling through the Dream Worlds in search of a brave hero
 And it appears I have found you.
 
-->END
+->firstchoice
 === WhatDo ===
 I see you already have a light holder with you
 Elements of this world will interact when exposed to a light
@@ -40,9 +44,9 @@ The colour of your light is also important
 
 === DreamWorlds ===
 Yes. Pocket realities created by the collective consciousness of people and entered through dreams
-->main
+->firstchoice
 
 === WhatsLeft ===
 This Dream World is being destroyed by horrible nightmares of some greater evil
 If we don't act quickly, other Dream Worlds will suffer the same fate!
-->main
+->firstchoice
