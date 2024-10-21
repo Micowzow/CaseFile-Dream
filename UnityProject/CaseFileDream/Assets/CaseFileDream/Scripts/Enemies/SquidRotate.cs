@@ -5,17 +5,20 @@ using UnityEngine;
 public class SquidRotate : MonoBehaviour
 {
 
-    public float speed = 10;
+    
 
-    public SpriteRenderer squid;
+    //public SpriteRenderer squid;
     private int dir = 1;
     public bool flipY = false;
+    public float speed = 10;
+
+
     // Start is called before the first frame update
     void Start()
     {
         if (flipY == true)
         {
-            squid.flipY = true;
+            //squid.flipY = true;
             dir = -1;
         }
     }
