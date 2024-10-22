@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Playables;
 
 public class QuestItemManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class QuestItemManager : MonoBehaviour
 
     public int questItem;
     public TextMeshProUGUI numDisplay;
+
+    [SerializeField] private PlayableDirector playableDirector;
 
     // Start is called before the first frame update
     private void Awake()
@@ -21,6 +24,13 @@ public class QuestItemManager : MonoBehaviour
 
     }
 
+    public void Update()
+    {
+        if (questItem == 4)
+        {
+            playableDirector.Play();
+        }
+    }
 
     private void ONGUI()
     {
