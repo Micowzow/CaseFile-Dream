@@ -51,16 +51,29 @@ It's aweful!
 ->Wrong
 
 === TreeNuts ===
-Yes my babies, my Tree Nuts got nocked out of the nest
-I was stocking up for the Winter!
-The Raccoon told me that Tree Nuts made for good eating in the Winter
-If you could bring 4 of my Tree Nuts back that would be wonderful
-->END
-=== WhatAbout ===
-Yes my babies, my Tree Nuts got nocked out of the nest
+Yes my Tree Nuts are my babies, they got nocked out of the nest
 I was stocking up for the Winter!
 The Raccoon told me that Tree Nuts made for good eating in the Winter
 If you could bring 4 of my Tree Nuts back that would be wonderful
 
++[Where are they?]
+            ->Where
+            
+=== Where ===
+One of them fell down to the bottom of the treetops
+One got carried off to the Pink Garden
+One fell into the water and got carried down stream into the Cove
+The last one was picked up by the Raccoon, maybe you could get it back from him
+
 ->END
+=== WhatAbout ===
+Yes my Tree Nuts are my babies, they got nocked out of the nest
+I was stocking up for the Winter!
+The Raccoon told me that Tree Nuts made for good eating in the Winter
+If you could bring 4 of my Tree Nuts back that would be wonderful
+
++[Where are they?]
+            ->Where
+            
+->Where
 

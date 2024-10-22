@@ -26,7 +26,6 @@ Why would you help?
 
 +[Save Dream Worlds]
             ->SaveWorld
-->END
 
 ->END
 

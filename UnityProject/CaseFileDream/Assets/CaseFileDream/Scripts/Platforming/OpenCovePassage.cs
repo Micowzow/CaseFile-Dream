@@ -6,7 +6,7 @@ public class OpenCovePassage : MonoBehaviour
 {
     public GameObject door;
     public GameObject water;
-
+    
  
 
     
@@ -31,6 +31,7 @@ public class OpenCovePassage : MonoBehaviour
         {
             Debug.Log("CutBramble");
             Destroy(door);
+            Destroy(GameObject.FindWithTag("Ticket"));
             
         }
     }

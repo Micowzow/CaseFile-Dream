@@ -14,7 +14,7 @@ public class ShopTicket : MonoBehaviour
     
     public EssenceManager essenceManager;
 
-    
+    public SpriteRenderer displayImage;
 
     public bool hasTicket = false;
 
@@ -35,6 +35,7 @@ public class ShopTicket : MonoBehaviour
             hasTicket = true;
             essenceManager.essences -= ticketAmount;
             essenceDisplay.text = essenceManager.essences.ToString();
+            displayImage.enabled = false;
         }
 
     }
