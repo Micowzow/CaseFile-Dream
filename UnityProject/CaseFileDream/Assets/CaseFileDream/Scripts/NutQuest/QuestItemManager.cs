@@ -11,7 +11,16 @@ public class QuestItemManager : MonoBehaviour
     public int questItem;
     public TextMeshProUGUI numDisplay;
 
-    [SerializeField] private PlayableDirector playableDirector;
+    [SerializeField] private PlayableDirector playableDirectorItemsCollected;
+    //[SerializeField] private PlayableDirector playableDirectorBlueFire;
+   // [SerializeField] private PlayableDirector playableDirectorRedFire;
+    //[SerializeField] private PlayableDirector playableDirectorPinkFire;
+
+    public ParticleSystem psBlue;
+    public ParticleSystem psRed;
+    public ParticleSystem psYellow;
+    public ParticleSystem psPink;
+
 
     // Start is called before the first frame update
     private void Awake()
@@ -21,15 +30,43 @@ public class QuestItemManager : MonoBehaviour
             instance = this;
 
         }
-
+        
     }
 
     public void Update()
     {
+        
+        if (questItem == 0)
+        {
+
+            
+        }
+        if (!psBlue.isPlaying && questItem == 1)
+        {
+            
+            psBlue.Play();
+            
+        }
+        if (!psPink.isPlaying && questItem == 2)
+        {
+            
+            psPink.Play();
+            
+        }
+        if (!psRed.isPlaying && questItem == 3)
+        {
+            
+            psRed.Play();
+            
+        }
         if (questItem == 4)
         {
-            playableDirector.Play();
+            playableDirectorItemsCollected.Play();
+            psYellow.Play();
+            questItem += 1;
         }
+
+
     }
 
     private void ONGUI()
@@ -44,5 +81,6 @@ public class QuestItemManager : MonoBehaviour
         numDisplay.text = questItem.ToString();
 
     }
+    
     
 }

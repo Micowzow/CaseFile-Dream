@@ -53,7 +53,7 @@ public class QuestItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (questManager.questItem == 4 && inArea == true)
+        if (questManager.questItem >= 4 && inArea == true)
         {
             Debug.Log("all Items present");
 
