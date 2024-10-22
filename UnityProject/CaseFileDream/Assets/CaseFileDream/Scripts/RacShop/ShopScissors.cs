@@ -22,9 +22,9 @@ public class ShopScissors : MonoBehaviour
 
     
     public int scissorsAmount;
-   
-    
-    
+    public SpriteRenderer displayImage;
+
+
     private void OnTriggerStay2D(Collider2D collider)
     {
        
@@ -35,6 +35,7 @@ public class ShopScissors : MonoBehaviour
             hasScissors = true;
             essenceManager.essences -= scissorsAmount;
             essenceDisplay.text = essenceManager.essences.ToString();
+            displayImage.enabled = false;
         }
 
     }

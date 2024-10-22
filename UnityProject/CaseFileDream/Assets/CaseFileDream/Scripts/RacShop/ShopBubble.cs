@@ -16,6 +16,8 @@ public class ShopBubble : MonoBehaviour
 
     public int bubbleAmount;
 
+    public SpriteRenderer displayImage;
+
 
     private void OnTriggerStay2D(Collider2D collider)
     {
@@ -26,6 +28,7 @@ public class ShopBubble : MonoBehaviour
             hasBubble = true;
             essenceManager.essences -= bubbleAmount;
             essenceDisplay.text = essenceManager.essences.ToString();
+            displayImage.enabled = false;
         }
     }
 }

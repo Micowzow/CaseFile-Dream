@@ -22,9 +22,9 @@ public class ShopNut : MonoBehaviour
 
     
     public int nutAmount;
-   
-    
-    
+
+    public SpriteRenderer displayImage;
+
     private void OnTriggerStay2D(Collider2D collider)
     {
        
@@ -35,6 +35,7 @@ public class ShopNut : MonoBehaviour
             hasNut = true;
             essenceManager.essences -= nutAmount;
             essenceDisplay.text = essenceManager.essences.ToString();
+            displayImage.enabled = false;
         }
 
     }
