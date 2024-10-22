@@ -16,8 +16,14 @@ public class QuestItem : MonoBehaviour
     public GameObject treeOne;
     public GameObject treeTwo;
 
+    public GameObject birdItem;
+    public GameObject bearItem;
+    public GameObject skunkItem;
+    public GameObject racItem;
+
     public Transform spawnPosition;
 
+    public Transform spawnQuestPosition;
 
     public bool inArea;
 
@@ -56,6 +62,11 @@ public class QuestItem : MonoBehaviour
             Destroy(gameObject);
             treeOne.SetActive(false);
             treeTwo.SetActive(true);
+
+            Instantiate(racItem, spawnQuestPosition.position, spawnQuestPosition.rotation);
+            Instantiate(birdItem, spawnQuestPosition.position, spawnQuestPosition.rotation);
+            Instantiate(bearItem, spawnQuestPosition.position, spawnQuestPosition.rotation);
+            Instantiate(skunkItem, spawnQuestPosition.position, spawnQuestPosition.rotation);
 
             questManager.questItem = 0;
             nutDisplay.text = 0.ToString();
