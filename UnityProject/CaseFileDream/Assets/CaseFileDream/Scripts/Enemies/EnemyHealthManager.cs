@@ -12,6 +12,7 @@ public class EnemyHealthManager : MonoBehaviour
 
     public EnemyHealthBar healthbar;
 
+    public SpriteRenderer spriteRenderer;
 
     public EssenceDrop essenceDrop;
 
@@ -26,6 +27,8 @@ public class EnemyHealthManager : MonoBehaviour
 
     public bool enemyDead = false;
 
+    public ParticleSystem pS;
+
     PlayerIndex playerIndex;
     GamePadState state;
     GamePadState prevState;
@@ -38,7 +41,7 @@ public class EnemyHealthManager : MonoBehaviour
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
         essenceDrop = GetComponent<EssenceDrop>();
-        
+        pS.Stop();
         
     }
 
@@ -85,6 +88,17 @@ public class EnemyHealthManager : MonoBehaviour
         GamePad.SetVibration(playerIndex, 0f, 0f);
        
     }
+
+    IEnumerator Death()
+    {
+        pS.Play();
+        essenceDrop.DropEssence();
+        spriteRenderer.enabled = false;
+        yield return new WaitForSeconds(.5f);
+        Destroy(gameObject);
+        enemyDead = true;
+        
+    }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -92,9 +106,7 @@ public class EnemyHealthManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("EnemyDamage");
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
-            enemyDead = true;
-            essenceDrop.DropEssence();
+            StartCoroutine(Death());
             
         }
         healthbar.SetCurrentHealth(currentHealth);

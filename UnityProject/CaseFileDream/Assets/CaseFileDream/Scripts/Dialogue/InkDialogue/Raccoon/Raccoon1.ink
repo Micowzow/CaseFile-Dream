@@ -6,7 +6,7 @@ You look like you could use some stuff!
 I got all sorts of stuff in my shop!
 All you'll need is some Nightmare Essence
 
-        +[This looks like random junk]
+        +[This looks like junk]
             ->Junk
             
         

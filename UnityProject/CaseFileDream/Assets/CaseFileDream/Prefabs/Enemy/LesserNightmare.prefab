@@ -660,6 +660,7 @@ Transform:
   m_Children:
   - {fileID: 1860009608}
   - {fileID: 1523352739}
+  - {fileID: 2148279799240019417}
   m_Father: {fileID: 2221228775498886437}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -812,12 +813,14 @@ MonoBehaviour:
   maxHealth: 1
   currentHealth: 0
   healthbar: {fileID: 1784820923}
+  spriteRenderer: {fileID: 2221228777443474028}
   essenceDrop: {fileID: 206016345}
   startDazedTime: 1
   enemy: {fileID: 2221228777443474024}
   playerAttackArea: {fileID: 0}
   cooldownTime: 0.2
   enemyDead: 0
+  pS: {fileID: 8336006624459400305}
 --- !u!114 &206016345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,3 +835,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   essenceDrop: {fileID: 6625883882055688400, guid: 8e2714c78b014fc4eab727ebd5361c32, type: 3}
   transform: {fileID: 2221228777443474024}
+--- !u!1001 &4147120914139867861
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 2221228777443474024}
+    m_Modifications:
+    - target: {fileID: 396283779271763930, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_Name
+      value: EnemyDiePartcileEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+--- !u!4 &2148279799240019417 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2620445617767261964, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+  m_PrefabInstance: {fileID: 4147120914139867861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8336006624459400305 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5342106592392433316, guid: 1c0f83fa29e29e6418524933c63416a8, type: 3}
+  m_PrefabInstance: {fileID: 4147120914139867861}
+  m_PrefabAsset: {fileID: 0}
