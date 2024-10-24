@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e1f1cf5125009b34f821ba70252069ac
+guid: b13b17f19dd1699408d4309cd4d73ab7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,10 +45,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
@@ -68,7 +68,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -115,7 +115,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -130,112 +130,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b20146e4d4b5d1d43aa888bc1c412f31
-      internalID: -1367867068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fed4b4c170834e4f8e9a5e069cce7ba
-      internalID: -645934902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fc61cc366d79ab478d7cb089ada4d54
-      internalID: 502704324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02ae43cb81b2ab7499aee29aa597f3ba
-      internalID: -316651753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 239bcdc1172436841817863e9b3e1b95
-      internalID: 2022471967
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_5
+      name: moustache leaf bud-Sheet orange_0
       rect:
         serializedVersion: 2
         x: 0
@@ -249,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76be975fe3162164d91904ee0acf76b0
-      internalID: 1475725708
+      spriteID: c1e58fdf558d93f4c850051d2bcc57b9
+      internalID: 1221197287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_6
+      name: moustache leaf bud-Sheet orange_1
       rect:
         serializedVersion: 2
         x: 64
@@ -270,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4384802819b77e4086db1a50d005eb1
-      internalID: 99441998
+      spriteID: 21b1da423f26f0f47945363b3728e217
+      internalID: -788593831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_7
+      name: moustache leaf bud-Sheet orange_2
       rect:
         serializedVersion: 2
         x: 128
@@ -291,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 270be24ef0b6aa44193cf558d51b2799
-      internalID: 286445197
+      spriteID: fcc89cab9b7b9264cb2f3c028f16031d
+      internalID: -1089859954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_8
+      name: moustache leaf bud-Sheet orange_3
       rect:
         serializedVersion: 2
         x: 192
@@ -312,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccad1640d47ccaf49b2c56be45fa7251
-      internalID: 143549888
+      spriteID: 7441f27f90bd0cf4a95e72773aad9a99
+      internalID: 1833706515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_9
+      name: moustache leaf bud-Sheet orange_4
       rect:
         serializedVersion: 2
         x: 256
@@ -333,14 +228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6de13ed1a797ca44fa7721bca83a0f38
-      internalID: -100081227
+      spriteID: 535f2644d3d1340458738c9e2b2ac5ee
+      internalID: -727159945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_10
+      name: moustache leaf bud-Sheet orange_5
       rect:
         serializedVersion: 2
         x: 320
@@ -354,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d62ad0a0b9fa18b4198a1978eb9eab79
-      internalID: -175420799
+      spriteID: 1f326f373477e1c43a49b9bdeec4a548
+      internalID: -1103721489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_11
+      name: moustache leaf bud-Sheet orange_6
       rect:
         serializedVersion: 2
         x: 384
@@ -375,14 +270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6415f62142de8de4bb41ccada6b94514
-      internalID: 536375983
+      spriteID: b2e0a0ff039781c4da51dbddd9920c21
+      internalID: -740337733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yellow leaf bud-Sheet_12
+      name: moustache leaf bud-Sheet orange_7
       rect:
         serializedVersion: 2
         x: 448
@@ -396,8 +291,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efbbe863258ad234894b0727377ac271
-      internalID: -216044033
+      spriteID: 2fffa7f6735b3c942a4fe4132d117e07
+      internalID: -2042359955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moustache leaf bud-Sheet orange_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5045a43c39981e349be38429ee765a54
+      internalID: 1955330329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moustache leaf bud-Sheet orange_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4add388d0d1fb9b468a466fac244e99b
+      internalID: 1702844838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moustache leaf bud-Sheet orange_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1619922aedad64cb3862477621fae9
+      internalID: -2138453506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moustache leaf bud-Sheet orange_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18d0c4bb697cb54f9ccac0ecc013fb3
+      internalID: -1145607752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moustache leaf bud-Sheet orange_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6073325842d7f6a428a3aef5f2014c39
+      internalID: 1654329935
       vertices: []
       indices: 
       edges: []
@@ -413,19 +413,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Yellow leaf bud-Sheet_7: 286445197
-      Yellow leaf bud-Sheet_1: -645934902
-      Yellow leaf bud-Sheet_0: -1367867068
-      Yellow leaf bud-Sheet_8: 143549888
-      Yellow leaf bud-Sheet_6: 99441998
-      Yellow leaf bud-Sheet_11: 536375983
-      Yellow leaf bud-Sheet_4: 2022471967
-      Yellow leaf bud-Sheet_10: -175420799
-      Yellow leaf bud-Sheet_9: -100081227
-      Yellow leaf bud-Sheet_5: 1475725708
-      Yellow leaf bud-Sheet_12: -216044033
-      Yellow leaf bud-Sheet_2: 502704324
-      Yellow leaf bud-Sheet_3: -316651753
+      moustache leaf bud-Sheet orange_4: -727159945
+      moustache leaf bud-Sheet orange_12: 1654329935
+      moustache leaf bud-Sheet orange_8: 1955330329
+      moustache leaf bud-Sheet orange_2: -1089859954
+      moustache leaf bud-Sheet orange_5: -1103721489
+      moustache leaf bud-Sheet orange_9: 1702844838
+      moustache leaf bud-Sheet orange_0: 1221197287
+      moustache leaf bud-Sheet orange_1: -788593831
+      moustache leaf bud-Sheet orange_10: -2138453506
+      moustache leaf bud-Sheet orange_3: 1833706515
+      moustache leaf bud-Sheet orange_6: -740337733
+      moustache leaf bud-Sheet orange_7: -2042359955
+      moustache leaf bud-Sheet orange_11: -1145607752
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
