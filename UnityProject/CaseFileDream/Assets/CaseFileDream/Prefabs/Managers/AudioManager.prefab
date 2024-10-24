@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7081557776700117838
 MonoBehaviour:
@@ -76,8 +76,8 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: ElkDialogue
-    clip: {fileID: 8300000, guid: 62cfb50824784ff408d134a5f6067224, type: 3}
-    volume: 0.2
+    clip: {fileID: 0}
+    volume: 0
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 26cc9f9e709bea2449d8367a5de9fa30, type: 3}
     volume: 0.2
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: RacDialogue
     clip: {fileID: 8300000, guid: 5aa0ae56ed5844b498660e2d4f087375, type: 3}
@@ -100,7 +100,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: TreeDialogue
-    clip: {fileID: 8300000, guid: d1bc16e92295c3f46ba791a360b4c4b5, type: 3}
+    clip: {fileID: 0}
     volume: 0.2
     pitch: 1
     loop: 0
@@ -126,6 +126,24 @@ MonoBehaviour:
   - name: EnemyDamage
     clip: {fileID: 8300000, guid: d6671ff65f2e74b47b52b9d2d35d4650, type: 3}
     volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LeafBudHit
+    clip: {fileID: 0}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LeafBudRespawn
+    clip: {fileID: 0}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Whispers
+    clip: {fileID: 8300000, guid: 4e0087f21caa83a4cb0d065c522ff064, type: 3}
+    volume: 0.05
     pitch: 1
     loop: 0
     source: {fileID: 0}
