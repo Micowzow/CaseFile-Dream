@@ -40,6 +40,8 @@ namespace PlayerController
                 respawning.Die();
                 pauseMenu.LoadMenu();
             }
+
+            
         }
 
         public void AddTime()

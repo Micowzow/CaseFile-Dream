@@ -94,7 +94,7 @@ public class EnemyHealthManager : MonoBehaviour
         pS.Play();
         essenceDrop.DropEssence();
         spriteRenderer.enabled = false;
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.2f);
         Destroy(gameObject);
         enemyDead = true;
         
