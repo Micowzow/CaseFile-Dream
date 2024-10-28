@@ -92,9 +92,10 @@ public class EnemyHealthManager : MonoBehaviour
     IEnumerator Death()
     {
         pS.Play();
+        gameObject.GetComponent<Collider2D>().enabled = false;
         essenceDrop.DropEssence();
         spriteRenderer.enabled = false;
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.5f);
         Destroy(gameObject);
         enemyDead = true;
         
