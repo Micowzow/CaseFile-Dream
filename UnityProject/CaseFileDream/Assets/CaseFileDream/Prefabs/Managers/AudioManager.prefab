@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7081557776700117838
 MonoBehaviour:
@@ -59,7 +59,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: cf76011791e95ce478ac14bdcbcf8f11, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -88,13 +88,13 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: BirdDialogue
-    clip: {fileID: 8300000, guid: 26cc9f9e709bea2449d8367a5de9fa30, type: 3}
+    clip: {fileID: 0}
     volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: RacDialogue
-    clip: {fileID: 8300000, guid: 5aa0ae56ed5844b498660e2d4f087375, type: 3}
+    clip: {fileID: 0}
     volume: 0.2
     pitch: 1
     loop: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Elevator
-    clip: {fileID: 8300000, guid: fb2afdac7a6da6c44af15eb04667eab0, type: 3}
+    clip: {fileID: 0}
     volume: 0.2
     pitch: 1
     loop: 0

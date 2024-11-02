@@ -4002,6 +4002,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8439471953745786075, guid: 134608bedac50c84c932a820e9be99df, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 05762d9d87309d345b78066a65ce8f10, type: 3}
+    - target: {fileID: 8439471953745786075, guid: 134608bedac50c84c932a820e9be99df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8439471954816714466, guid: 134608bedac50c84c932a820e9be99df, type: 3}
       propertyPath: inkJSON
       value: 
@@ -9422,6 +9430,14 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1248049111}
+    - target: {fileID: 810897477471851493, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722738909260356355, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2963013559392134627, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
       propertyPath: m_Name
       value: HudUI
@@ -9508,6 +9524,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2963013559392134638, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963013560145854821, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
