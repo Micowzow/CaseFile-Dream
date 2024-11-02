@@ -1,6 +1,6 @@
 -> main
 
 === main ===
-Embrace the cold sleep
+Who is this that wakes in the cold Dream?
         
 ->END
