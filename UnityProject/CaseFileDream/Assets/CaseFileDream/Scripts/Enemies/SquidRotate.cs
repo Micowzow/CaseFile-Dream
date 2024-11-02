@@ -26,6 +26,6 @@ public class SquidRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, speed*dir);
+        transform.Rotate(0, 0, speed*dir * Time.deltaTime);
     }
 }
