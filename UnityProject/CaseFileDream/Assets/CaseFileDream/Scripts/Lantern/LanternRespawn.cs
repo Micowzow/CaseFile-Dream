@@ -27,12 +27,12 @@ public class LanternRespawn : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Water"))
+        /*if (collision.gameObject.CompareTag("Water"))
         {
             lantern.transform.parent = null;
             RespawnLantern();
                       
-        }
+        }*/
 
 
        

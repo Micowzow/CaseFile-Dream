@@ -115,6 +115,14 @@ public class LanternItemController : MonoBehaviour
             inRangeYellow= true;
 
         }
+
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            DouseBlueLantern();
+            DousePinkLantern();
+            DouseRedLantern();
+            DouseYellowLantern();
+        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
