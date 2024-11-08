@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class DialogueTrigger : MonoBehaviour
     private bool playerInRange;
 
     
+    public GameObject objectiveUI;
+    
 
     
     private void Awake()
@@ -20,6 +24,10 @@ public class DialogueTrigger : MonoBehaviour
         playerInRange = false;
         
         visualCue.SetActive(false);
+
+        
+
+        objectiveUI.SetActive(false);
     }
 
     private void Update()
@@ -44,6 +52,8 @@ public class DialogueTrigger : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             playerInRange = true;
+            
+            objectiveUI.SetActive(true);
         }
     }
 
