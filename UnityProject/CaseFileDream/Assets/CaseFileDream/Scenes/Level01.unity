@@ -20672,7 +20672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1427753086}
   inkJSON: {fileID: 4900000, guid: b4127b78f3254fc4ab36470e378266c5, type: 3}
-  objectiveUI: {fileID: 0}
+  objectiveUI: {fileID: 1321049371}
 --- !u!1 &253641923
 GameObject:
   m_ObjectHideFlags: 0
@@ -30127,7 +30127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1539207252}
   inkJSON: {fileID: 4900000, guid: 512658d6647b48f4291a70d59942f85c, type: 3}
-  objectiveUI: {fileID: 0}
+  objectiveUI: {fileID: 1321049371}
 --- !u!114 &358037620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50304,7 +50304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1692471823}
   inkJSON: {fileID: 4900000, guid: 6ee8e66cce918e2449805d947d57bf99, type: 3}
-  objectiveUI: {fileID: 0}
+  objectiveUI: {fileID: 1321049371}
 --- !u!1 &546582042
 GameObject:
   m_ObjectHideFlags: 0
@@ -83999,7 +83999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1569063465}
   inkJSON: {fileID: 4900000, guid: a12b5fd43351b9e41b9c8be1d13116b0, type: 3}
-  objectiveUI: {fileID: 0}
+  objectiveUI: {fileID: 1321049371}
 --- !u!1 &875685452
 GameObject:
   m_ObjectHideFlags: 0
@@ -107257,7 +107257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1998676965}
   inkJSON: {fileID: 4900000, guid: 6181181548c45cb47a22933962907085, type: 3}
-  objectiveUI: {fileID: 0}
+  objectiveUI: {fileID: 1321049371}
 --- !u!1 &1131543646
 GameObject:
   m_ObjectHideFlags: 0
@@ -127487,6 +127487,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 1735769641}
+--- !u!1 &1321049371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 958784368418581544, guid: 47b4ceba26d1bf745adf0c6fdac00541, type: 3}
+  m_PrefabInstance: {fileID: 958784369093583371}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1322811025
 GameObject:
   m_ObjectHideFlags: 0
@@ -156067,7 +156072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 759691785}
   inkJSON: {fileID: 4900000, guid: 1e3a1bffcaae5e045be45671960df301, type: 3}
-  objectiveUI: {fileID: 0}
+  objectiveUI: {fileID: 1321049371}
 --- !u!114 &1573663213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167902,7 +167907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 949998348}
   inkJSON: {fileID: 4900000, guid: 6ee8e66cce918e2449805d947d57bf99, type: 3}
-  objectiveUI: {fileID: 0}
+  objectiveUI: {fileID: 1321049371}
 --- !u!61 &1694762063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -189801,7 +189806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 546582042}
   inkJSON: {fileID: 4900000, guid: bbf6f20d47d92d94188de80e7e2f2018, type: 3}
-  objectiveUI: {fileID: 0}
+  objectiveUI: {fileID: 1321049371}
 --- !u!61 &1903624981
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -195666,7 +195671,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967442804}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 735.89, y: 77.079994, z: 0}
+  m_LocalPosition: {x: 722.14, y: 78.59, z: 0}
   m_LocalScale: {x: 0.73484, y: 0.73484, z: 0.73484}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -210089,6 +210094,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1406961410303061671, guid: 4cad7caeebe50fc46b892ab1cea0e50b, type: 3}
+      propertyPath: objectiveUI
+      value: 
+      objectReference: {fileID: 1321049371}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cad7caeebe50fc46b892ab1cea0e50b, type: 3}
@@ -226026,6 +226035,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1550338146}
     m_Modifications:
+    - target: {fileID: 7369534418888598990, guid: 4ecc056e5c80d644f8de847c17ba0a02, type: 3}
+      propertyPath: objectiveUI
+      value: 
+      objectReference: {fileID: 1321049371}
     - target: {fileID: 7369534418888599026, guid: 4ecc056e5c80d644f8de847c17ba0a02, type: 3}
       propertyPath: m_RootOrder
       value: -1
