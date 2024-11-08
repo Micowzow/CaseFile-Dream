@@ -37,7 +37,7 @@ namespace PlayerController
                 FindObjectOfType<AudioManager>().Play("Hurt");
             }
 
-        if (collision.tag == "Water")
+        if (collision.tag == "KillWater")
         {
                 if (playerExtra.hasBubblePower == false)
                 {
@@ -46,7 +46,7 @@ namespace PlayerController
                 }
                 else
                 {
-                    TakeDamage(0);
+                    TakeDamage(10);
                 }
                 
         }
