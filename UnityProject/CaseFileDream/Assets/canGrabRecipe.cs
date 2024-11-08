@@ -44,6 +44,7 @@ public class canGrabRecipe : MonoBehaviour
             perfumeRecipe.enabled = true;
             rb.isKinematic = false;
             glass.enabled = false;
+            Destroy(GameObject.FindWithTag("Mallet"));
         }
     }
 }

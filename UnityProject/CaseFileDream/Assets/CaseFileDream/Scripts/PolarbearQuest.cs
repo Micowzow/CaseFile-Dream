@@ -24,7 +24,7 @@ public class PolarbearQuest : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        
+        bearQuestItem.SetActive(false);
         anim.SetBool("hasMelted", false);
         bearOne.SetActive(true);
         bearTwo.SetActive(false);
@@ -71,7 +71,7 @@ public class PolarbearQuest : MonoBehaviour
     {
         anim.SetBool("hasMelted", true);
         yield return new WaitForSeconds(2f);
-        Instantiate(bearQuestItem);
+        bearQuestItem.SetActive(true);
 
         Destroy(gameObject);
     }

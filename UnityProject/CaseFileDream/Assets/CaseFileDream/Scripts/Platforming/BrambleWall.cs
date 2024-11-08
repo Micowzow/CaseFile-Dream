@@ -26,6 +26,7 @@ public class BrambleWall : MonoBehaviour
         {
             Debug.Log("CutBramble");
             Destroy(gameObject);
+            Destroy(GameObject.FindWithTag("Scissors"));
         }
     }
 }

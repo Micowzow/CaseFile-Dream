@@ -6,14 +6,11 @@ using UnityEngine;
 public class AudioChanger : MonoBehaviour
 {
 
-    public AudioClip nextMusic; // drag the next music here in the Inspector
-    public AudioSource audioObject; // drag the music player here or...
+   
     
 
     void Start()
-    { // find it at Start:
-      // supposing that the music player is named "MusicPlayer":
-        audioObject = gameObject.GetComponent<AudioSource>();
+    { 
         
     }
 
@@ -21,7 +18,8 @@ public class AudioChanger : MonoBehaviour
     {
         if (other.tag == "Player")
         { // only an object tagged Player stops the sound
-            audioObject.Play(); // play it
+            FindObjectOfType<AudioManager>().Play("TreeTopMusic");
+            FindObjectOfType<AudioManager>().Stop("Music");
 
             Debug.Log("Player entered!");
         }
@@ -33,9 +31,9 @@ public class AudioChanger : MonoBehaviour
     {
         if (other.tag == "Player")
         { // only an object tagged Player restarts the sound
-            //audioObject.clip = nextMusic;  // select the next music
-            
-            audioObject.Stop();
+
+            FindObjectOfType<AudioManager>().Stop("TreeTopMusic");
+            FindObjectOfType<AudioManager>().Play("Music");
             Debug.Log("Player exit!");
         }
     }

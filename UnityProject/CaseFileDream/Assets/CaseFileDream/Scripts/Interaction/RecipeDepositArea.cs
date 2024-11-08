@@ -13,6 +13,7 @@ public class RecipeDepositArea : MonoBehaviour
     {
         skunkOne.SetActive(true);
         skunkTwo.SetActive(false);
+        skunkQuestItem.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class RecipeDepositArea : MonoBehaviour
         {
             skunkOne.SetActive(false);
             skunkTwo.SetActive(true);
-            Instantiate(skunkQuestItem);
+            skunkQuestItem.SetActive(true);
             Destroy(gameObject);
 
         }

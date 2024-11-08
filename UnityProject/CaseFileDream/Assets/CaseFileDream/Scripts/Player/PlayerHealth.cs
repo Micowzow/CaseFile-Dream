@@ -21,7 +21,7 @@ namespace PlayerController
         currentHealth = Mathf.Clamp(currentHealth - damge, 0, startingHealth);
         if (currentHealth > 0)
         {
-
+                currentHealth += 1;
         }
         else
         {

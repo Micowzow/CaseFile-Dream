@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 582023921376557718}
   - component: {fileID: 7604795909142580689}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414791933864637847}
   - component: {fileID: 1414791933864637844}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: YellowStation
   m_TagString: YellowRefill
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414791933912566394}
   - component: {fileID: 1414791933912566395}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,6 +310,10 @@ PrefabInstance:
     - target: {fileID: 4537632406372315496, guid: 54571a54f61e62842bbf397ded8eb1ea, type: 3}
       propertyPath: m_Name
       value: LightBugs
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537632406372315496, guid: 54571a54f61e62842bbf397ded8eb1ea, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4537632406372315498, guid: 54571a54f61e62842bbf397ded8eb1ea, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.ctime1

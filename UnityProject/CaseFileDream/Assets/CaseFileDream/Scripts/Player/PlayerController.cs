@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 namespace PlayerController
+
 {
    
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
@@ -244,4 +246,4 @@ namespace PlayerController
         public event Action Jumped;
         public Vector2 FrameInput { get; }
     }
-}
+} */

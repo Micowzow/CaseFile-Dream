@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace PlayerController
 {
@@ -14,6 +15,9 @@ namespace PlayerController
         public PlayerHealth playerHealth;
 
         public TimerController timerController;
+
+        public SpriteRenderer playerSprite;
+        public SpriteRenderer CandleSprite;
 
         public void Awake()
         {
@@ -81,12 +85,16 @@ namespace PlayerController
         IEnumerator Respawn(float duration)
         {
             playerRb.simulated = false;
+            playerSprite.enabled = false;
+            CandleSprite.enabled = false;
             playerRb.velocity = new Vector2(0, 0);
             transform.localScale = new Vector3(0, 0, 0);
             yield return new WaitForSeconds(duration);
             transform.position = checkpointPos;
             transform.localScale = new Vector3(1, 1, 1);
             playerRb.simulated = true;
+            playerSprite.enabled = true;
+            CandleSprite.enabled = true;
             playerHealth.currentHealth = playerHealth.startingHealth;
 
         }

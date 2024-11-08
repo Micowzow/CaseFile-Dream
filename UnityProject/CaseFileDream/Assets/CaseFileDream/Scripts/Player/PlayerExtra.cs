@@ -60,6 +60,7 @@ namespace PlayerController
             cameraFollowObject = cameraFollowGo.GetComponent<CameraFollowObject>();
            
             respawnPoint = transform.position;
+            hasBubblePower = true;
         }
 
        /* public void LoadData(GameData data)
@@ -115,13 +116,13 @@ namespace PlayerController
         {
             if (collision.gameObject.CompareTag("MovingPlatform"))
             {
-                transform.parent = collision.transform;
+                //transform.parent = collision.transform;
                 platform = collision.gameObject.GetComponent<Rigidbody2D>();
                 rb.gravityScale = 10;
             }
             if (collision.gameObject.CompareTag("LanternInteract"))
             {
-                transform.parent = collision.transform;
+                //transform.parent = collision.transform;
                 platform = collision.gameObject.GetComponent<Rigidbody2D>();
                 rb.gravityScale = 10;
             }

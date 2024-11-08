@@ -22,7 +22,7 @@ public class Teleport : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if(Vector2.Distance(player.transform.position, transform.position) > 1f)
+            if(Vector2.Distance(player.transform.position, transform.position) > 3f)
             {
                 StartCoroutine(TeleportIn());
                 

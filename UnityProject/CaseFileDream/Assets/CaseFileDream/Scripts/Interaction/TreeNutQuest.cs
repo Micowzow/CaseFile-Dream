@@ -33,7 +33,7 @@ public class TreeNutQuest : MonoBehaviour
         inArea = false;
         nutDisplay.enabled = false;
         nutImage.enabled = false;
-
+        birdQuestItem.SetActive(false);
         treeWith.enabled = false;
         treeWithout.enabled = true;
         
@@ -47,7 +47,7 @@ public class TreeNutQuest : MonoBehaviour
             Debug.Log("all Nuts present");
             birdOne.SetActive(false);
             birdTwo.SetActive(true);
-            Instantiate(birdQuestItem);
+            birdQuestItem.SetActive(true);
             nutManager.nuts = 0;
             nutDisplay.text = 0.ToString();
             treeWith.enabled = true;

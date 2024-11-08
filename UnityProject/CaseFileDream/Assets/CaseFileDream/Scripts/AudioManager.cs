@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        
+        FindObjectOfType<AudioManager>().Play("Music");
     }
     public void Play (string name)
     {

@@ -21,7 +21,7 @@ public class MasterShop : MonoBehaviour
     void Update()
     {
      if(GameObject.Find("Item1").GetComponent<ShopTicket>().hasTicket == true &&
-            GameObject.Find("Item2").GetComponent<ShopBubble>().hasBubble == true &&
+            
             GameObject.Find("Item3").GetComponent<ShopScissors>().hasScissors == true &&
             GameObject.Find("Item4").GetComponent<ShopNut>().hasNut == true)
         {

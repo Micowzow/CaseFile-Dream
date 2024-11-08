@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMelee : MonoBehaviour
 {
     public Transform attackOrigin;
-    public float attackRadius = 1f;
+    public float attackRadius = 5f;
     public LayerMask enemyMask;
 
     public float cooldownTime = .5f;
@@ -52,5 +52,13 @@ public class PlayerMelee : MonoBehaviour
         private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attackOrigin.position, attackRadius);
+    }
+
+    void Attack()
+    {
+        // playing attack animation
+        StartCoroutine(AttackAnim());
+
+        
     }
 }

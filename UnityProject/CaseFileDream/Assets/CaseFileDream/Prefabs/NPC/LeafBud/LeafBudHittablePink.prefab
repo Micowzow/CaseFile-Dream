@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 5893152406910772281}
   - component: {fileID: 1398287466711836856}
   - component: {fileID: 7930129656912224419}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Dialogue Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.87, y: 0.81}
+  m_AnchoredPosition: {x: 4.68, y: 0.81}
   m_SizeDelta: {x: 10, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5893152406910772281
@@ -459,7 +459,7 @@ Transform:
   - {fileID: 3027357314416555467}
   - {fileID: 4566073715263508060}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4566073715263508061
 GameObject:
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 1210561465841338876}
   - component: {fileID: 1171412195927306208}
   - component: {fileID: 6977865100823507782}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 1925581492996943943}
   - component: {fileID: 2373771711252101363}
   - component: {fileID: 2318501411251649834}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -722,9 +722,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Someone up there won''t stop crying
-
-'
+  m_text: There is a "sweet" smell coming from above
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
