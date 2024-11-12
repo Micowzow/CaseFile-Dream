@@ -3454,7 +3454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
+  m_HorizontalAxis: Vertical
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
@@ -3473,7 +3473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1145038371}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &524633735
@@ -15957,6 +15957,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b041553abbd9254438b5ca53d5642f71, type: 3}
+--- !u!1 &1145038371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8057592154163295405, guid: b041553abbd9254438b5ca53d5642f71, type: 3}
+  m_PrefabInstance: {fileID: 1145038370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1188113272
 GameObject:
   m_ObjectHideFlags: 0

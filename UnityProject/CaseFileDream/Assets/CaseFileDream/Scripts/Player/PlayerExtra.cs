@@ -80,6 +80,10 @@ namespace PlayerController
             float move = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
 
+            if (DialogueManager.GetInstance().dialogueIsPlaying)
+            {
+                return;
+            }
             //rb.velocity = new Vector2(move * speed, rb.velocity.y); //Can't remember what this was for?
 
             HandleDirection();

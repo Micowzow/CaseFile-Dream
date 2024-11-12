@@ -31641,6 +31641,10 @@ PrefabInstance:
       propertyPath: inkJSON
       value: 
       objectReference: {fileID: 4900000, guid: 3ba9d4682983ff444b853462ed607808, type: 3}
+    - target: {fileID: 8439471954816714466, guid: 134608bedac50c84c932a820e9be99df, type: 3}
+      propertyPath: objectiveUI
+      value: 
+      objectReference: {fileID: 1388981896}
     - target: {fileID: 8439471954816714469, guid: 134608bedac50c84c932a820e9be99df, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -35579,6 +35583,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &231552109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8057592154163295405, guid: b041553abbd9254438b5ca53d5642f71, type: 3}
+  m_PrefabInstance: {fileID: 3931917677340169234}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &234537623
 GameObject:
   m_ObjectHideFlags: 0
@@ -90091,7 +90100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
+  m_HorizontalAxis: Vertical
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
@@ -90110,7 +90119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 231552109}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &892743739
@@ -91044,6 +91053,10 @@ PrefabInstance:
       propertyPath: inkJSON
       value: 
       objectReference: {fileID: 4900000, guid: 52a5f937ae524664d8f001aa1e86a081, type: 3}
+    - target: {fileID: 8439471954816714466, guid: 134608bedac50c84c932a820e9be99df, type: 3}
+      propertyPath: objectiveUI
+      value: 
+      objectReference: {fileID: 1388981896}
     - target: {fileID: 8439471954816714469, guid: 134608bedac50c84c932a820e9be99df, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -93122,6 +93135,10 @@ PrefabInstance:
       propertyPath: inkJSON
       value: 
       objectReference: {fileID: 4900000, guid: 0e6f44730ec90b649958908c95507da3, type: 3}
+    - target: {fileID: 7369534418888598990, guid: 4ecc056e5c80d644f8de847c17ba0a02, type: 3}
+      propertyPath: objectiveUI
+      value: 
+      objectReference: {fileID: 1388981896}
     - target: {fileID: 7369534418888599025, guid: 4ecc056e5c80d644f8de847c17ba0a02, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -104508,6 +104525,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3054747293172364353, guid: 57bdf9277ee72c34d8a371f93e0c9845, type: 3}
   m_PrefabInstance: {fileID: 1652245069}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1388981896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 958784368418581544, guid: 47b4ceba26d1bf745adf0c6fdac00541, type: 3}
+  m_PrefabInstance: {fileID: 634666458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1389574685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2920830746781935266, guid: 28d763c303cbfbb4f8c0cee0644c0cfe, type: 3}
@@ -104726,6 +104748,10 @@ PrefabInstance:
       propertyPath: inkJSON
       value: 
       objectReference: {fileID: 4900000, guid: 99926bbf9256e58439ba08a671521251, type: 3}
+    - target: {fileID: 7369534418888598990, guid: 4ecc056e5c80d644f8de847c17ba0a02, type: 3}
+      propertyPath: objectiveUI
+      value: 
+      objectReference: {fileID: 1388981896}
     - target: {fileID: 7369534418888599024, guid: 4ecc056e5c80d644f8de847c17ba0a02, type: 3}
       propertyPath: m_Size.x
       value: 6.761216
@@ -120499,6 +120525,10 @@ PrefabInstance:
       propertyPath: inkJSON
       value: 
       objectReference: {fileID: 4900000, guid: 231a0adcf2b91374db2045008b0c595d, type: 3}
+    - target: {fileID: 8439471954816714466, guid: 134608bedac50c84c932a820e9be99df, type: 3}
+      propertyPath: objectiveUI
+      value: 
+      objectReference: {fileID: 1388981896}
     - target: {fileID: 8439471954816714467, guid: 134608bedac50c84c932a820e9be99df, type: 3}
       propertyPath: m_Size.x
       value: 4.7893715
@@ -128905,7 +128935,7 @@ PrefabInstance:
     - target: {fileID: 1406961410303061671, guid: 4cad7caeebe50fc46b892ab1cea0e50b, type: 3}
       propertyPath: objectiveUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1388981896}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cad7caeebe50fc46b892ab1cea0e50b, type: 3}
@@ -130875,6 +130905,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3931917677130909127, guid: b041553abbd9254438b5ca53d5642f71, type: 3}
+      propertyPath: typingSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 3931917678591168977, guid: b041553abbd9254438b5ca53d5642f71, type: 3}
       propertyPath: m_Camera
       value: 
@@ -131514,6 +131548,10 @@ PrefabInstance:
       propertyPath: inkJSON
       value: 
       objectReference: {fileID: 4900000, guid: c2a1c1dc92e5be04caf3145a01bb526b, type: 3}
+    - target: {fileID: 2948883253665179673, guid: 95c18dd00ce4b7948bc3b0f9540de18f, type: 3}
+      propertyPath: objectiveUI
+      value: 
+      objectReference: {fileID: 1388981896}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 95c18dd00ce4b7948bc3b0f9540de18f, type: 3}
@@ -131726,6 +131764,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 8439471954816714466, guid: 134608bedac50c84c932a820e9be99df, type: 3}
+      propertyPath: objectiveUI
+      value: 
+      objectReference: {fileID: 1388981896}
     - target: {fileID: 8439471954816714469, guid: 134608bedac50c84c932a820e9be99df, type: 3}
       propertyPath: m_RootOrder
       value: -1

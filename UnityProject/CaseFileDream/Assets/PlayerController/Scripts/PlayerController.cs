@@ -100,6 +100,10 @@ namespace PlayerController
             _time = time;
 
             GatherInput();
+            if (DialogueManager.GetInstance().dialogueIsPlaying)
+            {
+                return;
+            }
         }
 
         public void TickFixedUpdate(float delta)
@@ -107,6 +111,11 @@ namespace PlayerController
             _delta = delta;
 
             if (!Active) return;
+
+            if (DialogueManager.GetInstance().dialogueIsPlaying)
+            {
+                return;
+            }
 
             RemoveTransientVelocity();
 

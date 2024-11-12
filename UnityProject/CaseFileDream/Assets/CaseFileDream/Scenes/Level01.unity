@@ -1146,6 +1146,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &13620901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8057592154163295405, guid: b041553abbd9254438b5ca53d5642f71, type: 3}
+  m_PrefabInstance: {fileID: 1485754293}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &17361253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5615,7 +5620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 164486020}
   inkJSON: {fileID: 4900000, guid: 3e18f7e127b3dd24387efe91bbd54d4b, type: 3}
-  objectiveUI: {fileID: 0}
+  objectiveUI: {fileID: 1321049371}
 --- !u!61 &48864414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5629,7 +5634,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.4643307, y: -0.030077934}
+  m_Offset: {x: 7.015432, y: -0.030077934}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5640,7 +5645,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.2940025, y: 6.021887}
+  m_Size: {x: 3.835742, y: 6.021887}
   m_EdgeRadius: 0
 --- !u!95 &48864415
 Animator:
@@ -145349,7 +145354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
+  m_HorizontalAxis: Vertical
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
@@ -145368,7 +145373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 13620901}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1448304897
@@ -209481,7 +209486,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19328308, y: -0.030078053}
+  m_Offset: {x: 0.42276835, y: -1.0168467}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -209492,7 +209497,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.0399017, y: 6.021887}
+  m_Size: {x: 4.194338, y: 4.690897}
   m_EdgeRadius: 0
 --- !u!114 &1089330556617765845
 MonoBehaviour:
@@ -209508,7 +209513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1089330557696164334}
   inkJSON: {fileID: 4900000, guid: a41606ffdbbc263429e3ff85ec14a591, type: 3}
-  objectiveUI: {fileID: 0}
+  objectiveUI: {fileID: 1321049371}
 --- !u!1 &1089330556617765848
 GameObject:
   m_ObjectHideFlags: 0
