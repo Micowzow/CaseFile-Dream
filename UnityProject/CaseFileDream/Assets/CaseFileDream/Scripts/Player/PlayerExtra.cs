@@ -163,7 +163,10 @@ namespace PlayerController
         {
             animator.SetFloat("yVelocity", rb.velocity.y);
 
-
+            if (DialogueManager.GetInstance().dialogueIsPlaying)
+            {
+                return;
+            }
             //if(CanMove()==false)
             //   return;
 
