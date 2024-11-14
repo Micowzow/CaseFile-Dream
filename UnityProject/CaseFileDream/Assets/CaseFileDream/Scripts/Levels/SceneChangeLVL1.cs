@@ -11,6 +11,7 @@ public class SceneChangeLVL1 : MonoBehaviour
     public GameObject forestPreview;
     public Animator anim;
     public Animator animRoots;
+    public ParticleSystem portalParticles;
 
     public void change()
     {
@@ -46,6 +47,7 @@ public class SceneChangeLVL1 : MonoBehaviour
             anim.SetBool("onPortal", true);
             animRoots.SetBool("hasEntered", true);
             //defaultPreview.GetComponent<Renderer>().enabled = false;
+            portalParticles.Play();
         }
 
     }
@@ -56,6 +58,6 @@ public class SceneChangeLVL1 : MonoBehaviour
         defaultPreview.GetComponent<Renderer>().enabled = true;
         anim.SetBool("onPortal", false);
         animRoots.SetBool("hasEntered", false);
-
+        portalParticles.Stop();
     }
 }
