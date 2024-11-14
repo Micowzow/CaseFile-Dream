@@ -4549,8 +4549,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764639916}
-  m_LocalRotation: {x: -0, y: 0, z: -0.0018511909, w: 0.99999833}
-  m_LocalPosition: {x: 0.008, y: -0.533, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.005525438, w: 0.99998474}
+  m_LocalPosition: {x: -0.02, y: -0.233, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4574,7 +4574,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.31
   m_Color: {r: 0.9425928, g: 0.86226416, b: 1, a: 1}
-  m_Intensity: 2.66
+  m_Intensity: 4.3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: d1515dde631610648fa578af29a4fb246b77f12f000000005536a662133d0a50
@@ -4621,10 +4621,10 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 180.33
-  m_PointLightOuterAngle: 180.33
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 7.0900965
+  m_PointLightOuterRadius: 5.4439406
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -11459,7 +11459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269081020}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.003, y: -0.416, z: 0}
+  m_LocalPosition: {x: 0.003, y: -0.486, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11547,7 +11547,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1269081020}
   serializedVersion: 8
   lengthInSec: 5
-  simulationSpeed: 0.38
+  simulationSpeed: 0.4
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -11621,7 +11621,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.21
+      scalar: 1.33
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -12114,7 +12114,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.8
+      scalar: -1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -12175,7 +12175,7 @@ ParticleSystem:
     donutRadius: 0.5649605
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: -0, y: 0, z: 0}
-    m_Scale: {x: 3.8921237, y: 0.645332, z: 0.5492186}
+    m_Scale: {x: 5.37, y: 0.645332, z: 0.5492186}
     placementMode: 1
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -24960,7 +24960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948755756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.23, y: 0.25, z: 0}
+  m_LocalPosition: {x: 13.66, y: -4.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
