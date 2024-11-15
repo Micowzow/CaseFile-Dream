@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMelee : MonoBehaviour
 {
     public Transform attackOrigin;
-    public float attackRadius = 5f;
+    public float attackRadius = 3f;
     public LayerMask enemyMask;
 
     public float cooldownTime = .5f;

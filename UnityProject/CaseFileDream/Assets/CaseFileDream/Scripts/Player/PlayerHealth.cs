@@ -33,7 +33,7 @@ namespace PlayerController
     {
         if (collision.tag == "Enemy")
         {
-            TakeDamage(0);
+            TakeDamage(1.5f);
                 FindObjectOfType<AudioManager>().Play("Hurt");
             }
 
