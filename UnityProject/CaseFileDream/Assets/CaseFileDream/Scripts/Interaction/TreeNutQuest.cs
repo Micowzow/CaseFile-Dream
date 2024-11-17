@@ -31,8 +31,8 @@ public class TreeNutQuest : MonoBehaviour
         birdTwo.SetActive(false);
         nutManager = NutManager.instance;
         inArea = false;
-        nutDisplay.enabled = false;
-        nutImage.enabled = false;
+        nutDisplay.enabled = true;
+        nutImage.enabled = true;
         birdQuestItem.SetActive(false);
         treeWith.enabled = false;
         treeWithout.enabled = true;
