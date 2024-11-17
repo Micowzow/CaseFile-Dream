@@ -57672,6 +57672,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b25878861d2a144a24adab18ca0134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allVirtualCameras: []
+  fallPanAmount: 0.25
+  fallPanTime: 0.35
+  fallSpeedYDampingChangeThreshold: -15
 --- !u!4 &764012616
 Transform:
   m_ObjectHideFlags: 0
