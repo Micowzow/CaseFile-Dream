@@ -24,7 +24,7 @@ As much as you can carry would about do it I think
 ->END     
 
 === Nope ===
-Oh... I seem
+Oh... I see
 Well that's alright. I'm sure someone more helpful will find me eventually
 
 ->END
